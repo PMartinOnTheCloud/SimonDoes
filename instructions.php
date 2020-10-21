@@ -4,12 +4,10 @@
 	<title></title>
 </head>
 <body>
-	<?php echo"<h1>Welcome to Simon Says! </h1>";
-	echo"<p>To start the game just PRESS the 'PLAY!'button just like in the image below: </p>";
-	echo"<img src="">"
-	echo"<h1>test</h1>"
-	echo"<button> PLAY! </button>"?>;
-
+	<h1>Welcome to Simon Says! </h1>
+	<p>To start the game just PRESS the <mark>PLAY!</mark> button just like in the image below: </p>
+	<img src='./Images/play.jpg' width='250px' heigth='150px'><br><br><br>
+	<button> PLAY! </button>
 
 </body>
 </html>
