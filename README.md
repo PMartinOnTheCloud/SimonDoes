@@ -1,5 +1,5 @@
 # SimonDoes
-Respository of the development of a "Simon says..." kind game
+*Respository of the development of a "Simon says..." kind game*
 
 # Instalation instructions
 Linux: You need to have installed Apache and PHP.
