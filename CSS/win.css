@@ -1,8 +1,8 @@
 
 @-webkit-keyframes animacao1 { 
-  0% {background: #D62623;}
-  50% {background: #EE3430;}
-  100% {background: #FB3733;} }
+  0% {background: #7ffb04;}
+  50% {background: #7fdb24;}
+  100% {background: #7fc33c;} }
 
 body {background: #191919;}
 
@@ -29,11 +29,11 @@ body {background: #191919;}
       margin-top: 0px;
       margin-bottom: 0px;
       font-size: 160px;
-      font-family: 'Black Ops One', cursive;
+      font-family: Verdana, Arial, Tahoma, Serif;
       line-height: 140px;
       text-align: center;
       text-shadow: 5px 5px #000000;
-      color: #7fff00;}
+      color: #6576b4;}
 
 .continue {
   width: 750px;
@@ -47,7 +47,7 @@ body {background: #191919;}
   font-size: 40px;
   font-weight: bold;
   font-family: corbel;
-  color: #7fff00;
+  color: #6576b4;
   text-shadow: 2.5px 2.5px #000000;}
 
 .opcoes {
@@ -61,7 +61,7 @@ body {background: #191919;}
   font-size: 30px;
   font-weight: bold;
   font-family: corbel;
-  color: #7fff00;
+  color: #6576b4;
   text-decoration: none;
   text-shadow: 2.5px 2.5px #000000;
   padding: 25px 110px 25px 110px;
@@ -91,9 +91,9 @@ body {background: #191919;}
   font-size: 30px;
   font-weight: bold;
   font-family: corbel;
-  color: #7fff00;
+  color: #6576b4;
   text-decoration: none;
-  text-shadow: 1.5px 1.5px #FB3733;
+  text-shadow: 2.5px 2.5px #000000;
   padding: 25px 100px 25px 100px;
   border-radius: 20px;
   background: #000000;
