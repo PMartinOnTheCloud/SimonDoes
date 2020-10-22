@@ -11,7 +11,7 @@
 	</div>
 
 
-	<a href="to_play.php" id="button">Start</a>
+	<a href="to_play.php" class="button">START</a>
 
 
 	<div class="footer">
