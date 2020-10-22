@@ -3,12 +3,12 @@
 body { 
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #F9B176;
+  background-color: #3d3d3d;
 }
 
 .header {
   overflow: hidden;
-  background-color: #FF5733;
+  background-color: #191919;
   padding: 20px 10px;
 }
 
@@ -22,15 +22,45 @@ body {
   border-radius: 4px;
 }
 
-.header a.logo {
-  font-size: 50px;
-  font-weight: bold;
-  color:#0958A2;
+.Logo {
+    color: transparent;
+    -moz-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 2px;
+    -moz-text-stroke-color: #000000;
+    -webkit-text-stroke-color: #ffffff;
+ }
+
+.Logo {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+}
+
+.Logo::after {
+    content: "AWESOME TEXT";
+    font-size: 10rem;
+    letter-spacing: 0px;
+    background-size: 100%;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-stroke-width: 0;
+    -webkit-text-stroke-width: 0;
+    position: absolute;
+    text-align: center;
+    left: 0px;
+    right: 0;
+    top: 0px;
+    z-index: -1;
+    background-color: #ff4c00;
+    transition: all 0.5s ease;
+    text-shadow: 10px 2px #6ac7c2;
 }
 
 .header a.active {
   background-color: dodgerblue;
-  color: white;
+  color: #7fff00;
 }
 
 .header-right {
@@ -56,7 +86,7 @@ body {
    font-size: 20px;
    bottom: 0;
    width: 100%;
-   background-color: #FF5733;
-   color: #0958A2;
+   background-color: #191919;
+   color: #7fff00;
    text-align: center;
 }
