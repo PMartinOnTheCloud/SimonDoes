@@ -23,10 +23,12 @@
        </head>
        <body>
         <form name='input' action='Home.php? name=username' method='post'>
-          <label for='username'></label><input type='text' value='' id='username' name='username' />
-          <div class='error'><?php echo $userError;?></div>
-          <label for='password'></label><input type='password' value='' id='password' name='password' />
-          <div class='error'><?php echo $passError;?></div>
+          <label for='username'> User:</label>
+            <input type='text' value='' id='username' name='username'  required autofocus/>
+            <div class='error'><?php echo $userError;?></div>
+            <label for='password'>Password:</label>
+            <input type='password' value='' id='password' name='password' required/>
+            <div class='error'><?php echo $passError;?></div>
         <input type='submit' value='Home' name='sub' />
       </form>
 
