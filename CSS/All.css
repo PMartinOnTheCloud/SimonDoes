@@ -208,6 +208,13 @@ a#buttonInstructions:before {
   left: 20%
 }
 
+button#continue{
+  top: 80%;
+  left: 50%;
+  position: absolute;
+
+}
+
 /*FOOTER*/
 
 .footer {
