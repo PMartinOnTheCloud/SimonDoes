@@ -6,7 +6,11 @@
 
 body {background: #191919;}
 
+<<<<<<< HEAD
 #gameover {
+=======
+#win {
+>>>>>>> preproduction
     width: 750px;
     height: 580px;
     margin: auto;
@@ -19,13 +23,21 @@ body {background: #191919;}
     -webkit-animation-direction: alternate;}
 
 
+<<<<<<< HEAD
 .gameover {
+=======
+.win {
+>>>>>>> preproduction
     width:750px;
     height: auto;
     padding-top: 60px;
     background: none;}
 
+<<<<<<< HEAD
 .gameover p {
+=======
+.win p {
+>>>>>>> preproduction
       margin-top: 0px;
       margin-bottom: 0px;
       font-size: 160px;
