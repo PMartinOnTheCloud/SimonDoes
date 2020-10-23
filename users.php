@@ -39,7 +39,7 @@
       </form>
       </div>
       <div class="footer">
-        <p>Adrian Pradas - Carlos - Pablo </p>
+        <p>Adrian Pradas - Carlos Jurado   - Pablo Martin</p>
       </div>
     </body>
     </html>
