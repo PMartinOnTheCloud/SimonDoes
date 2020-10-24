@@ -4,16 +4,16 @@
 <head>
 <meta charset="utf-8">	
 <link href="CSS/win.css" rel="stylesheet" type="text/css" />	
-
+<link href='https://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
 <title>Win</title>
 
  </head>
 
  <body>
- 	<div id="gameover">
-	<div class="gameover">
-	<p> YOU'VE </p>
-	<p> WON </p>
+ 	<div id="win">
+	<div class="win">
+	<p> YOU'VE WON </p>
+	<p><img src="Images/win.png"></p>
 	</div>
 	<div class="continue"> <p> CONTINUE? </p> </div>
 	<div class="opcoes">

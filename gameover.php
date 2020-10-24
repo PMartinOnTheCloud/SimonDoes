@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">	
 <link href="CSS/gameover.css" rel="stylesheet" type="text/css" />	
-
+<link href='https://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
 <title>GameOver</title>
 
  </head>
