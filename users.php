@@ -1,20 +1,6 @@
 <?php
-    session_start();
-    $username = $password = $userError = $passError = '';
-    if(isset($_POST['sub'])){
-      $username = $_POST['username'];
-      $password = $_POST['password'];
-      if($username === '' && $password === ''){
-        $_SESSION['login'] = true; 
-        header('LOCATION:Home.php');
-        die();
-      }
-      
-      if($username !== ''){$userError = 'Invalid Username';}
-      if($password !== ''){$passError = 'Invalid Password';}
-    }
-    ?>
-
+session_start();
+?>
     <!DOCTYPE html>
     <html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>
        <head>
@@ -31,15 +17,18 @@
         <form name='input' action='Home.php? name=username' method='post'>
           <label for='username'> User:</label>
             <input type='text' value='' id='username' name='username'  required autofocus/>
-            <div class='error'><?php echo $userError;?></div>
             <label for='password'>Pass:</label>
             <input type='password' value='' id='password' name='password' required/>
-            <div class='error'><?php echo $passError;?></div>
-        <input type='submit' value='Home' name='sub' />
+        <input type='submit' value='Home' name="submit" />
       </form>
+      <?php
+      if (isset($_POST["submit"])){
+        $_SESSION["username"] = $_POST["username"]; 
+        $_SESSION["password"] = $_POST["password"];}
+      ?>
       </div>
       <div class="footer">
-        <p>Adrian Pradas - Carlos Jurado   - Pablo Martin</p>
+        <p>Adrian Pradas - Carlos Jurado - Pablo Martin</p>
       </div>
     </body>
     </html>
