@@ -18,7 +18,7 @@
 		<p>
 		<?php
 		$user = $_SESSION['username'];
-		echo "Welcome $user";?>
+		echo "$user";?>
 			
 		</p>
 	</div>

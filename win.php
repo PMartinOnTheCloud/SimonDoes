@@ -18,7 +18,7 @@
 	</div>
 	<div class="continue"> <p><?php
 		$user = $_SESSION['username'];
-		echo "Welcome $user";?> CONTINUE? </p> </div>
+		echo "$user";?> CONTINUE? </p> </div>
 	<div class="opcoes">
 		<div class="yes"> <a href="to_play.php"> YES </a> </div>
 		<div class="no"> <a href="Home.php"> NO </a> </div>
