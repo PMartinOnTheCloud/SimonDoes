@@ -7,6 +7,5 @@
 <body>
 <?php include 'header_footer.php';?>
 
-
 </body>
 </html>
