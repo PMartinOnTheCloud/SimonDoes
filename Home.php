@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,11 +12,11 @@
 	</div>
 
 
-	<a href="to_play.php" class="button">START</a>
+	<a href="to_play.php?name=username" class="button">START</a>
 
 
 	<div class="footer">
-        <p>Welcome, <?php session_start(); echo $_SESSION["username"] = $_POST["username"];?></p>
+        <p>Welcome, <?php echo $_SESSION["username"] = $_POST["username"];?></p>
 	</div>
 </body>
 </html>
