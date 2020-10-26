@@ -1,20 +1,14 @@
 
 @-webkit-keyframes animacao1 { 
-  0% {background: #D62623;}
-  50% {background: #EE3430;}
-  100% {background: #FB3733;} }
-
-:root {
-  --animation: glitch; /* glitch, hue, fade, shrink */
-  --speed: 2s;
-  --easing: linear;
-}
-
-@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+  0% {background: #7ffb04;}
+  50% {background: #7fdb24;}
+  100% {background: #7fc33c;} }
 
 body {background: #191919;}
 
-#gameover {
+
+
+#win {
     width: 750px;
     height: 580px;
     margin: auto;
@@ -27,48 +21,26 @@ body {background: #191919;}
     -webkit-animation-direction: alternate;}
 
 
-.gameover {
+.win {
     width:750px;
     height: auto;
-    padding-top: 60px;
-    background: none;
-    animation: var(--animation) var(--speed) infinite var(--easing);
-}
+    padding-top: 20px;
+    background: none;}
 
-@keyframes glitch {
-  0%, 12%, 15%, 52%, 55%, 82%, 85%, 100% { opacity: 1; transform: scaleX(1) scaleY(1) }  
-  13% { opacity: .8; transform: scaleY(2); color: #0ff }
-  53% { opacity: .8; transform: scaleX(.7);  color: #f0f }
-  83% { opacity: .8; transform: rotate(-10deg); color: #ff0 }
-}
-
-@keyframes hue {  
-  13% { color: #0ff }
-  53% { color: #f0f }
-  83% { color: #ff0 }
-}
-
-@keyframes shrink {  
-   0% { transform: scaleY(1) }
-  50% { transform: scaleY(.5) }
- 100% { transform: scaleY(1) }
-}
-
-@keyframes fade {  
-   0% { opacity: 1 }
-  50% { opacity: 0 }
- 100% { opacity: 1 }
-}
-
-.gameover p {
+.win p {
       margin-top: 0px;
       margin-bottom: 0px;
-      font-size: 160px;
+      font-size: 90px;
       font-family: 'Black Ops One', cursive;
       line-height: 140px;
       text-align: center;
       text-shadow: 5px 5px #000000;
-      color: #7fff00;}
+      color: #6576b4;}
+
+img {
+  width: 90px; height: 100px;
+  margin-top: 0px;
+}
 
 .continue {
   width: 750px;
@@ -82,13 +54,13 @@ body {background: #191919;}
   font-size: 40px;
   font-weight: bold;
   font-family: 'Black Ops One', cursive;
-  color: #7fff00;
+  color: #6576b4;
   text-shadow: 2.5px 2.5px #000000;}
 
 .opcoes {
   width: 550px;
   height: auto;
-  padding-top: 50px;
+  padding-top: 30px;
   margin: auto;}
 
 .yes a {
@@ -96,7 +68,7 @@ body {background: #191919;}
   font-size: 30px;
   font-weight: bold;
   font-family: 'Black Ops One', cursive;
-  color: #7fff00;
+  color: #6576b4;
   text-decoration: none;
   text-shadow: 2.5px 2.5px #000000;
   padding: 25px 110px 25px 110px;
@@ -126,9 +98,9 @@ body {background: #191919;}
   font-size: 30px;
   font-weight: bold;
   font-family: 'Black Ops One', cursive;
-  color: #7fff00;
+  color: #6576b4;
   text-decoration: none;
-  text-shadow: 1.5px 1.5px #FB3733;
+  text-shadow: 2.5px 2.5px #000000;
   padding: 25px 100px 25px 100px;
   border-radius: 20px;
   background: #000000;

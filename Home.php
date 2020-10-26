@@ -1,3 +1,9 @@
+<?php session_start();?>
+<?php
+      if (isset($_POST["username"])){
+        $_SESSION["username"] = $_POST["username"]; 
+    }
+      ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,7 +21,7 @@
 
 
 	<div class="footer">
-		<p>Adrian Pradas - Carlos - Pablo </p>
+        <p>Welcome, <?php echo $_SESSION["username"];?></p>
 	</div>
 </body>
 </html>
