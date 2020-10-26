@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,7 +15,12 @@
 	</div>
 
 	<div class="footer">
-		<p>Adrian Pradas - Carlos - Pablo </p>
+		<p>
+		<?php
+		$user = $_SESSION['username'];
+		echo "$user";?>
+			
+		</p>
 	</div>
 </body>
 </html>

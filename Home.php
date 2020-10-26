@@ -15,7 +15,7 @@
 
 
 	<div class="footer">
-		<p>Adrian Pradas - Carlos - Pablo </p>
+        <p>Welcome, <?php session_start(); echo $_SESSION["username"] = $_POST["username"];?></p>
 	</div>
 </body>
 </html>
