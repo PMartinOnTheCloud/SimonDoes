@@ -19,7 +19,7 @@
 	<p> OVER </p>
 	</div>
 
-	<div class="continue"> <p> <?php
+	<div class="continue"> <p><?php
 		$user = $_SESSION['username'];
 		echo "$user";?> CONTINUE? </p> </div>
 
