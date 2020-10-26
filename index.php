@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,11 +30,6 @@ session_start();
           		 	<button type="submit">Continue</button>
           		 </div>
           	</form>
-      <?php
-      if (isset($_POST["submit"])){
-        $_SESSION["username"] = $_POST["username"]; 
-    }
-      ?>
       </div>
 	</div>
 	<div class="footer">
