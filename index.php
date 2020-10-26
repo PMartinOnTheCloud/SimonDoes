@@ -23,7 +23,7 @@ session_start();
 		<p id="text">If you understood the instructions, enter a username and press <mark class="important"><strong>"CONTINUE".</mark></strong></p><br>
 		</div>
 		<div id="second">
-			<form name='input' action='Home.php?name=username' method='post'>
+			<form name='input' action='Home.php' method='post'>
           		<div class="imgcontainer">
           			<img src="Images/win.png" alt="Avatar" class="avatar">
           		</div>

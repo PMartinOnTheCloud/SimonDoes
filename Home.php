@@ -1,4 +1,9 @@
 <?php session_start();?>
+<?php
+      if (isset($_POST["submit"])){
+        $_SESSION["username"] = $_POST["username"]; 
+    }
+      ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,11 +17,11 @@
 	</div>
 
 
-	<a href="to_play.php?name=username" class="button">START</a>
+	<a href="to_play.php" class="button">START</a>
 
 
 	<div class="footer">
-        <p>Welcome, <?php echo $_SESSION["username"] = $_POST["username"];?></p>
+        <p>Welcome, <?php echo $_SESSION["username"];?></p>
 	</div>
 </body>
 </html>
