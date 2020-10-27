@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php session_start();?>
 <!DOCTYPE html>
 <html>
@@ -6,7 +5,7 @@
 	<title>To_play</title>
 	<style rel="stylesheet" type="text/css" href="CSS/All.css"></style>
 	<link rel="stylesheet" type="text/css" href="CSS/SimonDoes.css">
-
+	<link rel="stylesheet" href="CSS/to_play.css">
 </head>
 <body>
 <div class="header">
@@ -15,24 +14,6 @@
 		<a class="active" href="Home.php">Home</a>
 	</div>
 </div>
-
-
-<div class="footer">
-	<p>Welcome, <?php
-		$user = $_SESSION['username'];
-		echo "$user";?></p>
-</div>
-</body>
-</html>
-=======
-<!DOCKTYPE html>
-<head>
-	<link rel="stylesheet" href="index.css">
-</head>
-<body>
-
-<h1 id="demo">SIMON SAYS...</h1>
-
 
 <?php
 
@@ -100,8 +81,13 @@ echo "</div>";
 <button id='buttonStart' onclick="startGame(<?php echo "$secondsin"; ?>)">START</button>
 <button id='buttonCheck' onclick="failOrGrace(<?php echo "$numberOfCeldasToIlluminate"; ?>)">CHECK</button>
 
-<script src="to_play.js" type="text/javascript">
+<script src="JS/to_play.js" type="text/javascript">
 </script>
+
+<div class="footer">
+	<p>Welcome, <?php
+		$user = $_SESSION['username'];
+		echo "$user";?></p>
+</div>
 </body>
 </html>
->>>>>>> origin/PabloMartin

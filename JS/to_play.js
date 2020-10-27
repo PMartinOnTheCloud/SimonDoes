@@ -93,9 +93,9 @@ function getColoredCeldasId() {
 
 
 function youWin() {
-	document.write("You Win");
+	window.open('win.php');
 }
 
 function youLose() {
-	document.write("You Lose");
+	window.open('gameover.php');
 }
