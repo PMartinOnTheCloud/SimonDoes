@@ -22,7 +22,7 @@ if (isset($level)) {
 
 }
 else {
-    $searchfor = 'R5553';
+    $searchfor = 'S7781';
 
 }
 
@@ -63,13 +63,17 @@ while (sizeof($arrayOfCeldasToIlluminate) < $numberOfCeldasToIlluminate) {
 
 $identification = 0;
 
-echo "<div id='general' style=''>";
+$relativeheight = (100/$heigth)-(0.4);
+$relativewidth= (100/$width)-(0.4);
+
+
+echo "<div id='general'>";
 for ($h=0;$h<$heigth;$h++){
 	for ($w=0;$w<$width;$w++){
 		if (in_array($identification, $arrayOfCeldasToIlluminate)) {
-			echo "<div id='$identification' class='impostor'></div>";
+			echo "<div id='$identification' class='impostor' style='height: $relativeheight%;width: $relativewidth%;'></div>";
 		} else {
-			echo "<div id='$identification' class=''></div>";
+			echo "<div id='$identification' class='' style='height: $relativeheight%;width: $relativewidth%;'></div>";
 		}
 		$identification += 1;
 	}
