@@ -11,7 +11,7 @@
 <div class="header">
 	<a class="Logo">SimonDoes</a>
 	<div class="header-right">
-		<a class="active" href="Home.php">Home</a>
+		<a class="active" href="index.php">Home</a>
 	</div>
 </div>
 
