@@ -27,7 +27,7 @@
           		<div class="container">
           			<label class="label" for="uname"><b>Username</b></label>
           		 	<input type="text" placeholder="Enter Username" name="username" required>
-          		 	<button type="submit">Continue</button>
+          		 	<button type="submit" accesskey="s">Continue</button>
           		 </div>
           	</form>
       </div>

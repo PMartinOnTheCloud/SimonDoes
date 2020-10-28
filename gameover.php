@@ -24,8 +24,8 @@
 		echo "$user";?> ,CONTINUE? </p> </div>
 
 	<div class="opcoes">
-		<div class="yes"> <a href="to_play.php"> YES </a> </div>
-		<div class="no"> <a href="Home.php"> NO </a> </div>
+		<div class="yes"> <a accesskey="y" href="to_play.php"> YES </a> </div>
+		<div class="no"> <a accesskey="n" href="index.php"> NO </a> </div>
 	</div>
 
 </div>

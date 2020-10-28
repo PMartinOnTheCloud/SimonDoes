@@ -17,7 +17,7 @@
 	</div>
 
 
-	<a href="to_play.php" class="button">START</a>
+	<a href="to_play.php" accesskey="s"class="button">START</a>
 
 
 	<div class="footer">
