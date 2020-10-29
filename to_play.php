@@ -17,40 +17,23 @@
 
 <?php
 
-if (isset($level)) {
-    $searchfor = $level;
-
-}
-else {
-    $searchfor = 'S7781';
-
+if (!isset($_SESSION['level'])){
+	$_SESSION['level'] = 0;
 }
 
 $file = 'conf.txt';
- //<-- 
-// get the file contents, assuming the file to be readable (and exist)
-$contents = file_get_contents($file);
 
-// escape special characters in the query
-$pattern = preg_quote($searchfor, ',');
+$contents = file($file, FILE_IGNORE_NEW_LINES);
 
-$pattern = "/^.*$pattern.*\$/m";
-if(preg_match_all($pattern, $contents, $matches)){
-    foreach ($matches[0] as $point) {
-        $codeline=explode(",",$point);
-        $name=$codeline[0];
-        $width=$codeline[1];
-        $heigth=$codeline[2];
-        $numberOfCeldasToIlluminate=$codeline[3];
-        $secondsin=$codeline[4];
-        $code=$codeline[5];
-
-    }
-
+if ($contents[$_SESSION['level']]) {
+    $codeline=explode(",",$contents[$_SESSION['level']]);
+    $name=$codeline[0];
+    $width=$codeline[1];
+    $heigth=$codeline[2];
+    $numberOfCeldasToIlluminate=$codeline[3];
+    $secondsin=$codeline[4];
+    $code=$codeline[5];
 }
-else{
-   echo "No matches found";
-} 
 
 $arrayOfCeldasToIlluminate = [];
 
