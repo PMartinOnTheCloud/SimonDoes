@@ -20,8 +20,8 @@
 		$user = $_SESSION['username'];
 		echo "$user";?> ,CONTINUE? </p> </div>
 	<div class="opcoes">
-		<div class="yes"> <a href="to_play.php"> YES </a> </div>
-		<div class="no"> <a href="Home.php"> NO </a> </div>
+		<div class="yes"> <a href="to_play.php" accesskey="y"> YES </a> </div>
+		<div class="no"> <a href="Home.php" accesskey="n"> NO </a> </div>
 	</div>
 </div>
 </body>
