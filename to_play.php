@@ -20,6 +20,11 @@
 if (!isset($_SESSION['level'])){
 	$_SESSION['level'] = 0;
 }
+if (isset($_SESSION['Winpoints'])) {
+	$_SESSION['level'] +=1;
+}
+
+
 
 $file = 'conf.txt';
 

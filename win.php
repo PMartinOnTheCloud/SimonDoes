@@ -33,10 +33,10 @@ else {
 	</div>
 	<div class="user"> <p>Username: <?php $user = $_SESSION['username']; echo "$user";?></p> </div>
 	<div class="opcoes">
-		<div class="yes"> <a href="to_play.php" accesskey="y">SameLevel </a> </div>
-		<div class="no"> <a href="Snivel.php" accesskey="n">NextLevel </a> </div>
+		<div class="yes" name="Winpoints"> <a href="to_play.php" accesskey="y">Next Level <?php $_SESSION['level']+=1; ?></a> </div>
+		<div class="no" name="Retry"> <a href="to_play.php" accesskey="n">Try again </a> </div>
 	</div>
-	<div class="codi"> <p>Code:<?php echo "$searchfor";?> </p></div>
+	<div class="codi"> <p>Code:<?php echo "$level";?> </p></div>
 </div>
 <script src="JS/to_play.js" type="text/javascript"></script>
 
