@@ -1,5 +1,9 @@
 <?php session_start();
-$user = $_SESSION['username']?>
+    if (isset($_SESSION["username"])){
+       	$user = $_SESSION['username'];
+    }
+ ?>
+    
 
 <!DOCTYPE html>
 <html>
@@ -31,6 +35,7 @@ $user = $_SESSION['username']?>
           			<label class="label" for="uname"><b>Username</b></label>
           			<?php  
           				if (isset($user)) {
+  
           					echo "<input type=\"text\" value=\"$user\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\">Continue</button>";
           				}
           				else{

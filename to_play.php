@@ -37,6 +37,7 @@ $pattern = preg_quote($searchfor, ',');
 $pattern = "/^.*$pattern.*\$/m";
 if(preg_match_all($pattern, $contents, $matches)){
     foreach ($matches[0] as $point) {
+    	
         $codeline=explode(",",$point);
         $name=$codeline[0];
         $width=$codeline[1];

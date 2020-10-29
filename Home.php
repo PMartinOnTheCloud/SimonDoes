@@ -12,6 +12,8 @@
 	<link rel="stylesheet" type="text/css" href="CSS/All.css">
 </head>
 <body>
+
+</div>
 	<div class="header">
 		<h1 class="Logo">SimonDoes</h1>
 	</div>
