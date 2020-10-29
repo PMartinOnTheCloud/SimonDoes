@@ -36,7 +36,7 @@ else {
 
 	<div class="user"> <p>Username: <?php $user = $_SESSION['username']; echo "$user";?></p> </div>
 	<div class="opcoes">
-		<div class="yes"> <a href="to_play.php" accesskey="y">SameLevel </a> </div>
+		<div class="yes"> <a href="to_play.php" accesskey="y">Try Again </a> </div>
 	</div>
 	<div class="codi"> <p>Code:<?php echo "$searchfor";?> </p></div>
 </div>

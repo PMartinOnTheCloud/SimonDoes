@@ -10,11 +10,16 @@
 	<meta charset="utf-8">
 	<title>Home</title>
 	<link rel="stylesheet" type="text/css" href="CSS/All.css">
+	<link rel="stylesheet" type="text/css" href="CSS/SimonDoes.css">
+
 </head>
 <body>
 	<div class="header">
-		<h1 class="Logo">SimonDoes</h1>
+	<a class="Logo">SimonDoes</a>
+	<div class="header-right">
+		<a class="active" href="index.php" accesskey="h">Home</a>
 	</div>
+</div>
 
 	<div class="caja">
 	<a href="to_play.php" class="start" accesskey="s">START</a>
