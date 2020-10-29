@@ -20,7 +20,7 @@
 if (!isset($_SESSION['level'])){
 	$_SESSION['level'] = 0;
 }
-if (isset($_SESSION['Winpoints'])) {
+if (isset($_POST['Winpoints'])) {
 	$_SESSION['level'] +=1;
 }
 
@@ -37,7 +37,7 @@ if ($contents[$_SESSION['level']]) {
     $heigth=$codeline[2];
     $numberOfCeldasToIlluminate=$codeline[3];
     $secondsin=$codeline[4];
-    $code=$codeline[5];
+    $_SESSION['code']=$codeline[5];
 }
 
 $arrayOfCeldasToIlluminate = [];
