@@ -1,3 +1,6 @@
+<?php session_start();
+$user = $_SESSION['username']?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +20,7 @@
 		<p id="text"><mark class="correct">To win the game you need to press the correct boxes. </p>
 		<h3 id="text">But <mark class="important">be carefull!</mark> If you fail a single one you will <mark class="incorrect">lose the game!</mark></h3>
 		<p id="text">Win multiple games to increase the dificult of it by increasing the speed of the boxes to disapear and the number of it.</p>	
-		<p id="text">If you understood the instructions, enter a username and press <mark class="important"><strong>"CONTINUE".</mark></strong></p><br>
+		<p id="text">If you understood the instructions, enter a username and press <mark class="important"><strong>"CONTINUE".</mark></strong></p><br>	
 		</div>
 		<div id="second">
 			<form name='input' action='Home.php' method='post'>
@@ -26,8 +29,15 @@
           		</div>
           		<div class="container">
           			<label class="label" for="uname"><b>Username</b></label>
-          		 	<input type="text" placeholder="Enter Username" name="username" required>
-          		 	<button type="submit" accesskey="s">Continue</button>
+          			<?php  
+          				if (isset($user)) {
+          					echo "<input type=\"text\" value=\"$user\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\">Continue</button>";
+          				}
+          				else{
+          					echo "<input type=\"text\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\">Continue</button>";
+          				}
+          			?>	
+          		 	
           		 </div>
           	</form>
       </div>
