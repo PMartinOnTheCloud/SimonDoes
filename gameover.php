@@ -34,14 +34,11 @@ else {
 	<p> OVER </p>
 	</div>
 
-	<div class="continue"> <p><?php
-		$user = $_SESSION['username'];
-		echo "$user";?>     Code:<?php echo "$searchfor";?>  </p> </div>
-
+	<div class="user"> <p>Username: <?php $user = $_SESSION['username']; echo "$user";?></p> </div>
 	<div class="opcoes">
-		<div class="yes"> <a href="to_play.php" accesskey="y" > SameLevel </a> </div>
+		<div class="yes"> <a href="to_play.php" accesskey="y">SameLevel </a> </div>
 	</div>
-
+	<div class="codi"> <p>Code:<?php echo "$searchfor";?> </p></div>
 </div>
 </body>
 

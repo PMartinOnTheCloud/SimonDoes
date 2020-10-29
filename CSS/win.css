@@ -109,8 +109,35 @@ body {background: #191919;}
 img {
   width: 90px; height: 100px;
   margin-top: 0px;
-}
 
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        transform:scale(1);
+        -ms-transform:scale(1); 
+        -moz-transform:scale(1); 
+        -webkit-transform:scale(1); 
+        -o-transform:scale(1); 
+        -webkit-transition: all 500ms ease-in-out; 
+        -moz-transition: all 500ms ease-in-out; 
+        -ms-transition: all 500ms ease-in-out;
+        -o-transition: all 500ms ease-in-out;    
+    }        
+    
+        img:hover{
+            transform:scale(1.2);
+            -ms-transform:scale(1.2); 
+            -moz-transform:scale(1.2); 
+            -webkit-transform:scale(1.2); 
+            -o-transform:scale(1.2); 
+        }
+    
+
+
+
+
+
+/* Username */
 .user {
   width: 750px;
   height: auto;
