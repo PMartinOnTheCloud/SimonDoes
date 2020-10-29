@@ -16,9 +16,12 @@
 		<h1 class="Logo">SimonDoes</h1>
 	</div>
 
+	<div class="caja">
+	<a href="to_play.php" class="start" accesskey="s">START</a>
 
-	<a href="to_play.php" class="button" accesskey="s">START</a>
 
+	<a href="ranking.cfg" class="ranking" accesskey="r">Ranking</a>
+	</div>
 
 	<div class="footer">
         <p>Welcome, <?php echo $_SESSION["username"];?></p>

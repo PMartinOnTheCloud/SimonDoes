@@ -111,12 +111,12 @@ img {
   margin-top: 0px;
 }
 
-.continue {
+.user {
   width: 750px;
   height: auto;
   padding-top: 30px;}
 
-.continue p {
+.user p {
   margin-top: 0px;
   margin-bottom: 0px;
   text-align: center;
@@ -126,12 +126,6 @@ img {
   color: #6576b4;
   text-shadow: 2.5px 2.5px #000000;}
 
-.opcoes {
-  width: 550px;
-  height: auto;
-  padding-top: 30px;
-  margin: auto;}
-
 .yes a {
   text-align: center;
   font-size: 20px;
@@ -140,12 +134,14 @@ img {
   color: #6576b4;
   text-decoration: none;
   text-shadow: 2.5px 2.5px #000000;
-  padding: 25px 100px 25px 100px;
+  padding: 20px 20px 25px 20px;
   border: 1px solid #000000;
   border-radius: 20px;
   background: #000000;
   margin-right: 10px;
-  float: left;}
+  float: left;
+  margin-left: 20%;
+  margin-top: 1%;}
 
 
 
@@ -170,10 +166,13 @@ img {
   color: #6576b4;
   text-decoration: none;
   text-shadow: 2.5px 2.5px #000000;
-  padding: 25px 100px 25px 90px;
+  padding: 20px 20px 25px 20px;
   border-radius: 20px;
   background: #000000;
-  float: left;}
+  float: right;
+  margin-right: 20%;
+  margin-top: 1%;}
+
 
 
 @-webkit-keyframes animacao2 { from {-webkit-transform: scale(1);} 
@@ -186,3 +185,21 @@ img {
   -webkit-animation-timing-function:  linear;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;}
+
+
+/*Codigo*/
+
+.codi {
+  width: 750px;
+  height: auto;
+  padding-top: 100px;}
+
+.codi p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'Black Ops One', cursive;
+  color: #6576b4;
+  text-shadow: 2.5px 2.5px #000000;}

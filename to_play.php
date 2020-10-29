@@ -85,8 +85,7 @@ echo "</div>";
 <button accesskey="s" id='buttonStart' onclick="startGame(<?php echo "$secondsin"; ?>)">START</button>
 <button accesskey="k" id='buttonCheck' onclick="failOrGrace(<?php echo "$numberOfCeldasToIlluminate"; ?>)">CHECK</button>
 
-<script src="JS/to_play.js" type="text/javascript">
-</script>
+<script src="JS/to_play.js" type="text/javascript"></script>
 
 <div class="footer">
 	<p>Welcome, <?php
