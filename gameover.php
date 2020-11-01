@@ -11,6 +11,16 @@
  </head>
 
 <body>
+	<?php
+if (isset($level)) {
+    $searchfor = $level;
+
+}
+else {
+    $searchfor = 'S7781';
+
+}
+?>
 <div class="header">
 	<a class="Logo">SimonDoes</a>
 	<div class="header-right">
@@ -24,15 +34,11 @@
 	<p> OVER </p>
 	</div>
 
-	<div class="continue"> <p><?php
-		$user = $_SESSION['username'];
-		echo "$user";?> ,CONTINUE? </p> </div>
-
+	<div class="user"> <p>Username: <?php $user = $_SESSION['username']; echo "$user";?></p> </div>
 	<div class="opcoes">
-		<div class="yes"> <a href="to_play.php" accesskey="y" > YES </a> </div>
-		<div class="no"> <a href="Home.php" accesskey="n" > NO </a> </div>
+		<div class="yes"> <a href="to_play.php" accesskey="y">Try Again </a> </div>
 	</div>
-
+	<div class="codi"> <p>Code:<?php echo "$searchfor";?> </p></div>
 </div>
 </body>
 

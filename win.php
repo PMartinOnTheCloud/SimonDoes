@@ -9,7 +9,16 @@
 <title>Win</title>
 
  </head>
+ <?php
+if (isset($level)) {
+    $searchfor = $level;
 
+}
+else {
+    $searchfor = 'S7781';
+
+}
+?>
  <body>
  	<div class="header">
 	<a class="Logo">SimonDoes</a>
@@ -22,12 +31,14 @@
 	<p> YOU'VE WON </p>
 	<p><img src="Images/win.png"></p>
 	</div>
-	<div class="continue"> <p><?php
-		$user = $_SESSION['username'];
-		echo "$user";?> ,CONTINUE? </p> </div>
+	<div class="user"> <p>Username: <?php $user = $_SESSION['username']; echo "$user";?></p> </div>
 	<div class="opcoes">
-		<div class="yes"> <a href="to_play.php" accesskey="y"> YES </a> </div>
-		<div class="no"> <a href="Snivel.php" accesskey="n"> NextLevel </a> </div>
+		<div class="yes"> <a href="to_play.php" accesskey="y">Next Level <?php $_SESSION['level']+=1; ?></a> </div>
+		<div class="no"> <a href="to_play.php" accesskey="n">Try again </a> </div>
 	</div>
+	<div class="codi"> <p>Code:<?php echo "$level";?> </p></div>
 </div>
+<script src="JS/to_play.js" type="text/javascript"></script>
+
 </body>
+</html>
