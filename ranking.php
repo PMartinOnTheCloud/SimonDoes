@@ -18,6 +18,7 @@
     <?php
         $DatosRanking = fopen("ranking.cfg", "r");
         $listaPlayers = [];
+        sort($listaPlayers);
         while(!feof($DatosRanking)) {
             $SetPlayers = fgets($DatosRanking);
             $players = explode(';', $SetPlayers);
