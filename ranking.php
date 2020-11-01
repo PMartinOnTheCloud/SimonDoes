@@ -13,36 +13,40 @@
 		<a class="active" href="index.php" accesskey="h">Home</a>
 	</div>
 </div>
-
- <h1>Ranking</h1>
-    <?php
-        $DatosRanking = fopen("ranking.cfg", "r");
-        $listaPlayers = [];
-        sort($listaPlayers);
-        while(!feof($DatosRanking)) {
-            $SetPlayers = fgets($DatosRanking);
-            $players = explode(';', $SetPlayers);
-            array_push($listaPlayers, $players);
+<?php
+    $fileRanking = fopen("ranking.cfg", "rb");
+    $dataRanking = [];
+    while (!feof($fileRanking) ) {
+        $row = fgets($fileRanking);
+        $index = count($dataRanking);
+        $dataRanking[$index] = explode(';', $row);
+        array_splice($dataRanking[$index], 0, 1, explode(';', $dataRanking[$index][0]));
+    }
+    usort($dataRanking, function ($prev, $next) {
+        if ($prev[1] == $next[1]) {
+            return 0;
         }
-        fclose($DatosRanking);
-    ?>
-    <div class ="ranking">
-    	<table id="tabla">
+        return ($prev[1] < $next[1]) ? -1 : 1;
+    });
+    fclose($fileRanking);
+?>
+<table id="tabla">
+    <thead>
+        <tr>
             <th>Username</th>
             <th>Points</th>
-            <?php
-            foreach ($listaPlayers as $key => $players) {
-                echo "<tr>";
-                echo "<td>";
-                echo $players[0];
-                echo "</td>";
-                echo "<td>";
-                echo $players[1];
-                echo "</td>";
-                echo "</tr>";
-            }
-            ?>
-    	</table>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($dataRanking as $item): ?>
+            <tr>
+                <td><?= $item[0] ?></td>
+                <td><?= $item[1] ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+  </table>
+?> 
 	</div>
 <div class="footer">
 	<p>Welcome, <?php
