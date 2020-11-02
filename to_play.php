@@ -22,7 +22,7 @@ if (isset($level)) {
 
 }
 else {
-    $searchfor = 'B1010101';
+    $searchfor = 'S3324';
 
 }
 

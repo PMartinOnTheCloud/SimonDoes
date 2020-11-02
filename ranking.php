@@ -1,4 +1,9 @@
 <?php session_start();?>
+<?php
+      if (isset($_POST["username"])){
+        $_SESSION["username"] = $_POST["username"]; 
+    }
+      ?>
 <!DOCTYPE html>
 <html>
 <head>

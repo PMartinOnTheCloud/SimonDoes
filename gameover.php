@@ -16,10 +16,6 @@ if (isset($level)) {
     $searchfor = $level;
 
 }
-else {
-    $searchfor = 'S7781';
-
-}
 ?>
 <div class="header">
 	<a class="Logo">SimonDoes</a>
@@ -38,7 +34,6 @@ else {
 	<div class="opcoes">
 		<div class="yes"> <a href="to_play.php" accesskey="y">Try Again </a> </div>
 	</div>
-	<div class="codi"> <p>Code:<?php echo "$searchfor";?> </p></div>
 </div>
 </body>
 
