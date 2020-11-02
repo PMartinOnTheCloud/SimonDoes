@@ -26,7 +26,7 @@
         if ($prev[1] == $next[1]) {
             return 0;
         }
-        return ($prev[1] < $next[1]) ? -1 : 1;
+        return ($prev[1] > $next[1]) ? -1 : 1;
     });
     fclose($fileRanking);
 ?>
