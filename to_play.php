@@ -11,47 +11,35 @@
 <div class="header">
 	<a class="Logo">SimonDoes</a>
 	<div class="header-right">
-		<a class="active" href="index.php">Home</a>
+		<a class="active" href="index.php" accesskey="h">Home</a>
 	</div>
 </div>
 
 <?php
 
-if (isset($level)) {
-    $searchfor = $level;
-
+if (!isset($_SESSION['level'])){
+	$_SESSION['level'] = 0;
 }
 else {
-    $searchfor = 'S7781';
-
+    $searchfor = 'S3324';
 }
+
+
 
 $file = 'conf.txt';
- //<-- 
-// get the file contents, assuming the file to be readable (and exist)
-$contents = file_get_contents($file);
 
-// escape special characters in the query
-$pattern = preg_quote($searchfor, ',');
 
-$pattern = "/^.*$pattern.*\$/m";
-if(preg_match_all($pattern, $contents, $matches)){
-    foreach ($matches[0] as $point) {
-    	
-        $codeline=explode(",",$point);
-        $name=$codeline[0];
-        $width=$codeline[1];
-        $heigth=$codeline[2];
-        $numberOfCeldasToIlluminate=$codeline[3];
-        $secondsin=$codeline[4];
-        $code=$codeline[5];
+$contents = file($file, FILE_IGNORE_NEW_LINES);
 
-    }
-
+if ($contents[$_SESSION['level']]) {
+    $codeline=explode(",",$contents[$_SESSION['level']]);
+    $name=$codeline[0];
+    $width=$codeline[1];
+    $heigth=$codeline[2];
+    $numberOfCeldasToIlluminate=$codeline[3];
+    $secondsin=$codeline[4];
+    $_SESSION['code']=$codeline[5];
 }
-else{
-   echo "No matches found";
-} 
 
 $arrayOfCeldasToIlluminate = [];
 
@@ -81,13 +69,13 @@ for ($h=0;$h<$heigth;$h++){
 }
 
 echo "</div>";
+
 ?>
 
-<button id='buttonStart' onclick="startGame(<?php echo "$secondsin"; ?>)">START</button>
-<button id='buttonCheck' onclick="failOrGrace(<?php echo "$numberOfCeldasToIlluminate"; ?>)">CHECK</button>
+<button accesskey="s" id='buttonStart' onclick="startGame(<?php echo "$secondsin"; ?>)">START</button>
+<button accesskey="k" id='buttonCheck' onclick="failOrGrace(<?php echo "$numberOfCeldasToIlluminate"; ?>)">CHECK</button>
 
-<script src="JS/to_play.js" type="text/javascript">
-</script>
+<script src="JS/to_play.js" type="text/javascript"></script>
 
 <div class="footer">
 	<p>Welcome, <?php
