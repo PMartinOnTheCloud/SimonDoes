@@ -46,6 +46,11 @@ else {
 </form>
 </div>
 <div class="opcoes">
+<form method="post" action="ranking.php">
+		<div class="puntos"><button class="puntos" name="Retry" type="Submit">Save/Exit</button></div>
+</form>
+</div>
+<div class="opcoes">
 <form method="post" action="to_play.php">
 		<div class="no"><button class="no" name="Retry" type="Submit">Try Again</button></div>
 </form>

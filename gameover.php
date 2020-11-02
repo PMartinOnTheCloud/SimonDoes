@@ -32,8 +32,17 @@
 	</div>
 
 	<div class="user"> <p>Username: <?php $user = $_SESSION['username']; echo "$user";?></p> </div>
+
 	<div class="opcoes">
-		<div class="yes"> <a href="to_play.php" accesskey="y">Try Again </a> </div>
+		<form method="post" action="to_play.php">
+			<div class="yes"><button class="yes" name="Winpoints" type="Submit">Save/Exit</button></div>
+		</form>
+	</div>
+
+	<div class="opcoes">
+		<form method="post" action="to_play.php">
+			<div class="no"><button class="no" name="Retry" type="Submit">Try Again</button></div>
+		</form>
 	</div>
 
 	<div class="codi"> <p>Code:<?php echo "$code";?> </p></div>
