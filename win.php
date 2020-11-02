@@ -17,6 +17,10 @@ if (isset($level)) {
     $searchfor = $level;
 
 }
+//en caso de que llegue al ultimo nivel.
+//elseif (isset($level) && $_SESSION['level']==) {
+
+//}
 else {
     $searchfor = 'S7781';
 
@@ -36,9 +40,16 @@ else {
 	</div>
 	<div class="user"> <p>Username: <?php $user = $_SESSION['username']; echo "$user";?></p> </div>
 	<div class="opcoes">
-
-		<div class="yes" name="Winpoints"> <a href="to_play.php" accesskey="y">Next Level </a> </div>
-		<div class="no" name="Retry"> <a href="to_play.php" accesskey="n">Try again </a> </div>
+<div class="opcoes">
+<form method="post" action="to_play.php">
+		<div class="yes"><button class="yes" name="Winpoints" type="Submit">Next Level</button></div>
+</form>
+</div>
+<div class="opcoes">
+<form method="post" action="to_play.php">
+		<div class="no"><button class="no" name="Retry" type="Submit">Try Again</button></div>
+</form>
+</div>
 	</div>
 	<div class="codi"> <p>Code:<?php echo "$code";?> </p></div>
 

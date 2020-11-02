@@ -20,10 +20,12 @@
 if (!isset($_SESSION['level'])){
 	$_SESSION['level'] = 0;
 }
-else {
-    $searchfor = 'S3324';
 
-}	
+
+if (isset($_POST['Winpoints'])){
+	$_SESSION['level'] += 1;
+}
+
 
 
 $file = 'conf.txt';
