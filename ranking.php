@@ -22,7 +22,8 @@
             $players = explode(';', $ConjuntoPlayers);
             array_push($listaPlayers, $players);
         }
-
+        
+    	// ordenar matriz por índice de matriz 1
         usort($listaPlayers, function ($prevplayer, $nextplayer) {
         if ($prevplayer[1] == $nextplayer[1]) {
             return 0;
@@ -31,7 +32,7 @@
     });
         fclose($file);
     ?>
-    
+
     <table id="tabla">
             <th>UserName</th>
             <th>Points</th>
