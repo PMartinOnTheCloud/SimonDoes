@@ -1,4 +1,8 @@
-<?php session_start();?>
+<?php session_start();
+ if (isset($_SESSION["code"])){
+        $code = $_SESSION['code'];
+    }
+?>
 <!DOCTYPE html>
 <html>
 
@@ -32,7 +36,7 @@
 		<div class="yes"> <a href="to_play.php" accesskey="y">Try Again </a> </div>
 	</div>
 
-	
+	<div class="codi"> <p>Code:<?php echo "$code";?> </p></div>
 </div>
 </body>
 
