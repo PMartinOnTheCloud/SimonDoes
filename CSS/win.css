@@ -153,7 +153,7 @@ img {
   color: #6576b4;
   text-shadow: 2.5px 2.5px #000000;}
 
-.yes a {
+.yes button {
   text-align: center;
   font-size: 20px;
   font-weight: bold;
@@ -176,7 +176,7 @@ img {
                 to {-webkit-transform: scale(1.2);} }
 
 
-.yes a:hover {
+.yes button:hover {
   -webkit-animation-name: animacao2;
   -webkit-animation-duration: 0.8s;
   -webkit-animation-timing-function:  linear;
@@ -185,7 +185,7 @@ img {
 
 
 
-.no a {
+.no button {
   text-align: center;
   font-size: 20px;
   font-weight: bold;
@@ -206,7 +206,7 @@ img {
                 to {-webkit-transform: scale(1.2);} }
 
 
-.no a:hover {
+.no button:hover {
   -webkit-animation-name: animacao2;
   -webkit-animation-duration: 0.8s;
   -webkit-animation-timing-function:  linear;
