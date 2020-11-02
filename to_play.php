@@ -20,6 +20,10 @@
 if (!isset($_SESSION['level'])){
 	$_SESSION['level'] = 0;
 }
+//mirar mañana, el problema de esto es generar pastusername antes que esta funcion para que la pueda llamar, ¿donde?
+//if (isset($_SESSION['username'] && $_SESSION['username']!=$_SESSION['pastusername'])){
+//	$_SESSION['level'] = 0;
+//}
 
 
 if (isset($_POST['Winpoints'])){
