@@ -19,7 +19,7 @@
         $listaPlayers = [];
         while(!feof($file)) {
             $ConjuntoPlayers = fgets($file);
-            $players = explode(';', $ConjuntoPlayers);
+            $players = explode(',', $ConjuntoPlayers);
             array_push($listaPlayers, $players);
         }
         
@@ -28,7 +28,7 @@
         if ($prevplayer[1] == $nextplayer[1]) {
             return 0;
         }
-        return ($prevplayer[1] > $nextplayer[1]) ? -1 : 1;
+        return ($prevplayer[1] > $nextplayer[1])? -1 : 1;
     });
         fclose($file);
     ?>
