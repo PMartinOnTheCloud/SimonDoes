@@ -13,41 +13,41 @@
 		<a class="active" href="index.php" accesskey="h">Home</a>
 	</div>
 </div>
-<?php
-    $fileRanking = fopen("ranking.cfg", "rb");
-    $dataRanking = [];
-    while (!feof($fileRanking) ) {
-        $row = fgets($fileRanking);
-        $index = count($dataRanking);
-        $dataRanking[$index] = explode(';', $row);
-        array_splice($dataRanking[$index], 0, 1, explode(';', $dataRanking[$index][0]));
-    }
-    usort($dataRanking, function ($prev, $next) {
-        if ($prev[1] == $next[1]) {
+<h1>Ranking</h1>
+    <?php
+        $file = fopen("ranking.cfg", "r");
+        $listaPlayers = [];
+        while(!feof($file)) {
+            $ConjuntoPlayers = fgets($file);
+            $players = explode(';', $ConjuntoPlayers);
+            array_push($listaPlayers, $players);
+        }
+
+        usort($listaPlayers, function ($prevplayer, $nextplayer) {
+        if ($prevplayer[1] == $nextplayer[1]) {
             return 0;
         }
-        return ($prev[1] > $next[1]) ? -1 : 1;
+        return ($prevplayer[1] > $nextplayer[1]) ? -1 : 1;
     });
-    fclose($fileRanking);
-?>
-<table id="tabla">
-    <thead>
-        <tr>
-            <th>Username</th>
+        fclose($file);
+    ?>
+    
+    <table id="tabla">
+            <th>UserName</th>
             <th>Points</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php foreach ($dataRanking as $item): ?>
-            <tr>
-                <td><?= $item[0] ?></td>
-                <td><?= $item[1] ?></td>
-            </tr>
-        <?php endforeach; ?>
-    </tbody>
-  </table>
-?> 
-	</div>
+            <?php
+            	foreach ($listaPlayers as $key => $players) {
+                	echo "<tr>";
+                	echo "<td>";
+                	echo $players[0];
+                	echo "</td>";
+                	echo "<td>";
+                	echo $players[1];
+                	echo "</td>";
+                	echo "</tr>";
+            	}
+            ?>
+    </table>
 <div class="footer">
 	<p>Welcome, <?php
 		$user = $_SESSION['username'];
