@@ -22,12 +22,11 @@ if (!isset($_SESSION['level'])){
 }
 else {
     $searchfor = 'S3324';
-}
 
+}	
 
 
 $file = 'conf.txt';
-
 
 $contents = file($file, FILE_IGNORE_NEW_LINES);
 
