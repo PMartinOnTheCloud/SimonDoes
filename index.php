@@ -34,10 +34,10 @@
           			<label class="label" for="uname"><b>Username</b></label>
           			<?php  
           				if (isset($user)) {
-          					echo "<input type=\"text\" value=\"$user\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\">Continue</button>";
+          					echo "<input type=\"text\" value=\"$user\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" accesskey=\"c\">Continue</button>";
           				}
           				else{
-          					echo "<input type=\"text\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\">Continue</button>";
+          					echo "<input type=\"text\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" accesskey=\"c\">Continue</button>";
           				}
           			?>	
           		 	
