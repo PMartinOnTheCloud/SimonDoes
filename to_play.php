@@ -20,9 +20,6 @@
 if (!isset($_SESSION['level'])){
 	$_SESSION['level'] = 0;
 }
-if (isset($_POST['Winpoints'])) {
-	$_SESSION['level'] +=1;
-}
 
 
 
@@ -68,6 +65,7 @@ for ($h=0;$h<$heigth;$h++){
 }
 
 echo "</div>";
+
 ?>
 
 <button id='buttonStart' onclick="startGame(<?php echo "$secondsin"; ?>)">START</button>
