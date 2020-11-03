@@ -17,7 +17,7 @@
 <body>
 <?php
 
-$_SESSION["puntos"] -= 20;
+$_SESSION["points"] -= 20;
 
 ?>
 <div class="header">
@@ -36,7 +36,7 @@ $_SESSION["puntos"] -= 20;
 	<div class="user"> <p>Username: <?php $user = $_SESSION['username']; echo "$user";?></p> </div>
 
 	<div class="opcoes">
-		<form method="post" action="to_play.php">
+		<form method="post" action="ranking.php">
 			<div class="yes"><button class="yes" id="yes" name="saveandexit" type="Submit">Save/Exit</button></div>
 		</form>
 	</div>

@@ -1,4 +1,5 @@
 <?php session_start();?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +16,29 @@
 </div>
 <h1>Ranking</h1>
     <?php
+
+    if (isset($_POST['saveandexit'])) {
+    $username = $_SESSION['username'];
+    $points = $_SESSION['points'];
+    $filename = 'ranking.cfg';
+    $numlines = sizeof(file($filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES));
+    $fp = fopen($filename, 'a');
+    if ($numlines = 0) {
+        fwrite ($fp, $username.";".$points);
+    } else {
+        fwrite ($fp, "\n".$username.";".$points);
+    }
+    fclose ($fp);
+    $_SESSION['points'] = 0;
+    $_SESSION['level'] = 0;
+}
+
+
+
+
+
+
+
         $file = fopen("ranking.cfg", "r");
         $listaPlayers = [];
         while(!feof($file)) {

@@ -14,7 +14,7 @@
  </head>
  <?php
 
-$_SESSION['puntos'] += 100;
+$_SESSION['points'] += 100;
 
 ?>
  <body>

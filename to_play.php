@@ -14,7 +14,6 @@
 		<a class="active" href="index.php" accesskey="h">Home</a>
 	</div>
 </div>
-
 <?php
 
 if (!isset($_SESSION['pastname'])){
@@ -31,7 +30,7 @@ if (!isset($_SESSION['pastname'])){
 
 
 if (isset($_POST['RetryWin'])) {
-	$_SESSION -= 100; 
+	$_SESSION['points']-= 100; 
 }
 
 

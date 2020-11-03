@@ -33,6 +33,6 @@
 	<div class="footer">
         <p>Welcome, <?php echo $_SESSION["username"];?></p>
 	</div>
-<script src="JS/hotkey.js" type="text/javascript"></script>
+<script src="JS/hotkey_home.js" type="text/javascript"></script>
 </body>
 </html>
