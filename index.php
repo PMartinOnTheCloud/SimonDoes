@@ -42,7 +42,7 @@
           				}
           			?>	
           			
-          			<button id="ranking" accesskey="r"><a href="ranking.php" class="RANK" id="RANK">Ranking</a></button>
+          			<button id="ranking" accesskey=""><a href="ranking.php" class="RANK" id="RANK">Ranking</a></button>
 
           		 </div>
           	</form>
