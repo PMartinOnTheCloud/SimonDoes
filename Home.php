@@ -24,10 +24,10 @@
 </div>
 
 	<div class="caja">
-	<a href="to_play.php" class="start" accesskey="s">START</a>
+	<a id="start" href="to_play.php" class="start" accesskey="s">START</a>
 
 
-	<a href="ranking.php" class="ranking" accesskey="r">Ranking</a>
+	<a id="ranking" href="ranking.php" class="ranking" accesskey="r">Ranking</a>
 	</div>
 
 	<div class="footer">

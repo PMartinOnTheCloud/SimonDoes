@@ -15,12 +15,6 @@
 </div>
 <h1>Ranking</h1>
     <?php
-
-
-
-
-
-    
         $file = fopen("ranking.cfg", "r");
         $listaPlayers = [];
         while(!feof($file)) {
