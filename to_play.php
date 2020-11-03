@@ -17,15 +17,27 @@
 
 <?php
 
-if (!isset($_SESSION['level'])){
+if (!isset($_SESSION['pastname'])){
 	$_SESSION['level'] = 0;
+	$_SESSION['points'] = 0;
+	$_SESSION['pastname'] = $_SESSION['username'];
+} else {
+	if ($_SESSION['pastname'] != $_SESSION['username']) {
+		$_SESSION['level'] = 0;
+		$_SESSION['points'] = 0;
+		$_SESSION['pastname'] = $_SESSION['username'];
+	}
+}
+
+
+if (isset($_POST['RetryWin'])) {
+	$_SESSION -= 100; 
 }
 
 
 if (isset($_POST['Winpoints'])){
 	$_SESSION['level'] += 1;
 }
-
 
 
 $file = 'conf.txt';
@@ -77,6 +89,7 @@ echo "</div>";
 <button accesskey="k" id='buttonCheck' onclick="failOrGrace(<?php echo "$numberOfCeldasToIlluminate"; ?>)">CHECK</button>
 
 <script src="JS/to_play.js" type="text/javascript"></script>
+<script src="JS/hotkey_to_play.js" type="text/javascript"></script>
 
 <div class="footer">
 	<p>Welcome, <?php
