@@ -13,18 +13,9 @@
 
  </head>
  <?php
-if (isset($level)) {
-    $searchfor = $level;
 
-}
-//en caso de que llegue al ultimo nivel.
-//elseif (isset($level) && $_SESSION['level']==) {
+$_SESSION['puntos'] += 100;
 
-//}
-else {
-    $searchfor = 'S7781';
-
-}
 ?>
  <body>
  	<div class="header">
@@ -42,24 +33,23 @@ else {
 	<div class="opcoes">
 <div class="opcoes">
 <form method="post" action="to_play.php">
-		<div class="yes"><button class="yes" name="Winpoints" type="Submit">Next Level</button></div>
+		<div class="yes"><button class="yes" id="yes" name="Winpoints" type="Submit">Next Level</button></div>
 </form>
 </div>
 <div class="opcoes">
 <form method="post" action="ranking.php">
-		<div class="puntos"><button class="puntos" name="Retry" type="Submit">Save/Exit</button></div>
+		<div class="puntos"><button class="puntos" id="puntos" name="saveandexit" type="Submit">Save/Exit</button></div>
 </form>
 </div>
 <div class="opcoes">
 <form method="post" action="to_play.php">
-		<div class="no"><button class="no" name="Retry" type="Submit">Try Again</button></div>
+		<div class="no"><button class="no" name="RetryWin" id="no" type="Submit">Try Again</button></div>
 </form>
 </div>
 	</div>
 	<div class="codi"> <p>Code:<?php echo "$code";?> </p></div>
 
 </div>
-<script src="JS/to_play.js" type="text/javascript"></script>
-
+<script src="JS/hotkey_win.js" type="text/javascript"></script>
 </body>
 </html>
