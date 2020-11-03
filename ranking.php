@@ -10,11 +10,17 @@
 <div class="header">
 	<a class="Logo">SimonDoes</a>
 	<div class="header-right">
-		<a class="active" href="index.php" accesskey="h">Home</a>
+		<a class="active" href="index.php">Home</a>
 	</div>
 </div>
 <h1>Ranking</h1>
     <?php
+
+
+
+
+
+    
         $file = fopen("ranking.cfg", "r");
         $listaPlayers = [];
         while(!feof($file)) {
@@ -54,5 +60,6 @@
 		$user = $_SESSION['username'];
 		echo "$user";?></p>
 </div>
+<script src="JS/hotkey_ranking.js" type="text/javascript"></script>
 </body>
 </html>
