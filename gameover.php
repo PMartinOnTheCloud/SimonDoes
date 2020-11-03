@@ -15,7 +15,9 @@
  </head>
 
 <body>
-	<?php
+<?php
+
+$_SESSION["puntos"] -= 20;
 
 ?>
 <div class="header">
@@ -35,18 +37,19 @@
 
 	<div class="opcoes">
 		<form method="post" action="to_play.php">
-			<div class="yes"><button class="yes" name="Winpoints" type="Submit">Save/Exit</button></div>
+			<div class="yes"><button class="yes" id="yes" name="saveandexit" type="Submit">Save/Exit</button></div>
 		</form>
 	</div>
 
 	<div class="opcoes">
 		<form method="post" action="to_play.php">
-			<div class="no"><button class="no" name="Retry" type="Submit">Try Again</button></div>
+			<div class="no"><button class="no" id="no" name="RetryLose" type="Submit">Try Again</button></div>
 		</form>
 	</div>
 
 	<div class="codi"> <p>Code:<?php echo "$code";?> </p></div>
 </div>
+<script src="JS/hotkey_gameover.js" type="text/javascript"></script>
 </body>
 
 
