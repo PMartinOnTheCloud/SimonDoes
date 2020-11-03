@@ -7,10 +7,11 @@ function startGame(seconds) {
 
 function playerPlays() {
 	var celdas = document.getElementById('general').children;
+	var s = 0;
+	seconds = setInterval(function () { s += 1; },1000);
 	clearCeldas(celdas);
 	showButtonCheck();
 	addEventListenerToCeldas(celdas);
-	
 }
 
 function hideButtonStart(){
@@ -51,6 +52,7 @@ function checkCeldas(i,celdas) {
 
 
 function failOrGrace(numberOfCeldasToIlluminate){
+	clearInterval(seconds);
 	var correctCeldasId = getCorrectCeldasId(numberOfCeldasToIlluminate);
 	var coloredCeldasId = getColoredCeldasId();
 	var fallo = false;
