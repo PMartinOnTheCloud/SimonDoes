@@ -35,10 +35,10 @@
           			<?php  
           				if (isset($user)) {
 
-          					echo "<input type=\"text\" value=\"$user\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" accesskey=\"c\">Continue</button>";
+          					echo "<input type=\"text\" value=\"$user\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" id=\"button\">Continue</button>";
           				}
           				else{
-          					echo "<input type=\"text\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" accesskey=\"c\">Continue</button>";
+          					echo "<input type=\"text\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" id=\"button\">Continue</button>";
           				}
           			?>	
           		 	
@@ -49,5 +49,6 @@
 	<div class="footer">
 		<p class="footer">Creator: Adrian Pradas - Carlos Jurado - Pablo Martin </p>
 	</div>
+<script src="JS/hotkey_index.js" type="text/javascript"></script>
 </body>
 </html>
