@@ -1,0 +1,29 @@
+.ranking{
+	display: flex;
+	justify-content: center;
+}
+
+#tabla {
+  margin-left: auto;
+  margin-right: auto;
+  color: #7fff00;
+  font-size: 30px;
+  border-collapse: separate;
+  border-spacing: 20px;
+  text-align: center;
+}
+
+td {
+	border: #7fff00 2px solid;
+}
+
+h1 {
+    text-align:center;
+    color: #7fff00;
+    font-size: 40px;
+
+}
+
+table.class_color tr:last-child td{
+   background: #f00;
+}
