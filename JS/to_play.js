@@ -11,8 +11,7 @@ function playerPlays() {
 	scnds = setInterval(function () { s += 1; },1000);
 	clearCeldas(celdas);
 	showButtonCheck();
-	addEventListenerToCeldas(celdas);
-}
+	addEventListenerToCeldas(celdas);}
 
 function hideButtonStart(){
 	var buttonStart = document.getElementById('buttonStart');
