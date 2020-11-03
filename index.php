@@ -41,7 +41,8 @@
           					echo "<input type=\"text\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" id=\"button\">Continue</button>";
           				}
           			?>	
-
+          			
+          			<button id="ranking" accesskey="r"><a href="ranking.php" class="RANK" id="RANK">Ranking</a></button>
 
           		 </div>
           	</form>
