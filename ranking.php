@@ -33,12 +33,6 @@
     $_SESSION['level'] = 0;
 }
 
-
-
-
-
-
-
         $file = fopen("ranking.cfg", "r");
         $listaPlayers = [];
         while(!feof($file)) {
