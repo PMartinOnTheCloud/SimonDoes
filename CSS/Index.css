@@ -36,6 +36,7 @@ header {
 
 
 /*Contenido Section*/
+
 mark.important {
       
       font-weight: bold;
@@ -167,10 +168,13 @@ footer p {
 /* pantalla maximo 980px */
 @media screen and (max-width:980px) {
   .container {
-    width:98%;
+    width:100%;
   }
   section {
-    width:68%;
+    width:70%;
+  }
+  aside {
+    width:90%;
   }
 }
  
@@ -181,17 +185,13 @@ footer p {
     width:96%;
     font-size:1.2em;
   }
-  nav, section {
+  section {
     font-size:1.2em;
   }
   aside {
     margin-top:5px;
     background:#333;
     color: #fff;
-  }
-  nav ul {
-    float:none;
-    clear:both;
   }
 }
  
@@ -204,7 +204,7 @@ footer p {
     color: #fff;
     font-size:1.5em;
   }
-  nav, section {
+  section {
     font-size:1.5em;
   }
   section {
