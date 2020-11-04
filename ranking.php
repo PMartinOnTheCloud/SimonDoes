@@ -31,28 +31,24 @@
     fclose ($fp);
     $_SESSION['points'] = 0;
     $_SESSION['level'] = 0;
-}
+    }
 
 
-
-
-
-
-        $file = fopen("ranking.cfg", "r");
-        $listaPlayers = [];
-        while(!feof($file)) {
-            $ConjuntoPlayers = fgets($file);
-            $players = explode(';', $ConjuntoPlayers);
-            array_push($listaPlayers, $players);
+    $file = fopen("ranking.cfg", "r");
+    $listaPlayers = [];
+    while(!feof($file)) {
+        $ConjuntoPlayers = fgets($file);
+        $players = explode(';', $ConjuntoPlayers);
+        array_push($listaPlayers, $players);
         }
-    	// ordenar matriz por índice de matriz 1
+        // ordenar matriz por índice de matriz 1
         usort($listaPlayers, function ($prevplayer, $nextplayer) {
-        if ($prevplayer[1] == $nextplayer[1]) {
-            return 0;
-        }
-        return ($prevplayer[1] > $nextplayer[1]) ? -1 : 1;
-    });
-            fclose($file);
+            if ($prevplayer[1] == $nextplayer[1]) {
+                return 0;
+            }
+            return ($prevplayer[1] > $nextplayer[1]) ? -1 : 1;
+        });
+        fclose($file);
     ?>
 
     <table id="tabla">
