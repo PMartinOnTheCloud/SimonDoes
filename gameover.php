@@ -18,13 +18,14 @@
 <body>
 <?php
 
-$_SESSION["points"] -= 20;
-
+if ($_SESSION["points"] > 20){
+	$_SESSION["points"] -= 20;
+}
 ?>
 <div class="header">
 	<a class="Logo">SimonDoes</a>
 	<div class="header-right">
-		<a class="active" href="index.php" accesskey="h">Home</a>
+		<a class="active" href="index.php">Home</a>
 	</div>
 </div>
 <div id="gameover">

@@ -26,11 +26,11 @@
 		<p id="text">If you understood the instructions, enter a username and press <mark class="important"><strong>"CONTINUE".</mark></strong></p><br>	
 		</div>
 		<div id="second">
-			<form name='input' action='Home.php' method='post'>
           		<div class="imgcontainer">
           			<img src="Images/win.png" alt="Avatar" class="avatar">
           		</div>
           		<div class="container">
+          			<form name='input' action='Home.php' method='post'>
           			<label class="label" for="uname"><b>Username</b></label>
           			<?php  
           				if (isset($user)) {
@@ -40,11 +40,13 @@
           				else{
           					echo "<input type=\"text\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" id=\"button\">Continue</button>";
           				}
-          			?>
+          			?>	
+          			</form>
+          			<form action="ranking.php">
+          			<button id="ranking" type="submit">Ranking</button>
+          			</form>
           		 </div>
-          	</form>
       </div>
-      <a id="Rank" class="Rank" href="ranking.php" accesskey="r">Ranking</a>
 	</div>
 	<div class="footer">
 		<p class="footer">Creator: Adrian Pradas - Carlos Jurado - Pablo Martin </p>

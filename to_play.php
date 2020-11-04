@@ -11,7 +11,7 @@
 <div class="header">
 	<a class="Logo">SimonDoes</a>
 	<div class="header-right">
-		<a class="active" href="index.php" accesskey="h">Home</a>
+		<a class="active" href="index.php">Home</a>
 	</div>
 </div>
 <?php
@@ -84,8 +84,8 @@ echo "</div>";
 
 ?>
 
-<button accesskey="s" id='buttonStart' onclick="startGame(<?php echo "$secondsin"; ?>)">START</button>
-<button accesskey="k" id='buttonCheck' onclick="failOrGrace(<?php echo "$numberOfCeldasToIlluminate"; ?>)">CHECK</button>
+<button id='buttonStart' onclick="startGame(<?php echo "$secondsin"; ?>)">START</button>
+<button id='buttonCheck' onclick="failOrGrace(<?php echo "$numberOfCeldasToIlluminate"; ?>)">CHECK</button>
 
 <script src="JS/to_play.js" type="text/javascript"></script>
 <script src="JS/hotkey_to_play.js" type="text/javascript"></script>

@@ -19,15 +19,15 @@
 	<div class="header">
 	<a class="Logo">SimonDoes</a>
 	<div class="header-right">
-		<a class="active" href="index.php" accesskey="h">Home</a>
+		<a class="active" href="index.php" >Home</a>
 	</div>
 </div>
 
 	<div class="caja">
-	<a id="start" href="to_play.php" class="start" accesskey="s">START</a>
+	<a id="start" href="to_play.php" class="start">START</a>
 
 
-	<a id="ranking" href="ranking.php" class="ranking" accesskey="r">Ranking</a>
+	<a id="ranking" href="ranking.php" class="ranking">Ranking</a>
 	</div>
 
 	<div class="footer">
