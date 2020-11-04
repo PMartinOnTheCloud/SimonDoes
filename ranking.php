@@ -22,7 +22,7 @@
     $points = $_SESSION['points'];
     $filename = 'ranking.cfg';
     $numlines = sizeof(file($filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES));
-    $fp = fopen($filename, 'a+');
+    $fp = fopen($filename, 'a');
     if ($numlines = 0) {
         fwrite ($fp, $username.";".$points);
     } else {
