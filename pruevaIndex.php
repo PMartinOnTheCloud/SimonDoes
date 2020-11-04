@@ -16,7 +16,7 @@
 	</header>
 <!-- Finaliza Header -->
 
-<!-- Empieza Seccion de contenido -->
+<!-- Empieza Explicacion -->
 	<section>
 		<p id="text">To start the game just press the <mark class="important">START</mark> button.
 		<p id="text">When the game starts a table box will appear, after that a few boxes will light up. </p>
@@ -25,9 +25,9 @@
 		<p id="text">Win multiple games to increase the dificult of it by increasing the speed of the boxes to disapear and the number of it.</p>	
 		<p id="text">If you understood the instructions, enter a username and press <mark class="important"><strong>"CONTINUE".</mark></strong></p><br>
 	</section>
-<!-- Finaliza Seccion de contenido -->
+<!-- Finaliza Explicacion -->
  
-<!-- Empieza barra lateral -->
+<!-- Empieza Form Username -->
 	<aside>
    <div class="imgcontainer">
         <img src="Images/win.png" alt="Avatar" class="avatar">
@@ -47,13 +47,13 @@
         <button id="ranking" type="submit">Ranking</button>
       </form>
   	</aside>
-<!-- Finaliza barra lateral -->
+<!-- Finaliza Form Username -->
  
-<!-- Empieza pie de pagina -->
+<!-- Empieza Footer -->
 	<footer>
 		<p class="foot">Creator: Adrian Pradas - Carlos Jurado - Pablo Martin </p>
 	</footer>
-<!-- Empieza pie de pagina -->
+<!-- Empieza Footer -->
  
 </div>
 </body>

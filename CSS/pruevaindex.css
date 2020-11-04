@@ -77,14 +77,14 @@ section {
   float: left;
   width: 50%;
   background-color:#3d3d3d;
-  border: 10px solid red;
+  border: 1px solid red;
 }
 aside {
   float: right;
   width: 40%;
   background-color:#3d3d3d;
   color: #333;
-  border: 10px solid blue;
+  border: 1px solid blue;
 }
 
 
