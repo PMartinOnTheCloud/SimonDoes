@@ -1,12 +1,15 @@
 <?php session_start();
-$user = $_SESSION['username']?>
+   if (isset($_SESSION["username"])){
+        $user = $_SESSION['username'];
+    }
+?>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Instructions</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="CSS/All.css">
+	<link rel="stylesheet" type="text/css" href="CSS/Index.css">
 	
 </head>
 <body>
@@ -14,6 +17,7 @@ $user = $_SESSION['username']?>
 		<h1 class="Logo">Welcome to SimonDone! </h1>
 	</div>
 	<div id="wrapper" class="clearfix">
+
 		<div id="first">	
 		<p id="text">To start the game just press the <mark class="important">START</mark> button.
 		<p id="text">When the game starts a table box will appear, after that a few boxes will light up. </p>
@@ -22,28 +26,30 @@ $user = $_SESSION['username']?>
 		<p id="text">Win multiple games to increase the dificult of it by increasing the speed of the boxes to disapear and the number of it.</p>	
 		<p id="text">If you understood the instructions, enter a username and press <mark class="important"><strong>"CONTINUE".</mark></strong></p><br>	
 		</div>
-		<div id="second">
-			<form name='input' action='Home.php' method='post'>
-          		<div class="imgcontainer">
-          			<img src="Images/win.png" alt="Avatar" class="avatar">
-          		</div>
-          		<div class="container">
-          			<label class="label" for="uname"><b>Username</b></label>
-          			<?php  
-          				if (isset($user)) {
-          					echo "<input type=\"text\" value=\"$user\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" accesskey=\"c\">Continue</button>";
-          				}
-          				else{
-          					echo "<input type=\"text\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" accesskey=\"c\">Continue</button>";
-          				}
-          			?>	
-          		 	
-          		 </div>
-          	</form>
+
+    <div id="second">
+      <div class="imgcontainer">
+        <img src="Images/win.png" alt="Avatar" class="avatar">
       </div>
-	</div>
+      <form name='input' action='to_play.php' method='post'>
+        <label class="label" for="uname"><b>Username</b></label>
+        <?php 
+          if (isset($user)) {
+            echo "<input type=\"text\" value=\"$user\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" id=\"button\">Continue</button>";
+          }
+          else{
+            echo "<input type=\"text\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" id=\"button\">Continue</button>";
+          }
+        ?>  
+      </form>
+      <form action="ranking.php">
+        <button id="ranking" type="submit">Ranking</button>
+      </form>
+    </div>
+  </div>
 	<div class="footer">
-		<p class="footer">Creator: Adrian Pradas - Carlos Jurado - Pablo Martin </p>
+		<p class="foot">Creator: Adrian Pradas - Carlos Jurado - Pablo Martin </p>
 	</div>
+<script src="JS/hotkey_index.js" type="text/javascript"></script>
 </body>
 </html>

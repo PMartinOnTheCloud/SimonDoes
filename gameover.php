@@ -1,4 +1,8 @@
-<?php session_start();?>
+<?php session_start();
+ if (isset($_SESSION["code"])){
+        $code = $_SESSION['code'];
+    }
+?>
 <!DOCTYPE html>
 <html>
 
@@ -10,17 +14,18 @@
 
  </head>
 
-<body>
-	<?php
-if (isset($level)) {
-    $searchfor = $level;
 
+<body>
+<?php
+
+if ($_SESSION["points"] > 20){
+	$_SESSION["points"] -= 20;
 }
 ?>
 <div class="header">
 	<a class="Logo">SimonDoes</a>
 	<div class="header-right">
-		<a class="active" href="index.php" accesskey="h">Home</a>
+		<a class="active" href="index.php">Home</a>
 	</div>
 </div>
 <div id="gameover">
@@ -31,10 +36,22 @@ if (isset($level)) {
 	</div>
 
 	<div class="user"> <p>Username: <?php $user = $_SESSION['username']; echo "$user";?></p> </div>
+
 	<div class="opcoes">
-		<div class="yes"> <a href="to_play.php" accesskey="y">Try Again </a> </div>
+		<form method="post" action="ranking.php">
+			<div class="yes"><button class="yes" id="yes" name="saveandexit" type="Submit">Save/Exit</button></div>
+		</form>
 	</div>
+
+	<div class="opcoes">
+		<form method="post" action="to_play.php">
+			<div class="no"><button class="no" id="no" name="RetryLose" type="Submit">Try Again</button></div>
+		</form>
+	</div>
+
+	<div class="codi"> <p>Code:<?php echo "$code";?> </p></div>
 </div>
+<script src="JS/hotkey_gameover.js" type="text/javascript"></script>
 </body>
 
 

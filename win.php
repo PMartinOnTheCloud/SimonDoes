@@ -13,20 +13,15 @@
 
  </head>
  <?php
-if (isset($level)) {
-    $searchfor = $level;
 
-}
-else {
-    $searchfor = 'S7781';
+$_SESSION['points'] += 100;
 
-}
 ?>
  <body>
  	<div class="header">
 	<a class="Logo">SimonDoes</a>
 	<div class="header-right">
-		<a class="active" href="index.php" accesskey="h">Home</a>
+		<a class="active" href="index.php">Home</a>
 	</div>
 </div>
  	<div id="win">
@@ -36,12 +31,25 @@ else {
 	</div>
 	<div class="user"> <p>Username: <?php $user = $_SESSION['username']; echo "$user";?></p> </div>
 	<div class="opcoes">
-		<div class="yes" name="Winpoints"> <a href="to_play.php" accesskey="y">Next Level </a> </div>
-		<div class="no" name="Retry"> <a href="to_play.php" accesskey="n">Try again </a> </div>
+<div class="opcoes">
+<form method="post" action="to_play.php">
+		<div class="yes"><button class="yes" id="yes" name="Winpoints" type="Submit">Next Level</button></div>
+</form>
+</div>
+<div class="opcoes">
+<form method="post" action="ranking.php">
+		<div class="puntos"><button class="puntos" id="puntos" name="saveandexit" type="Submit">Save/Exit</button></div>
+</form>
+</div>
+<div class="opcoes">
+<form method="post" action="to_play.php">
+		<div class="no"><button class="no" name="RetryWin" id="no" type="Submit">Try Again</button></div>
+</form>
+</div>
 	</div>
 	<div class="codi"> <p>Code:<?php echo "$code";?> </p></div>
-</div>
-<script src="JS/to_play.js" type="text/javascript"></script>
 
+</div>
+<script src="JS/hotkey_win.js" type="text/javascript"></script>
 </body>
 </html>

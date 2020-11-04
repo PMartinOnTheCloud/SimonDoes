@@ -1,4 +1,9 @@
 <?php session_start();?>
+<?php
+      if (isset($_POST["username"])){
+        $_SESSION["username"] = $_POST["username"]; 
+    }
+      ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,46 +16,47 @@
 <div class="header">
 	<a class="Logo">SimonDoes</a>
 	<div class="header-right">
-		<a class="active" href="index.php" accesskey="h">Home</a>
+		<a class="active" href="index.php">Home</a>
 	</div>
 </div>
-
 <?php
 
-if (isset($level)) {
-    $searchfor = $level;
-
+if (!isset($_SESSION['pastname'])){
+	$_SESSION['level'] = 0;
+	$_SESSION['points'] = 0;
+	$_SESSION['pastname'] = $_SESSION['username'];
+} else {
+	if ($_SESSION['pastname'] != $_SESSION['username']) {
+		$_SESSION['level'] = 0;
+		$_SESSION['points'] = 0;
+		$_SESSION['pastname'] = $_SESSION['username'];
+	}
 }
-else {
-    $searchfor = 'S3324';
 
+
+if (isset($_POST['RetryWin'])) {
+	$_SESSION['points']-= 100; 
 }
+
+
+if (isset($_POST['Winpoints'])){
+	$_SESSION['level'] += 1;
+}
+
 
 $file = 'conf.txt';
- //<-- 
-// get the file contents, assuming the file to be readable (and exist)
-$contents = file_get_contents($file);
 
-// escape special characters in the query
-$pattern = preg_quote($searchfor, ',');
+$contents = file($file, FILE_IGNORE_NEW_LINES);
 
-$pattern = "/^.*$pattern.*\$/m";
-if(preg_match_all($pattern, $contents, $matches)){
-    foreach ($matches[0] as $point) {
-        $codeline=explode(",",$point);
-        $name=$codeline[0];
-        $width=$codeline[1];
-        $heigth=$codeline[2];
-        $numberOfCeldasToIlluminate=$codeline[3];
-        $secondsin=$codeline[4];
-        $code=$codeline[5];
-
-    }
-
+if ($contents[$_SESSION['level']]) {
+    $codeline=explode(",",$contents[$_SESSION['level']]);
+    $name=$codeline[0];
+    $width=$codeline[1];
+    $heigth=$codeline[2];
+    $numberOfCeldasToIlluminate=$codeline[3];
+    $secondsin=$codeline[4];
+    $_SESSION['code']=$codeline[5];
 }
-else{
-   echo "No matches found";
-} 
 
 $arrayOfCeldasToIlluminate = [];
 
@@ -80,12 +86,14 @@ for ($h=0;$h<$heigth;$h++){
 }
 
 echo "</div>";
+
 ?>
 
-<button accesskey="s" id='buttonStart' onclick="startGame(<?php echo "$secondsin"; ?>)">START</button>
-<button accesskey="k" id='buttonCheck' onclick="failOrGrace(<?php echo "$numberOfCeldasToIlluminate"; ?>)">CHECK</button>
+<button id='buttonStart' onclick="startGame(<?php echo "$secondsin"; ?>)">START</button>
+<button id='buttonCheck' onclick="failOrGrace(<?php echo "$numberOfCeldasToIlluminate"; ?>)">CHECK</button>
 
 <script src="JS/to_play.js" type="text/javascript"></script>
+<script src="JS/hotkey_to_play.js" type="text/javascript"></script>
 
 <div class="footer">
 	<p>Welcome, <?php
