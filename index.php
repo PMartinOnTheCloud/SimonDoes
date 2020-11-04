@@ -24,6 +24,9 @@
 		<h3 id="text">But <mark class="important">be carefull!</mark> If you fail a single one you will <mark class="incorrect">lose the game!</mark></h3>
 		<p id="text">Win multiple games to increase the dificult of it by increasing the speed of the boxes to disapear and the number of it.</p>	
 		<p id="text">If you understood the instructions, enter a username and press <mark class="important"><strong>"CONTINUE".</mark></strong></p><br>	
+		<form method="post" action="ranking.php">
+			<button class="no" name="RetryWin" id="ranking" type="Submit">Ranking</button>
+		</form>
 		</div>
 		<div id="second">
 			<form name='input' action='Home.php' method='post'>
@@ -41,9 +44,6 @@
           					echo "<input type=\"text\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" id=\"button\">Continue</button>";
           				}
           			?>	
-          			
-          			<button id="ranking" accesskey=""><a href="ranking.php" class="RANK" id="RANK">Ranking</a></button>
-
           		 </div>
           	</form>
       </div>
