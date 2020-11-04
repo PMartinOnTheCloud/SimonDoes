@@ -216,6 +216,7 @@ button {
   margin: 8px 0;
   border: none;
   cursor: pointer;
+  font-size: 20px;
   width: 100%;
   font-size: 20px;
 }
@@ -223,6 +224,30 @@ button {
 button:hover {
   opacity: 0.8;
 }
+
+
+
+button#ranking {
+  background-color: #191919;
+  color: #7fff00;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  width: 100%;
+  margin-top: 19.5%;
+}
+
+button#ranking:hover {
+  opacity: 0.8;
+}
+
+a.RANK{
+  color:#7fff00;
+  text-decoration: none;
+}
+
 
 .imgcontainer {
   text-align: center;

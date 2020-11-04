@@ -16,4 +16,6 @@ Run apache and execute at your browser (localhost/'your directory name')
  - Carlos Jurado
  - Pablo Martin
 
-## [Retrospectiva](https://github.com/PMartinOnTheCloud/SimonDoes/wiki/Restrospective-Sprint-1)
+## [Ranking Explanation](https://github.com/PMartinOnTheCloud/SimonDoes/wiki/Ranking-Explanation)
+## [Retrospectiva-1](https://github.com/PMartinOnTheCloud/SimonDoes/wiki/Restrospective-Sprint-1)
+## [Retrospectiva-2](https://github.com/PMartinOnTheCloud/SimonDoes/wiki/Restrospective-Sprint-2)
