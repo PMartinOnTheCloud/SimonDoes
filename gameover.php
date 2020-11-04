@@ -18,8 +18,9 @@
 <body>
 <?php
 
-$_SESSION["points"] -= 20;
-
+if ($_SESSION["points"] > 20){
+	$_SESSION["points"] -= 20;
+}
 ?>
 <div class="header">
 	<a class="Logo">SimonDoes</a>
