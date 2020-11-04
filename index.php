@@ -40,7 +40,7 @@
           				else{
           					echo "<input type=\"text\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" id=\"button\">Continue</button>";
           				}
-          			?>	
+          			?>
           		 </div>
           	</form>
       </div>
