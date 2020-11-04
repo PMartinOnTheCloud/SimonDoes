@@ -216,6 +216,7 @@ button {
   border: none;
   cursor: pointer;
   width: 100%;
+  font-size: 20px;
 }
 
 button:hover {
@@ -294,4 +295,20 @@ button#continue{
 #second {
     float:left;
     width:50%;
+}
+
+
+
+a.Rank{
+   background-color: #191919;
+  color: #7fff00;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 48%;
+  top: 65%;
+  left: 51%;
+  position: absolute;
+  text-align: center;
 }

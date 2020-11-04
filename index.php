@@ -41,11 +41,10 @@
           					echo "<input type=\"text\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" id=\"button\">Continue</button>";
           				}
           			?>	
-
-
           		 </div>
           	</form>
       </div>
+      <a id="Rank" class="Rank" href="ranking.php" accesskey="r">Ranking</a>
 	</div>
 	<div class="footer">
 		<p class="footer">Creator: Adrian Pradas - Carlos Jurado - Pablo Martin </p>
