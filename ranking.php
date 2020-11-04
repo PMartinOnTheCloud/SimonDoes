@@ -23,7 +23,7 @@
     $filename = 'ranking.cfg';
     $numlines = sizeof(file($filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES));
     $fp = fopen($filename, 'a');
-    if ($numlines = 0) {
+    if ($numlines == 0) {
         fwrite ($fp, $username.";".$points);
     } else {
         fwrite ($fp, "\n".$username.";".$points);
@@ -33,6 +33,11 @@
     $_SESSION['level'] = 0;
 }
 
+
+
+
+
+
         $file = fopen("ranking.cfg", "r");
         $listaPlayers = [];
         while(!feof($file)) {
@@ -40,7 +45,6 @@
             $players = explode(';', $ConjuntoPlayers);
             array_push($listaPlayers, $players);
         }
-        
     	// ordenar matriz por índice de matriz 1
         usort($listaPlayers, function ($prevplayer, $nextplayer) {
         if ($prevplayer[1] == $nextplayer[1]) {
@@ -48,13 +52,18 @@
         }
         return ($prevplayer[1] > $nextplayer[1]) ? -1 : 1;
     });
-        fclose($file);
+            fclose($file);
     ?>
 
     <table id="tabla">
+            <tr>
             <th>UserName</th>
             <th>Points</th>
+            </tr>
             <?php
+            $filename = 'ranking.cfg';
+            $numlines = sizeof(file($filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES));
+            if ($numlines != 0) {
             	foreach ($listaPlayers as $key => $players) {
                 	echo "<tr>";
                 	echo "<td>";
@@ -65,12 +74,14 @@
                 	echo "</td>";
                 	echo "</tr>";
             	}
+            }
             ?>
     </table>
 <div class="footer">
-	<p>Welcome, <?php
+	<p><?php if (isset($_SESSION['username'])) {
+		echo "Welcome, ";
 		$user = $_SESSION['username'];
-		echo "$user";?></p>
+		echo "$user";}?></p>
 </div>
 <script src="JS/hotkey_ranking.js" type="text/javascript"></script>
 </body>
