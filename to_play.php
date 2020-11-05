@@ -37,7 +37,6 @@ if(isset($_SESSION["codelevel"])){
 		for ($i=0; $i < sizeof($contents); $i++) { 
 			if (strpos($contents[$i], $_SESSION["codelevel"])) {
 				$line=$i;
-				
 				}
 			}
 		}
@@ -48,10 +47,7 @@ if(isset($_SESSION["codelevel"])){
 else{
 	$_SESSION['codelevel']='S3324';
 }
-		
-	
 
-//usuario y niveles
 
 //puntos
 if (isset($_POST['RetryWin'])) {
@@ -62,12 +58,11 @@ if (isset($_POST['RetryWin'])) {
 if (isset($_POST['Winpoints'])){
 	$_SESSION['level'] += 1;
 }
-
-
-
 //definir nivel
 if (isset($_SESSION['codelevel'])&& isset($line)) {
-	$_SESSION['level']=$line;
+	if (!isset($_POST['Winpoints'])) {
+		$_SESSION['level']=$line;
+	}
     $codeline=explode(",",$contents[$_SESSION['level']]);
     $name=$codeline[0];
     $width=$codeline[1];
@@ -75,8 +70,8 @@ if (isset($_SESSION['codelevel'])&& isset($line)) {
     $numberOfCeldasToIlluminate=$codeline[3];
     $secondsin=$codeline[4];
     $_SESSION['code']=$codeline[5];
-    //$_SESSION['codelevel']='0';
     
+    //usuario y niveles
     if (!isset($_SESSION['pastname'])){
 		$_SESSION['points'] = 0;
 		$_SESSION['pastname'] = $_SESSION['username'];}
@@ -85,7 +80,6 @@ if (isset($_SESSION['codelevel'])&& isset($line)) {
 		$_SESSION['pastname'] = $_SESSION['username'];
 
 	}
-
 }
 
 else{
