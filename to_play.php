@@ -1,4 +1,13 @@
 <?php session_start();?>
+<?php
+      if (isset($_POST["username"])){
+        $_SESSION["username"] = $_POST["username"]; 
+    }
+
+      if (isset($_POST["codelevel"])){
+        $_SESSION["codelevel"] = $_POST["codelevel"];
+    }
+    ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,20 +24,36 @@
 	</div>
 </div>
 <?php
+//codigo para coger lvl concreto
+$file = 'conf.txt';
 
-if (!isset($_SESSION['pastname'])){
-	$_SESSION['level'] = 0;
-	$_SESSION['points'] = 0;
-	$_SESSION['pastname'] = $_SESSION['username'];
-} else {
-	if ($_SESSION['pastname'] != $_SESSION['username']) {
-		$_SESSION['level'] = 0;
-		$_SESSION['points'] = 0;
-		$_SESSION['pastname'] = $_SESSION['username'];
-	}
+$contents = file($file, FILE_IGNORE_NEW_LINES);
+//existe el codigo? y lo coge
+
+
+if(isset($_SESSION["codelevel"])){
+	if (!empty($_SESSION['codelevel'])){
+	
+		for ($i=0; $i < sizeof($contents); $i++) { 
+			if (strpos($contents[$i], $_SESSION["codelevel"])) {
+				$line=$i;
+				
+				}
+			}
+		}
+	else{
+		$_SESSION['codelevel']='a';
+	}	
 }
+else{
+	$_SESSION['codelevel']='S3324';
+}
+		
+	
 
+//usuario y niveles
 
+//puntos
 if (isset($_POST['RetryWin'])) {
 	$_SESSION['points']-= 100; 
 }
@@ -39,11 +64,10 @@ if (isset($_POST['Winpoints'])){
 }
 
 
-$file = 'conf.txt';
 
-$contents = file($file, FILE_IGNORE_NEW_LINES);
-
-if ($contents[$_SESSION['level']]) {
+//definir nivel
+if (isset($_SESSION['codelevel'])&& isset($line)) {
+	$_SESSION['level']=$line;
     $codeline=explode(",",$contents[$_SESSION['level']]);
     $name=$codeline[0];
     $width=$codeline[1];
@@ -51,7 +75,42 @@ if ($contents[$_SESSION['level']]) {
     $numberOfCeldasToIlluminate=$codeline[3];
     $secondsin=$codeline[4];
     $_SESSION['code']=$codeline[5];
+    //$_SESSION['codelevel']='0';
+    
+    if (!isset($_SESSION['pastname'])){
+		$_SESSION['points'] = 0;
+		$_SESSION['pastname'] = $_SESSION['username'];}
+
+	else{
+		$_SESSION['pastname'] = $_SESSION['username'];
+
+	}
+
 }
+
+else{
+	if (!isset($_SESSION['pastname'])){
+		$_SESSION['level'] = 0;
+		$_SESSION['points'] = 0;
+		$_SESSION['pastname'] = $_SESSION['username'];
+	} else {
+		if ($_SESSION['pastname'] != $_SESSION['username']) {
+			$_SESSION['level'] = 0;
+			$_SESSION['points'] = 0;
+			$_SESSION['pastname'] = $_SESSION['username'];
+		}
+	}
+    $codeline=explode(",",$contents[$_SESSION['level']]);
+    $name=$codeline[0];
+    $width=$codeline[1];
+    $heigth=$codeline[2];
+    $numberOfCeldasToIlluminate=$codeline[3];
+    $secondsin=$codeline[4];
+    $_SESSION['code']=$codeline[5];
+   
+	
+}
+
 
 $arrayOfCeldasToIlluminate = [];
 

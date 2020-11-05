@@ -30,7 +30,7 @@
           			<img src="Images/win.png" alt="Avatar" class="avatar">
           		</div>
           		<div class="container">
-          			<form name='input' action='Home.php' method='post'>
+          			<form name='input' action='to_play.php' method='post'>
           			<label class="label" for="uname"><b>Username</b></label>
           			<?php  
           				if (isset($user)) {
@@ -40,7 +40,9 @@
           				else{
           					echo "<input type=\"text\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" id=\"button\">Continue</button>";
           				}
-          			?>	
+          			?>
+                <label>Code:</label> 
+                <input type="text" name="codelevel">	
           			</form>
           			<form action="ranking.php">
           			<button id="ranking" type="submit">Ranking</button>
