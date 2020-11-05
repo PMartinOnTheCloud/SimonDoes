@@ -69,7 +69,7 @@ h3#text{
 
 /*Section and Aside*/
 
-section,aside {
+section,#aside {
   padding: 10px;
   -moz-border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;border-radius:3px;
 }
@@ -173,14 +173,14 @@ footer p {
   section {
     width:70%;
   }
-  aside {
+  #aside {
     width:90%;
   }
 }
  
 /* pantalla maximo 700px */
 @media screen and (max-width:700px) {
-  aside,section {
+  #aside,section {
     float:none;
     width:96%;
     font-size:1.2em;
@@ -188,7 +188,7 @@ footer p {
   section {
     font-size:1.2em;
   }
-  aside {
+  #aside {
     margin-top:5px;
     background:#333;
     color: #fff;
@@ -209,5 +209,23 @@ footer p {
   }
   section {
     width:94%;
+  }
+}
+
+/* pantalla maximo 700px */
+@media screen and (max-width:800px) {
+  aside,section {
+    float:none;
+    width:95%;
+    font-size:1.2em;
+  }
+  section {
+    font-size:1.2em;
+  }
+  aside {
+    margin-top:5px;
+    background:#333;
+    color: #fff;
+    margin-bottom: 10%;
   }
 }

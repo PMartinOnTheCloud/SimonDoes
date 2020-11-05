@@ -4,47 +4,42 @@
 	<title>PruevaWin</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<LINK REL="stylesheet" TYPE="text/css" HREF="CSS/pruevaWin.css">
+	<link href='https://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div class="container">
-
-		<div id="header">
+	<div class="Container">
+		<div id="Header">
 			<a class="Logo">SimonDoes</a>
-			<div class="header-right">
-				<a class="active" href="index.php">Home</a>
+			<div class="Header-right">
+				<a class="Active" href="index.php">Home</a>
 			</div>
 		</div>
 
-		<div id="win">
-			<div class="win">
-				<p> YOU'VE WON </p>
-				<img src="Images/win.png">
+			<div class="Title">
+				<div class="Win">YOU'VE WON.</div>
+				<div class="Img">
+					<img src="Images/win.png" class=".vert-move">
+				</div>
 			</div>
 			
-			<div class="user"> 
-				<p>Username:</p>
+			<div class="User"> 
+				<p>Username: Adrian</p>
 			</div>
 
-			<div class="relative">
-				<div class="opcoes">
-					<form method="post" action="to_play.php">
-						<div class="item"><button class="TryAgain" name="RetryWin" id="TryAgain" type="Submit">Try Again</button></div>
+			<div class="Relative">
+				<form method="post" action="to_play.php">
+						<button class="NextLevel" id="NextLevel" name="NextLevel" type="Submit">Next Level</button>
 					</form>
-				</div>
-
-				<div class="opcoes">
+					<form method="post" action="to_play.php">
+						<button class="TryAgain" name="TryAgain" id="TryAgain" type="Submit">Try Again</button>
+					</form>
 					<form method="post" action="ranking.php">
-						<div class="item"><button class="SaveExit" id="SaveExit" name="saveandexit" type="Submit">Save/Exit</button></div>
+						<button class="SaveExit" id="SaveExit" name="SaveExit" type="Submit">Save/Exit</button>
 					</form>
-				</div>
-
-				<div class="opcoes">
-					<form method="post" action="to_play.php">
-						<div class="item"><button class="NextLevel" id="NextLevel" name="Winpoints" type="Submit">Next Level</button></div>
-					</form>
-				</div>
 			</div>
-		</div>
+			<div class="Code">
+				<p>Code:R3323 </p>
+			</div>
 	</div>
 </body>
 </html>
