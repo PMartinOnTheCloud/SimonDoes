@@ -77,14 +77,15 @@ background: #191919;}
 
 #win { 
 	background: yellow;
-        width: 50%;       
-        height: 50%;
-        position: absolute;
-        top:30%;
-        left: 30%;           
-        margin-top: -100px;
-        margin-left: -100px;
-     -webkit-animation-name: animacao1;
+    width: 50%;       
+    height: 50%;
+    position: absolute;
+    top:30%;
+    left: 30%;           
+    margin-top: -100px;
+   	margin-left: -100px;
+    border-radius: 40px;
+    -webkit-animation-name: animacao1;
     -webkit-animation-duration: 1s;
     -webkit-animation-timing-function:  linear;
     -webkit-animation-iteration-count: infinite;
@@ -146,9 +147,9 @@ img:hover{
 
 #opcoes{
 	background-color: black;
-	padding: 1em;
+	padding: 10em;
 	overflow: hidden;
-	margin-left: 5%;
+	marker-left: 10%;
 }
 
 .item{
