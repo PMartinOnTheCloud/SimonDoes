@@ -1,0 +1,241 @@
+@-webkit-keyframes animacao1 { 
+  0% {background: #7ffb04;}
+  50% {background: #7fdb24;}
+  100% {background: #7fc33c;} }
+
+body {
+background: #191919;}
+
+.container {
+  width:100%;
+  margin:0px auto;
+  font-size:1em;
+  font-family: "Arial", Georgia, Serif;
+  font-size: 15px;
+}
+
+/*Empieza Header*/
+#header {
+  text-align:center;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  background-color: black;
+  padding: 20px 10px;  
+}
+
+#header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+
+.Logo {
+  color: transparent;
+  position: left;
+  text-align: center;
+  font-size: 40px;
+  -moz-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 2px;
+  -moz-text-stroke-color: #000000;
+  -webkit-text-stroke-color: #ffffff;
+}
+
+.header-right {
+  float: right;
+}
+
+
+#header a.active {
+	background-color: #4CAF50; 
+	color: #7fff00;
+	text-align: center;
+}
+
+
+
+​@media screen and (max-width: 500px) {
+  #header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
+}
+
+/*Termina Header*/
+
+/* Empieza Win */
+
+#win { 
+	background: yellow;
+        width: 50%;       
+        height: 50%;
+        position: absolute;
+        top:30%;
+        left: 30%;           
+        margin-top: -100px;
+        margin-left: -100px;
+     -webkit-animation-name: animacao1;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function:  linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;}}
+
+
+.win {
+    width:100%;
+    height: auto;
+    padding-top: 20px;
+    background: none;}
+
+.win p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+   	font-size:5vw;
+    font-family: 'Black Ops One', cursive;
+    line-height: 100%;
+    text-align: center;
+    text-shadow: 10% 10% #000000;
+    color: #6576b4;}
+
+img {
+  width: 10%; height: 10%;
+  margin-top: 0px;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  transform:scale(1);
+  -ms-transform:scale(1); 
+  -moz-transform:scale(1); 
+  -webkit-transform:scale(1); 
+  -o-transform:scale(1); 
+  -webkit-transition: all 500ms ease-in-out; 
+  -moz-transition: all 500ms ease-in-out; 
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;}        
+    
+img:hover{
+	transform:scale(1.2);
+    -ms-transform:scale(1.2); 
+   	-moz-transform:scale(1.2); 
+    -webkit-transform:scale(1.2); 
+    -o-transform:scale(1.2);}
+
+.user {
+  width: 100%;
+  height: auto;
+  padding-top: 2%;}
+
+.user p {
+	margin-top: 0%;
+	margin-bottom: 0%;
+	text-align: center;
+	font-size: 2.5vW;
+	font-weight: bold;
+	font-family: 'Black Ops One', cursive;
+	color: #6576b4;}
+
+#opcoes{
+	background-color: black;
+	padding: 1em;
+	overflow: hidden;
+	margin-left: 5%;
+}
+
+.item{
+	margin: 1em;
+	padding: 1em;
+	color: white;
+	float: left;
+}
+
+.NextLevel{
+	text-align: center;
+  	font-size: 20px;
+  	font-weight: bold;
+  	font-family: 'Black Ops One', cursive;
+  	color: #6576b4;
+  	text-decoration: none;
+  	text-shadow: 2.5px 2.5px #000000;
+  	padding: 20px 20px 25px 20px;
+  	border: 1px solid #000000;
+  	border-radius: 20px;
+  	background: #000000;}
+
+
+
+@-webkit-keyframes animacao2 { from {-webkit-transform: scale(1);} 
+                to {-webkit-transform: scale(1.2);} }
+
+
+.NextLevel button:hover {
+  -webkit-animation-name: animacao2;
+  -webkit-animation-duration: 0.8s;
+  -webkit-animation-timing-function:  linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;}
+
+
+
+.TryAgain{
+	text-align: center;
+  	font-size: 20px;
+  	font-weight: bold;
+  	font-family: 'Black Ops One', cursive;
+  	color: #6576b4;
+  	text-decoration: none;
+  	text-shadow: 2.5px 2.5px #000000;
+  	padding: 20px 20px 25px 20px;
+  	border: 1px solid #000000;
+  	border-radius: 20px;
+  	background: #000000;}
+
+
+
+@-webkit-keyframes animacao2 { from {-webkit-transform: scale(1);} 
+                to {-webkit-transform: scale(1.2);} }
+
+
+.TryAgain button:hover {
+  -webkit-animation-name: animacao2;
+  -webkit-animation-duration: 0.8s;
+  -webkit-animation-timing-function:  linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;}
+
+.SaveExit{
+	font-size: 20px;
+  	font-weight: bold;
+  	font-family: 'Black Ops One', cursive;
+  	color: #6576b4;
+  	text-decoration: none;
+  	text-shadow: 2.5px 2.5px #000000;
+  	padding: 20px 20px 25px 20px;
+  	border: 1px solid #000000;
+  	border-radius: 20px;
+  	background: #000000;}
+
+
+
+@-webkit-keyframes animacao2 { from {-webkit-transform: scale(1);} 
+                to {-webkit-transform: scale(1.2);} }
+
+
+.SaveExit button:hover {
+  -webkit-animation-name: animacao2;
+  -webkit-animation-duration: 0.8s;
+  -webkit-animation-timing-function:  linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;}
+
+
+/*Termina Win*/
