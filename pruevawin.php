@@ -1,7 +1,3 @@
-<?php session_start();
- if (isset($_SESSION["code"])){
-        $code = $_SESSION['code'];
-    }?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,11 +6,6 @@
 	<LINK REL="stylesheet" TYPE="text/css" HREF="CSS/pruevaWin.css">
 	<link href='https://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
 </head>
-  <?php
-
-$_SESSION['points'] += 100;
-
-?>
 <body>
 	<div class="Container">
 		<div id="Header">

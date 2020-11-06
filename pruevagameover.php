@@ -18,7 +18,7 @@
 		</div>
 	</div>
 	<div class="Title">
-		<div class="Gameover">YOU'VE WON.</div>
+		<div class="Gameover">Game Over</div>
 		<div class="Img">
 			<img src="Images/gameover4.png" class=".vert-move">
 		</div>
