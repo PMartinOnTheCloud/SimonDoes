@@ -96,3 +96,14 @@ table.class_color tr:last-child td{
           font-size: 10vw;
         }
     }
+
+.footer {
+  position: fixed;
+  background-color: black;
+  box-sizing: border-box;
+  bottom: 0;
+  width: 100%;
+  background-color: #191919;
+  color: #7fff00;
+  text-align: center;
+}
