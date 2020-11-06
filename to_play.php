@@ -30,23 +30,46 @@ $file = 'conf.txt';
 $contents = file($file, FILE_IGNORE_NEW_LINES);
 //existe el codigo? y lo coge
 
+$codelist = array();
+for ($i = 0 ; $i < sizeof($contents) ; $i++) {
+	$codeline=explode(",",$contents[$i]);
+	array_push($codelist, end($codeline));
+}
 
-if(isset($_SESSION["codelevel"])){
-	if (!empty($_SESSION['codelevel'])){
-	
+if (isset($_POST["codelevel"])){
+	if (in_array($_POST["codelevel"],$codelist)) {
+		$_SESSION['level'] = array_search($_POST['codelevel'],$codelist);
+	} 
+	else if (empty($_POST['codelevel']) && isset($_SESSION['level'])) {
+		$_SESSION['level'] = $_SESSION['level'];
+	} 
+	else if (empty($_POST['codelevel'])) {
+		$_SESSION['level'] = 0;
+	}
+	else {
+		header("Location: index.php");
+	}
+}
+
+//otra forma de buscar el codigo
+/*if(isset($_POST["codelevel"])){
+	if (!empty($_POST['codelevel'] && strlen($_POST['codelevel'])>4) ){
 		for ($i=0; $i < sizeof($contents); $i++) { 
 			if (strpos($contents[$i], $_SESSION["codelevel"])) {
 				$line=$i;
-				}
+				}	
 			}
+		if (!isset($line) && !isset($_SESSION['level']))
+			header("Location: index.php");
 		}
-	else{
-		$_SESSION['codelevel']='a';
-	}	
+	elseif (!empty($_POST['codelevel'])) {
+		header("Location: index.php");
+	}
+elseif (empty($_POST["codelevel"])) {
+	$_POST['codelevel']='S3324';
 }
-else{
-	$_SESSION['codelevel']='S3324';
-}
+	
+}*/
 
 
 //puntos
@@ -59,7 +82,7 @@ if (isset($_POST['Winpoints'])){
 	$_SESSION['level'] += 1;
 }
 //definir nivel
-if (isset($_SESSION['codelevel'])&& isset($line)) {
+if (isset($_POST['codelevel'])&& isset($line)) {
 	if (!isset($_POST['Winpoints'])) {
 		$_SESSION['level']=$line;
 	}
