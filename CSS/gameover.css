@@ -11,243 +11,230 @@
 
 @import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
 
-body {background: #191919;}
+html, body{
+  height:100%;
+  margin:0;
+  display: flex;
+  flex-direction: column;
+  background: #191919;}
 
-.header {
-  overflow: hidden;
-  background-color: #EE3430;
-  padding: 20px 10px;
+#Gameover {
+  height: 100%;
+  width: 100%;
+  background-color: #3d3d3d;
+  justify-content: center;
+  align-content: center;
+  -webkit-animation-name: animacao1;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function:  linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
 }
 
-.header a {
+/*Empieza Header*/
+#Header {
+  text-align:center;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  background-color: black;
+  padding: 20px 10px;  
+}
+
+#Header a {
   float: left;
+  color: black;
   text-align: center;
   padding: 12px;
   text-decoration: none;
-  font-size: 18px; 
+  font-size: 3vw; 
   line-height: 25px;
   border-radius: 4px;
 }
 
+
 .Logo {
-    color: transparent;
-    -moz-text-stroke-width: 2px;
-    -webkit-text-stroke-width: 2px;
-    -moz-text-stroke-color: #000000;
-    -webkit-text-stroke-color: #191919;
-    position: relative;
-    text-align: center;
-    font-size: 90px;
- }
-
-.Logo::after {
-    content: "AWESOME TEXT";
-    font-size: 10rem;
-    letter-spacing: 0px;
-    background-size: 100%;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -moz-text-stroke-width: 0;
-    -webkit-text-stroke-width: 0;
-    position: absolute;
-    text-align: center;
-    left: 0px;
-    right: 0;
-    top: 0px;
-    z-index: -1;
-    background-color: #ff4c00;
-    transition: all 0.5s ease;
-    text-shadow: 10px 2px #6ac7c2;
+  color: transparent;
+  position: left;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Black Ops One', cursive;
+  -moz-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 2px;
+  -moz-text-stroke-color: #000000;
+  -webkit-text-stroke-color: #ffffff;
 }
 
-.header a.active {
-  background-color:#3d3d3d ;
-  color: #7fff00;
-}
-
-.header-right {
+.Header-right {
   float: right;
 }
 
-@media screen and (max-width: 500px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .header-right {
-    float: none;
-  }
+
+#Header a.Active {
+  background-color: #6c7059; 
+  color: #7fff00;
+  text-align: center;
+  font-family: 'Black Ops One', cursive;
 }
 
 
-#gameover {
-    width: 750px;
-    height: 580px;
-    margin: auto;
-    margin-top: 20px;
-    border-radius: 40px;
-    -webkit-animation-name: animacao1;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-timing-function:  linear;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-direction: alternate;}
 
 
-.gameover {
-    width:750px;
-    height: auto;
-    padding-top: 60px;
-    background: none;
+/*Termina Header*/
+
+img {
+  width: 15%; height: 15%;
+  margin-top: 0px;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  transform:scale(1);
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+.Gameover {
+    padding: 20px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size:5vw;
+    font-family: 'Black Ops One', cursive;
+    line-height: 100%;
+    text-align: center;
+    color: orange;
+    text-shadow: 2.5px 2.5px #000000;
     animation: var(--animation) var(--speed) infinite var(--easing);
 }
 
-@keyframes glitch {
-  0%, 12%, 15%, 52%, 55%, 82%, 85%, 100% { opacity: 1; transform: scaleX(1) scaleY(1) }  
-  13% { opacity: .8; transform: scaleY(2); color: #0ff }
-  53% { opacity: .8; transform: scaleX(.7);  color: #f0f }
-  83% { opacity: .8; transform: rotate(-10deg); color: #ff0 }
-}
-
-@keyframes hue {  
-  13% { color: #0ff }
-  53% { color: #f0f }
-  83% { color: #ff0 }
-}
-
-@keyframes shrink {  
-   0% { transform: scaleY(1) }
-  50% { transform: scaleY(.5) }
- 100% { transform: scaleY(1) }
-}
-
-@keyframes fade {  
-   0% { opacity: 1 }
-  50% { opacity: 0 }
- 100% { opacity: 1 }
-}
-
-.gameover p {
-      margin-top: 0px;
+.Gameover p {
+      margin-top: 5%;
       margin-bottom: 0px;
-      font-size: 160px;
+      font-size: 1vw;
       font-family: 'Black Ops One', cursive;
       line-height: 140px;
       text-align: center;
       text-shadow: 5px 5px #000000;
       color: #7fff00;}
 
-.continue {
+.User {
   width: 100%;
-  padding-top: 30px;}
-
-.continue p {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  text-align: center;
-  font-size: 30px;
-  font-weight: bold;
-  font-family: 'Black Ops One', cursive;
-  color: #7fff00;
-  text-shadow: 2.5px 2.5px #000000;}
-
-.opcoes {
-  width: 550px;
-  padding-top: 0px;
-  margin: auto;
-  margin-left: 35%;}
-
-.user {
-  width: 750px;
   height: auto;
-  padding-top: 30px;}
+  padding-top: 2%;}
 
-.user p {
-  margin-top: 0px;
-  margin-bottom: 0px;
+.User p {
+  margin-top: 0%;
+  margin-bottom: 0%;
   text-align: center;
-  font-size: 40px;
+  font-size: 2.5vW;
   font-weight: bold;
   font-family: 'Black Ops One', cursive;
-  color: #6576b4;
+  color: orange;
   text-shadow: 2.5px 2.5px #000000;}
 
+ button {
+        background-color: #000000;
+        color: #7fff00;
+        padding: 15px 20px;
+        margin: 8px 0;
+        cursor: pointer;
+        width: 100%;
+        font-family: 'Black Ops One', cursive;
+        font-size: 2vw;-webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+}  
 
-.yes button {
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-  font-family: 'Black Ops One', cursive;
-  color: #6576b4;
-  text-decoration: none;
-  text-shadow: 2.5px 2.5px #000000;
-  padding: 20px 20px 25px 20px;
-  border: 1px solid #000000;
-  border-radius: 20px;
-  background: #000000;
-  margin-right: 10px;
-  float: left;
-  margin-right: 0%;
-  margin-top: 1%;}
-
-
-
-@-webkit-keyframes animacao2 { from {-webkit-transform: scale(1);} 
-                to {-webkit-transform: scale(1.2);} }
+button:hover {
+  background-color: #7fff00;
+  color:#000000;
+}
 
 
-.yes button:hover {
-  -webkit-animation-name: animacao2;
-  -webkit-animation-duration: 0.8s;
-  -webkit-animation-timing-function:  linear;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;}
+    .TryAgain {
+        padding: 15px 20px;
+        background-color: #000000;
+        color: #7fff00;
+    }
 
+    .TryAgain,.SaveExit {
+        float: left;
+        width: 50%;
+    }
 
+    .Relative::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
 
-.no button {
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-  font-family: 'Black Ops One', cursive;
-  color: #6576b4;
-  text-decoration: none;
-  text-shadow: 2.5px 2.5px #000000;
-  padding: 20px 20px 25px 20px;
-  border-radius: 20px;
-  background: #000000;
-  float: right;
-  margin-right: 45%;
-  margin-top: 1%;}
-
-
-
-@-webkit-keyframes animacao2 { from {-webkit-transform: scale(1);} 
-                to {-webkit-transform: scale(1.2);} }
-
-
-.no button:hover {
-  -webkit-animation-name: animacao2;
-  -webkit-animation-duration: 0.8s;
-  -webkit-animation-timing-function:  linear;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;}
-/*Codigo*/
-
-.codi {
-  width: 750px;
+.Code {
+  width: 100%;
   height: auto;
-  padding-top: 100px;}
+  padding-top: 2%;}
 
-.codi p {
-  margin-top: 0px;
-  margin-bottom: 0px;
+.Code p {
+  margin-top: 0%;
+  margin-bottom: 0%;
   text-align: center;
-  font-size: 40px;
+  font-size: 1.5vW;
   font-weight: bold;
   font-family: 'Black Ops One', cursive;
-  color: #6576b4;
+  color: orange;
   text-shadow: 2.5px 2.5px #000000;}
+        
+/*Termina Win*/
+
+
+/* Responsive Movil 1920x1080 */
+
+ @media screen and (min-width: 1920px) {
+  #Header a {
+    float: none;
+    display: block;
+    text-align: center;
+    font-size: 3vw;
+    margin-top: 1vw;
+    float:left;
+  }
+  
+  .Header-right {
+    float: right;
+    }
+
+  img{
+    width: 15%; height: 15%;
+  }
+
+  div.Gameover {
+    font-size: 9vw;}
+
+  .TryAgain,.SaveExit {
+    width: 100%;
+    font-size: 3vw;}
+
+  .Code p,.User p{
+    font-size: 3vw;}
+}
+
+/* Responsive Movil 1366x768 */
+
+
+/* Responsive Movil 1024x768 */
+
+
+/* Responsive Movil 800x600 */
+
+
+
+/* Responsive Movil 375x667 */

@@ -42,10 +42,10 @@
         <label class="label" for="uname"><b>Username</b></label>
         <?php 
           if (isset($user)) {
-            echo "<input type=\"text\" value=\"$user\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" id=\"button\">Continue</button>";
+            echo "<input type=\"text\" value=\"$user\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" id=\"button\"onclick=\"play()\">Continue</button>";
           }
           else{
-            echo "<input type=\"text\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" id=\"button\">Continue</button>";
+            echo "<input type=\"text\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" id=\"button\"onclick=\"play()\">Continue</button>";
           }
         ?>  
       </form>
@@ -62,5 +62,7 @@
 <!-- Empieza Footer -->
  
 </div>
+<script src="JS/sound_index.js" type="text/javascript"></script>
+
 </body>
 </html>

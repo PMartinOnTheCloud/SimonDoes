@@ -46,7 +46,7 @@ html, body{
   text-align: center;
   padding: 12px;
   text-decoration: none;
-  font-size: 3vw; 
+  font-size: 10px; 
   line-height: 25px;
   border-radius: 4px;
 }
@@ -76,8 +76,64 @@ html, body{
   font-family: 'Black Ops One', cursive;
 }
 
+@media screen and (max-width: 1920px) {
+  #Header a {
+    float: none;
+    display: block;
+    text-align: center;
+    font-size: 3vw;
+    margin-top: 1vw;
+    float:left;
+  }
+  
+  .Header-right {
+    float: right;
+    margin-right: 5vw;
+  }
+}
 
 
+@media screen and (max-width: 1366px) {
+  #Header a {
+    float: none;
+    display: block;
+    text-align: center;
+    font-size: 3vw;
+    margin-top: 1vw;
+    float:left;
+  }
+  
+  .Header-right {
+    float: right;
+    margin-right: 5vw;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  #Header a {
+    float: none;
+    display: block;
+    text-align: center;
+    font-size: 5vw;
+  }
+  
+  .Header-right {
+    float: none;
+  }
+}
+
+​@media screen and (max-width: 500px) {
+  #Header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .Header-right {
+    float: none;
+  }
+}
 
 /*Termina Header*/
 
@@ -124,6 +180,34 @@ img {
       text-align: center;
       text-shadow: 5px 5px #000000;
       color: #7fff00;}
+
+@media screen and (max-width: 1920px) {
+  div.Gameover{
+    font-size: 9vw;}
+  }
+
+@media screen and (max-width: 1366px) {
+  div.Gameover{
+    font-size: 8vw;}
+  }
+
+@media screen and (max-width: 1024px) {
+  div.Gameover {
+    font-size: 10vw;}
+  }
+
+
+@media screen and (max-width: 800px) {
+  div.Gameover {
+    font-size: 9vw;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  div.Gameover {
+    font-size: 13vw;
+  }
+}
 
 .User {
   width: 100%;
@@ -178,6 +262,41 @@ button:hover {
         display: table;
     }
 
+
+@media screen and (max-width: 1920px) {
+  .TryAgain,
+        .SaveExit{
+    font-size: 3vw;}
+  }
+
+@media screen and (max-width: 1366px) {
+  .TryAgain,
+        .SaveExit{
+    font-size: 4vw;}
+  }
+
+@media screen and (max-width: 1024px) {
+  .TryAgain,
+        .SaveExit{
+    font-size: 6vw;}
+  }
+
+
+@media screen and (max-width: 800px) {
+  .TryAgain,.SaveExit {
+    width: 100%;
+    font-size: 4vw;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        .TryAgain,
+        .SaveExit {
+            width: 100%;
+            font-size: 7vw;
+        }
+    }
+
 .Code {
   width: 100%;
   height: auto;
@@ -192,49 +311,35 @@ button:hover {
   font-family: 'Black Ops One', cursive;
   color: orange;
   text-shadow: 2.5px 2.5px #000000;}
-        
-/*Termina Win*/
 
-
-/* Responsive Movil 1920x1080 */
-
- @media screen and (min-width: 1920px) {
-  #Header a {
-    float: none;
-    display: block;
-    text-align: center;
-    font-size: 3vw;
-    margin-top: 1vw;
-    float:left;
+@media screen and (max-width: 1920px) {
+  .Code p,.User p {
+    font-size: 4vw;
   }
-  
-  .Header-right {
-    float: right;
-    }
-
-  img{
-    width: 15%; height: 15%;
-  }
-
-  div.Gameover {
-    font-size: 9vw;}
-
-  .TryAgain,.SaveExit {
-    width: 100%;
-    font-size: 3vw;}
-
-  .Code p,.User p{
-    font-size: 3vw;}
 }
 
-/* Responsive Movil 1366x768 */
+@media screen and (max-width: 1366px) {
+  .Code p,.User p {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Code p,.User p {
+    font-size: 5vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .Code p,.User p {
+    font-size: 4vw;
+  }
+}
 
 
-/* Responsive Movil 1024x768 */
-
-
-/* Responsive Movil 800x600 */
-
-
-
-/* Responsive Movil 375x667 */
+  @media screen and (max-width: 375px) {
+        .Code p,.User p{
+          font-size: 8vw;
+        }
+    }
+/*Termina Win*/
