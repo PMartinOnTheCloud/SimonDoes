@@ -19,9 +19,10 @@
 	<div class="Title">
 		<div class="Gameover">YOU'VE WON.</div>
 		<div class="Img">
-			<img src="Images/gameover.png" class=".vert-move">
+			<img src="Images/gameover4.png" class=".vert-move">
 		</div>
 	</div>
+
 	<div class="User"> <p>Username: Adrian</p> </div>
 
 	<div class="Relative">
