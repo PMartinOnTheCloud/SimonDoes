@@ -212,15 +212,14 @@ footer p {
   }
 }
 
-/* pantalla maximo 700px */
-@media screen and (max-width:800px) {
+@media screen and (max-width:1920px) {
   aside,section {
-    float:none;
-    width:95%;
-    font-size:1.2em;
+  float:none;
+  width:100%;
+  font-size:1vw;
   }
   section {
-    font-size:1.2em;
+    font-size:1vw;
   }
   aside {
     margin-top:5px;
