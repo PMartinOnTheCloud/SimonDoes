@@ -1,7 +1,13 @@
 @-webkit-keyframes animacao1 { 
-  0% {background: #7ffb04;}
-  50% {background: #7fdb24;}
-  100% {background: #7fc33c;} }
+  0% {background: #D62623;}
+  50% {background: #EE3430;}
+  100% {background: #FB3733;} }
+
+:root {
+  --animation: glitch; /* glitch, hue, fade, shrink */
+  --speed: 2s;
+  --easing: linear;
+}
 
 @import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
 
@@ -12,12 +18,18 @@ html, body{
   flex-direction: column;
   background: #191919;}
 
-.Container {
+#Gameover {
   height: 100%;
   width: 100%;
   background-color: #3d3d3d;
   justify-content: center;
   align-content: center;
+  border-radius: 40px;
+  -webkit-animation-name: animacao1;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function:  linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
 }
 
 /*Empieza Header*/
@@ -59,9 +71,9 @@ html, body{
 
 
 #Header a.Active {
-	background-color: #6c7059; 
-	color: #7fff00;
-	text-align: center;
+  background-color: #6c7059; 
+  color: #7fff00;
+  text-align: center;
   font-family: 'Black Ops One', cursive;
 }
 
@@ -80,46 +92,6 @@ html, body{
 }
 
 /*Termina Header*/
-
-/* Empieza Win */
-
-div.Win {
-  padding: 20px;
-  text-align: center;
-  margin-top: 0px;
-    margin-bottom: 0px;
-    font-size:5vw;
-    font-family: 'Black Ops One', cursive;
-    line-height: 100%;
-    text-align: center;
-    color: orange;
-    text-shadow: 2.5px 2.5px #000000;
-
-  letter-spacing: 4px;
-  overflow: hidden;
-  background: linear-gradient(100deg, #51fd19, #e60205, #51fd19);
-  background-repeat: no-repeat;
-  background-size: 80%;
-  animation: animate 1s linear infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(255, 255, 255, 0.5);
-}
-
-@keyframes animate {
-  0% {
-    background-position: -500%;
-  }
-  100% {
-    background-position: 500%;
-  }
-}
-
-
-@media screen and (max-width: 375px) {
-  div.Win {
-    font-size: 13vw;
-  }
-}
 
 img {
   width: 10%; height: 10%;
@@ -141,6 +113,35 @@ img {
     100% { transform: translateY(-20px); }
 }
 
+.Gameover {
+    padding: 20px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size:5vw;
+    font-family: 'Black Ops One', cursive;
+    line-height: 100%;
+    text-align: center;
+    color: orange;
+    text-shadow: 2.5px 2.5px #000000;
+    animation: var(--animation) var(--speed) infinite var(--easing);
+}
+
+.Gameover p {
+      margin-top: 5%;
+      margin-bottom: 0px;
+      font-size: 160px;
+      font-family: 'Black Ops One', cursive;
+      line-height: 140px;
+      text-align: center;
+      text-shadow: 5px 5px #000000;
+      color: #7fff00;}
+
+@media screen and (max-width: 375px) {
+  div.Gameover {
+    font-size: 13vw;
+  }
+}
 
 .User {
   width: 100%;
@@ -148,13 +149,13 @@ img {
   padding-top: 2%;}
 
 .User p {
-	margin-top: 0%;
-	margin-bottom: 0%;
-	text-align: center;
-	font-size: 2.5vW;
-	font-weight: bold;
-	font-family: 'Black Ops One', cursive;
-	color: orange;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  text-align: center;
+  font-size: 2.5vW;
+  font-weight: bold;
+  font-family: 'Black Ops One', cursive;
+  color: orange;
   text-shadow: 2.5px 2.5px #000000;}
 
  button {
@@ -178,16 +179,15 @@ button:hover {
 }
 
 
-    .NextLevel {
+    .TryAgain {
         padding: 15px 20px;
         background-color: #000000;
         color: #7fff00;
     }
 
-    .NextLevel,
     .TryAgain,.SaveExit {
         float: left;
-        width: 33.3%;
+        width: 50%;
     }
 
     .Relative::after {
@@ -198,8 +198,8 @@ button:hover {
 
      
     @media screen and (max-width: 375px) {
-        .NextLevel,
-        .TryAgain,.SaveExit {
+        .TryAgain,
+        .SaveExit {
             width: 100%;
             font-size: 9vw;
         }
