@@ -5,7 +5,7 @@ document.onkeyup = function(key) {
   	document.getElementById("no").click();
   } else if (key.ctrlKey && key.altKey && key.which == 78) {
   	document.getElementById("yes").click();
-  } /* else if (key.ctrlKey && key.altKey && key.which == 83) {
-  	Aqui va la accion para redirigir al ranking y salvar el score
-  } */
+  } else if (key.ctrlKey && key.altKey && key.which == 83) {
+  	document.getElementById("puntos").click();
+  } 
 };

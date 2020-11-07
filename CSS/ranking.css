@@ -1,20 +1,73 @@
-.ranking{
-	display: flex;
-	justify-content: center;
+html, body{
+  height:100%;
+  margin:0;
+  display: flex;
+  flex-direction: column;
+  background: #191919;}
+
+/*Empieza Header*/
+#Header {
+  text-align:center;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  background-color: black;
+  padding: 20px 10px;  
 }
 
+#Header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+
+.Logo {
+  color: transparent;
+  position: left;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Black Ops One', cursive;
+  -moz-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 2px;
+  -moz-text-stroke-color: #000000;
+  -webkit-text-stroke-color: #ffffff;
+}
+
+.Header-right {
+  float: right;
+}
+
+
+#Header a.Active {
+  background-color: #6c7059; 
+  color: #7fff00;
+  text-align: center;
+  font-family: 'Black Ops One', cursive;
+}
+
+/*Termina Header*/
+
 #tabla {
-  margin-left: auto;
+max-height: 200px;
+margin-left: auto;
   margin-right: auto;
   color: #7fff00;
   font-size: 30px;
   border-collapse: separate;
   border-spacing: 20px;
   text-align: center;
+  overflow-y: auto;
+  overflow-x: auto;
+  display: block;
 }
 
 td {
-	border: #7fff00 2px solid;
+  border: #7fff00 2px solid;
 }
 
 h1 {
@@ -26,4 +79,56 @@ h1 {
 
 table.class_color tr:last-child td{
    background: #f00;
+}
+
+.footer {
+  position: fixed;
+  background-color: black;
+  box-sizing: border-box;
+  bottom: 0;
+  width: 100%;
+  background-color: #191919;
+  color: #7fff00;
+  text-align: center;
+}
+
+
+@media screen and (max-width:1366px){
+  .Main{
+    width: 60%;
+  }
+
+  .footer{
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width:1024px){
+  .Main{
+    width: 60%;
+  }
+
+  .footer{
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width:800px){
+  .Main{
+    width: 60%;
+  }
+
+  .footer{
+    font-size: 3vw;
+  }
+}
+
+@media screen and (max-width:800px){
+  .Main{
+    width: 60%;
+  }
+
+  .footer{
+    font-size: 6vw;
+  }
 }
