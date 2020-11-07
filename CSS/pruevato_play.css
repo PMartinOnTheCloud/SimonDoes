@@ -65,29 +65,28 @@ html, body{
 	float: left;
 }
 
+
 #ButtonStart {
-	display: block;
 	margin: 20px auto auto auto;
-	position: absolute;top: 50%;
+	position: absolute;
+	top: 50%;
 	width:20%;
 	height: 20%;
 	font-size: 50px;
 	background-color: black;
 	color:#7fff00;
-	float:right;
 }
 
 #ButtonCheck {
-	display: block;
 	margin: 20px auto auto auto;
 	visibility: hidden;
-	position: absolute;top: 50%;
+	position: absolute;
+	top: 50%;
 	width:20%;
 	height: 20%;
 	font-size: 50px;
 	background-color:black;
 	color:#7fff00;
-	float:right;
 }
 
 
@@ -105,3 +104,97 @@ html, body{
    	text-align: center;
 }
 
+
+/* Responsive Movil 1366x768 */
+
+@media screen and (max-width: 1366px) {
+  #Header a {
+    float: none;
+    display: block;
+    text-align: center;
+    font-size: 3vw;
+    margin-top: 1vw;
+    float:left;
+  }
+  
+  .Header-right {
+    float: right;
+    }
+
+  img{
+    width: 10%; height: 10%;
+  }
+
+  div.Win {
+    font-size: 9vw;}
+
+  .NextLevel,.TryAgain,.SaveExit {
+    width: 100%;
+    font-size: 2vw;}
+
+  .Code p,.User p{
+    font-size: 3vw;}
+}
+
+
+/* Responsive Movil 1024x768 */
+
+@media screen and (max-width: 1024px) {
+  #Header a {
+    float: none;
+    display: block;
+    text-align: center;
+    font-size: 2vw;
+    margin-top: 1vw;
+    float:left;
+  }
+  
+  .Header-right {
+    float: right;
+    }
+}
+
+/* Responsive Movil 800x600 */
+
+@media screen and (max-width: 800px) {
+  #Header a {
+    float: none;
+    display: block;
+    text-align: center;
+    font-size: 3vw;
+    margin-top: 1vw;
+    float:left;
+  }
+  
+  .Header-right {
+    float: right;
+    }
+
+ .Footer p{
+ 	font-size: 2vw;
+ }
+
+}
+
+
+
+/* Responsive Movil 375x667 */
+
+@media screen and (max-width: 375px) {
+ #Header a {
+    float: none;
+    display: block;
+    text-align: center;
+    font-size: 4vw;
+    margin-top: 1vw;
+    float:left;
+  }
+  
+  .Header-right {
+    float: right;
+    }
+
+     .Footer p{
+ 	font-size: 2vw;
+ }
+}
