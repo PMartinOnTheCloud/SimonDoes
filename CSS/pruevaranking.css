@@ -91,12 +91,6 @@ table.class_color tr:last-child td{
    background: #f00;
 }
 
- @media screen and (max-width: 375px) {
-        .Ranking{
-          font-size: 10vw;
-        }
-    }
-
 .footer {
   position: fixed;
   background-color: black;
@@ -106,4 +100,12 @@ table.class_color tr:last-child td{
   background-color: #191919;
   color: #7fff00;
   text-align: center;
+}
+
+
+@media only screen and (min-width: 800px) {
+  /* For tablets: */
+  #Header{width: 8.33%;}
+  #tabla {width: 16.66%;}
+  .footer {width: 25%;}
 }
