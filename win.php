@@ -29,10 +29,7 @@ if (end($urlexplode)== "to_play.php"){
 }
 
 ?>
-<body onload="autoNotify()"> 
-	<audio id="notifypop"> <!--Source the audio file. -->
-            <source src="win.wav" type="audio/wav">
-  </audio>
+<body> 
 	<div id="Win">
 	<div id="Header">
 

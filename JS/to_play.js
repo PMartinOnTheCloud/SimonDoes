@@ -92,10 +92,6 @@ function getColoredCeldasId() {
 
 
 function youWin() {
-	var audio = document.getElementById("notifypop");
-		function autoNotify() {
-		audio.play();
-		}
 	location.replace('win.php');
 }
 
