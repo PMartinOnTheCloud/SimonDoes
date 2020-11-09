@@ -16,7 +16,7 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
 	<title>To_play</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="CSS/to_play.css">
-    <audio id="BtM" preload="auto" src="Song/poweron.ogg"></audio>
+    <audio id="BtM" preload="auto" src="Song/beep.wav"></audio>
 </head>
 <body>
 <div id="Header">

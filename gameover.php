@@ -17,7 +17,7 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="CSS/gameover.css" rel="stylesheet" type="text/css" />	
 <audio id="audio" preload="auto" src="Song/lose.wav"></audio>
-<audio id="BtM" preload="auto" src="Song/poweron.ogg"></audio>
+<audio id="BtM" preload="auto" src="Song/beep.wav"></audio>
 <title>GameOver</title>
 
  </head>
