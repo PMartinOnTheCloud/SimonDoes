@@ -1,58 +1,75 @@
+@font-face {
+  font-family: 'Arcade-Font';
+  src: url('../Fonts/Bitwise-m19x.ttf');
+  font-weight: bold;
+}
+
 * {box-sizing: border-box;}
 
 body { 
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color:#3d3d3d;
+  font-family: Arcade-Font;
+  background-color:#262626;
 }
 
 .Header {
   overflow: hidden;
   background-color:#191919;
   padding: 20px 10px;
+  border-bottom: 3px solid #7FFF00;
 }
 
-.Header h1 {
+.Header > h1 {
   color: #7FFF00;
   text-align: center;
   padding: 12px;
+  padding-left: 10%;
   text-decoration: none;
   font-size: 18px; 
   line-height: 25px;
   border-radius: 4px;
+  display: inline-block;
+  float:left;
 }
 
-.Header h1.Logo {
+.Header > h1.Logo {
   font-size: 25px;
   font-weight: bold;
+  width: 85%;
 }
 
-.container´{
-  width: 100%
-  background-color:orange;
-  border: solid 5px black;
-  padding: 5px;
+button#colorblind {
+  width: 10%;
+  margin-top: 17px;
+  float: left;
+  background-color: #6576B4;
+  color: white;
+  border-radius: 10px;
 }
+
+
 
 /* section */
 .Main{
   float:left;
   width: 60%;
+  text-align: left;
+  padding-top: 8%;
+  padding-left: 10%;
 }
 
 mark.important {
       
-      font-weight: bold;
-      background-color:#6576b4;
-      
+      color:#6576b4;
+      background-color:#262626;
     }
 mark.correct{
-      font-weight: bold;
-      background-color:#308446;
+      color:#308446;
+      background-color:#262626;
     }
 mark.incorrect{
-      font-weight: bold;
-      background-color:#e51a4c;
+      color:#e51a4c;
+      background-color:#262626;
     }
 p#text {
   color:white;
@@ -64,20 +81,34 @@ h3#text{
   color:white;
   margin-left: 20px;
 }
+
+
+input[type=checkbox] {
+  margin-left: 15%;
+  margin-top: 7%;
+  transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+}
+
+label.checklabel {
+  color:white;
+}
+
 /*Final section
 
 
 
 /* aside*/
 aside{
-  float:right;
+  float:left;
   width: 30%;
-  margin-right: 5px;
+  padding-top: 5%;
+  margin-right: 10%;
 }
 
 img.avatar {
   width: 20%;
-  border-radius: 50%;
   display:block;
   margin:auto;
 }
@@ -113,22 +144,55 @@ button {
   font-size: 20px;
   width: 100%;
   font-size: 20px;
+  font-family: Arcade-Font;
+  border-radius: 10px;
 }
 
 button:hover {
-  opacity: 0.8;
+  background-color: #7fff00;
+  color: #191919;
 }
 
+
+
 /*final aside*/
+
+
+footer {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:#191919;
+  padding: 10px 10px;
+  border-top: 3px solid #7FFF00;
+}
+
+footer > p {
+  color: #7FFF00;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media screen and (max-width:1920px){
+  p#text{
+    font-size: 18px;
+  }
+}
 
 
 @media screen and (max-width:1366px){
   .Main{
     width: 60%;
+    padding-top: 5%;
   }
 
   aside{
     width: 30%;
+    margin-right: 0%;
+    margin-left: 5%;
   }
 }
 
@@ -143,12 +207,33 @@ button:hover {
 }
 
 @media screen and (max-width:800px){
+   .Header {
+      padding: 10px 5px;
+   }
+
    .Main{
-    width: 50%;
+    width: 55%;
+    padding-left: 1%;
+    padding-top: 3%;
   }
   aside{
     width: 40%;
-    margin-left: 10px;
+    padding-left: 2%;
+    margin-left: 0%;
+    float: right;
+    margin-right: 3%;
+  }
+  button#colorblind {
+    width: 13%;
+  }
+  footer{
+    padding: 0px 0px;
+  }
+  input[type=checkbox] {
+    margin-top: 0.5%;
+  }
+  p#text {
+    font-size: 16px;
   }
 }
 
@@ -163,4 +248,44 @@ button:hover {
   aside{
     width: 100%;
   }
+  .Header > h1.Logo {
+    width: 100%;
+    display: block;
+  }
+  button#colorblind {
+    width: 25%;
+    font-size: 15px;
+    margin-left: 37.5%;
+    margin-right: 37.5%;
+    margin-top: 5px;
+  }
+  .Header > h1 {
+    padding-left: 7%;
+  }
+  .Main {
+    padding-right: 5%;
+    padding-top: 2%;
+  }
+  input[type=checkbox] {
+    margin-left: 12%;
+    margin-bottom: 5%;
+  }
+  aside {
+    padding-right:4%; 
+    padding-left:4%;
+    margin-right: 0%;
+  }
+  img.avatar{
+    display: none;
+  }
+  footer > p{
+    font-size: 15px;
+  }
+  #inputlevel {
+    margin-bottom: 5%;
+  }
+  #ranking {
+    margin-bottom: 20%;
+  }
+
 }
