@@ -29,11 +29,16 @@ if (end($urlexplode)== "to_play.php"){
 }
 
 ?>
-<body>
+<body onload="autoNotify()"> 
+	<audio id="notifypop"> <!--Source the audio file. -->
+            <source src="win.wav" type="audio/wav">
+  </audio>
 	<div id="Win">
 	<div id="Header">
+
 		<a class="Logo" href="index.php">SimonDoes</a>
 		<button id="colorblind" onclick="">S<u>w</u>itch</button>	
+		</div>
 	</div>
 	<div class="Title">
 		<div class="Win">YOU'VE WON</div>
@@ -60,6 +65,4 @@ if (end($urlexplode)== "to_play.php"){
 </div>
 <script src="JS/hotkey_win.js" type="text/javascript"></script>
 </body>
-
-
 </html>
