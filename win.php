@@ -10,7 +10,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="CSS/win.css" rel="stylesheet" type="text/css" />	
 <link href='https://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
-<script src="JS/sound.js" type="text/javascript"></script>
 <title>Win</title>
 
  </head>
@@ -19,7 +18,10 @@
 $_SESSION['points'] += 100;
 
 ?>
-<body>
+<body onload="autoNotify()"> 
+	<audio id="notifypop"> <!--Source the audio file. -->
+            <source src="win.wav" type="audio/wav">
+  </audio>
 	<div id="Win">
 	<div id="Header">
 		<a class="Logo">SimonDoes</a>
