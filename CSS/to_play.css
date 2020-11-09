@@ -1,3 +1,83 @@
+@font-face {
+  font-family: 'Arcade-Font';
+  src: url('../Fonts/Bitwise-m19x.ttf');
+  font-weight: bold;
+}
+
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: Arcade-Font;
+  background-color:#262626;
+}
+
+/*Empieza Header*/
+#Header {
+  text-align:center;
+  overflow: hidden;
+  background-color: black;
+  padding: 20px 10px;  
+}
+
+#Header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 3vw; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+
+.Logo {
+  color: transparent;
+  position: left;
+  text-align: center;
+  font-size: 40px;
+  font-family: Arcade-Font;
+  -moz-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 2px;
+  -moz-text-stroke-color: #000000;
+  -webkit-text-stroke-color: #ffffff;
+  margin-top: 10px;
+}
+
+button#colorblind {
+  width: 10%;
+  margin-top: 7px;
+  float: right;
+  background-color: #6576B4;
+  color: white;
+  border-radius: 0px;
+  font-family: Arcade-Font;
+  font-size: 20px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  border: none;
+  margin-right: 20px;
+}
+
+
+.Header-right {
+  float: right;
+}
+
+
+#Header a.Active {
+  background-color: #6c7059; 
+  color: #7fff00;
+  text-align: center;
+  font-family: Arcade-Font;
+}
+
+/*Termina Header*/
+
+
+/*Empieza Tabla*/
+
 #general {
 	margin:auto;
 	width: 500px;
@@ -7,7 +87,7 @@
 #general > div {
 	background-color: white;
 	border: 1px solid black;
-	float: left;
+	float: right;
 }
 
 #buttonStart {
@@ -32,3 +112,27 @@
 	background-color:black;
 	color:#7fff00;
 }
+
+/*Empieza Tabla*/
+
+/*Empieza footer*/
+
+footer {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:#191919;
+  padding: 10px 10px;
+  border-top: 3px solid #7FFF00;
+}
+
+footer > p {
+  color: #7FFF00;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/*Termina footer*/

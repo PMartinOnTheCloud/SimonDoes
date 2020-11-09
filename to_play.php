@@ -14,14 +14,13 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
 <html>
 <head>
 	<title>To_play</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="CSS/to_play.css">
 </head>
 <body>
-<div class="header">
-	<a class="Logo">SimonDoes</a>
-	<div class="header-right">
-		<a class="active" href="index.php">Home</a>
-	</div>
+<div id="Header">
+	<a class="Logo" href="index.php">SimonDoes</a>
+	<button id="colorblind" onclick="">S<u>w</u>itch</button>
 </div>
 <?php
 
@@ -122,10 +121,11 @@ echo "</div>";
 <script src="JS/to_play.js" type="text/javascript"></script>
 <script src="JS/hotkey_to_play.js" type="text/javascript"></script>
 
-<div class="footer">
-	<p>Welcome, <?php
+<footer>
+    <p>Welcome, <?php
 		$user = $_SESSION['username'];
 		echo "$user";?></p>
-</div>
+  </footer>
+
 </body>
 </html>
