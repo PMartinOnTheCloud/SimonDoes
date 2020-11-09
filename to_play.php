@@ -3,6 +3,12 @@
       if (isset($_POST["username"])){
         $_SESSION["username"] = $_POST["username"]; 
     }
+if(!empty($_SESSION['visited_pages'])) {
+  $_SESSION['visited_pages']['prev'] = $_SESSION['visited_pages']['current'];
+}else {
+  $_SESSION['visited_pages']['prev'] = 'No previous page';
+}
+$_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
       ?>
 <!DOCTYPE html>
 <html>
@@ -35,14 +41,37 @@ if (!isset($_SESSION['pastname'])){
 
 
 if (isset($_POST['RetryWin'])) {
-	$_SESSION['points']-= 100; 
+	$_SESSION['points']-= 100;
+	header("Location: to_play.php"); 
 }
 
+$file = 'conf.txt';
 
-if (isset($_POST['Winpoints'])){
-	$_SESSION['level'] += 1;
+$contents = file($file, FILE_IGNORE_NEW_LINES);
+
+$codelist = array();
+for ($i = 0 ; $i < sizeof($contents) ; $i++) {
+    $codeline=explode(",",$contents[$i]);
+    array_push($codelist, end($codeline));
 }
 
+if (isset($_POST["codelevel"])){
+    if (in_array($_POST["codelevel"],$codelist)) {
+        $_SESSION['level'] = array_search($_POST['codelevel'],$codelist);
+        header("Location: to_play.php"); 
+    } 
+    else if (empty($_POST['codelevel']) && isset($_SESSION['level'])) {
+        $_SESSION['level'] = $_SESSION['level'];
+        header("Location: to_play.php"); 
+    } 
+    else if (empty($_POST['codelevel'])) {
+        $_SESSION['level'] = 0;
+        header("Location: to_play.php");
+    }
+    else {
+        header("Location: index.php");
+    }
+}
 
 $file = 'conf.txt';
 
