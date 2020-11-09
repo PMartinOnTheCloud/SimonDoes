@@ -14,9 +14,7 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
 <html>
 <head>
 	<title>To_play</title>
-	<style rel="stylesheet" type="text/css" href="CSS/All.css"></style>
-	<link rel="stylesheet" type="text/css" href="CSS/SimonDoes.css">
-	<link rel="stylesheet" href="CSS/to_play.css">
+	<link rel="stylesheet" type="text/css" href="CSS/to_play.css">
 </head>
 <body>
 <div class="header">
