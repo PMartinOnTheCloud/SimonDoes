@@ -16,6 +16,8 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
     <title>Ranking</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="CSS/ranking.css">
+    <audio id="BtM" preload="auto" src="Song/poweron.ogg"></audio>
+
 </head>
 <body>
 <div id="Header">
@@ -92,6 +94,7 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
         $user = $_SESSION['username'];
         echo "$user";}?></p>
 </div>
+<script src="Song/sound.js"></script>
 <script src="JS/hotkey_ranking.js" type="text/javascript"></script>
 </body>
 </html>

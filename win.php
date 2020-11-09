@@ -17,8 +17,8 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="CSS/win.css" rel="stylesheet" type="text/css" />
- <audio id="hoverAudio" preload="auto" src="Song/poweron.ogg"></audio>
- <audio id="selectAudio" preload="auto" src="../Song/016.mp3"></audio>
+ <audio id="audio" preload="auto" src="Song/win.wav"></audio>
+<audio id="BtM" preload="auto" src="Song/poweron.ogg"></audio>
 <title>Win</title>
 
  </head>
@@ -62,7 +62,8 @@ if (end($urlexplode)== "to_play.php"){
 		<p>Code: <?php echo "$code";?> </p>
 	</div>
 </div>
-    <script src="Song/sound.js"></script>
+<script src="Song/SoundWin.js"></script>
+<script src="Song/sound.js"></script>
 <script src="JS/hotkey_win.js" type="text/javascript"></script>
 </body>
 </html>

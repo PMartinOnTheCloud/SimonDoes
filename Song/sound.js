@@ -1,8 +1,8 @@
 let buttons = document.getElementsByTagName("button");
-let hoverAudio = document.getElementById("hoverAudio");
+let BtM = document.getElementById("BtM");
 
 for (const button of buttons) {
     button.addEventListener("mouseover", function (event) {
-        hoverAudio.play();
+        BtM.play();
     });
 }

@@ -16,6 +16,7 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
 	<title>To_play</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="CSS/to_play.css">
+    <audio id="BtM" preload="auto" src="Song/poweron.ogg"></audio>
 </head>
 <body>
 <div id="Header">
@@ -118,6 +119,7 @@ echo "</div>";
 <button id='buttonStart' onclick="startGame(<?php echo "$secondsin"; ?>)">START</button>
 <button id='buttonCheck' onclick="failOrGrace(<?php echo "$numberOfCeldasToIlluminate"; ?>)">CHECK</button>
 
+<script src="Song/sound.js"></script>
 <script src="JS/to_play.js" type="text/javascript"></script>
 <script src="JS/hotkey_to_play.js" type="text/javascript"></script>
 
