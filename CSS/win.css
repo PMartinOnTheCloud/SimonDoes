@@ -1,16 +1,25 @@
 @-webkit-keyframes animacao1 { 
-  0% {background: #7ffb04;}
-  50% {background: #7fdb24;}
-  100% {background: #7fc33c;} }
+  0% {background:   #73e203;}
+  50% {background:   #66c903;}
+  100% {background:  #59b003;} }
 
-@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+@font-face {
+  font-family: 'Arcade-Font';
+  src: url('../Fonts/Bitwise-m19x.ttf');
+}
 
 html, body{
   height:100%;
   margin:0;
   display: flex;
   flex-direction: column;
-  background: #191919;}
+  background: #191919;
+  -webkit-animation-name: animacao1;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function:  linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+}
 
 #Win {
   height: 100%;
@@ -28,10 +37,10 @@ html, body{
 /*Empieza Header*/
 #Header {
   text-align:center;
-  border: 1px solid #ccc;
   overflow: hidden;
   background-color: black;
-  padding: 20px 10px;  
+  padding: 20px 10px;
+  background-color: #191919;
 }
 
 #Header a {
@@ -40,7 +49,7 @@ html, body{
   text-align: center;
   padding: 12px;
   text-decoration: none;
-  font-size: 3vw; 
+  font-size: 2vw; 
   line-height: 25px;
   border-radius: 4px;
 }
@@ -50,12 +59,13 @@ html, body{
   color: transparent;
   position: left;
   text-align: center;
-  font-size: 40px;
-  font-family: 'Black Ops One', cursive;
+  font-size: 10px;
+  font-family: Arcade-Font;
   -moz-text-stroke-width: 2px;
   -webkit-text-stroke-width: 2px;
   -moz-text-stroke-color: #000000;
   -webkit-text-stroke-color: #ffffff;
+  margin-top: 10px;
 }
 
 .Header-right {
@@ -67,7 +77,22 @@ html, body{
   background-color: #6c7059; 
   color: #7fff00;
   text-align: center;
-  font-family: 'Black Ops One', cursive;
+  font-family: Arcade-Font;
+}
+
+button#colorblind {
+  width: 10%;
+  margin-top: 7px;
+  float: right;
+  background-color: #6576B4;
+  color: white;
+  border-radius: 0px;
+  font-family: Arcade-Font;
+  font-size: 20px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  border: none;
+  margin-right: 20px;
 }
 
 
@@ -100,20 +125,24 @@ img {
     text-align: center;
     margin-top: 0px;
     margin-bottom: 0px;
-    font-size:5vw;
-    font-family: 'Black Ops One', cursive;
+    font-size:7vw;
+    font-family: Arcade-Font;
     line-height: 100%;
     text-align: center;
     color: orange;
-    text-shadow: 2.5px 2.5px #000000;
+    text-shadow: 3px 3px #000000;
     animation: var(--animation) var(--speed) infinite var(--easing);
+  -moz-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 2px;
+  -moz-text-stroke-color: #000000;
+  -webkit-text-stroke-color: #ffffff;
 }
 
 .Win p {
       margin-top: 5%;
       margin-bottom: 0px;
       font-size: 1vw;
-      font-family: 'Black Ops One', cursive;
+      font-family: Arcade-Font;
       line-height: 140px;
       text-align: center;
       text-shadow: 5px 5px #000000;
@@ -130,25 +159,38 @@ img {
   text-align: center;
   font-size: 2.5vW;
   font-weight: bold;
-  font-family: 'Black Ops One', cursive;
-  color: orange;
+  font-family: Arcade-Font;
+  color: #6576B4;
   text-shadow: 2.5px 2.5px #000000;}
 
  button {
         background-color: #000000;
         color: #7fff00;
         padding: 15px 20px;
-        margin: 8px 0;
         cursor: pointer;
-        width: 100%;
-        font-family: 'Black Ops One', cursive;
+        border: #7fff00;
+        width: 20%;
+        border-radius: 10px;
+        font-family: Arcade-Font;
         font-size: 2vw;-webkit-transition: all 0.3s ease-out;
         -moz-transition: all 0.3s ease-out;
         -ms-transition: all 0.3s ease-out;
         -o-transition: all 0.3s ease-out;
         transition: all 0.3s ease-out;
-}  
+}
 
+#NextLevel {
+  margin-left: 12.5%;
+  margin-right: 7%;
+}
+
+#TryAgain {
+  margin-right: 7%;
+}
+
+.User > p{
+  margin-bottom: 1%;
+}
 button:hover {
   background-color: #7fff00;
   color:#000000;
@@ -163,7 +205,6 @@ button:hover {
 
     .NextLevel,.TryAgain,.SaveExit {
         float: left;
-        width: 33.3%;
     }
 
     .Relative::after {
@@ -175,16 +216,17 @@ button:hover {
 .Code {
   width: 100%;
   height: auto;
-  padding-top: 2%;}
+  padding-top: 2%;
+}
 
 .Code p {
   margin-top: 0%;
   margin-bottom: 0%;
   text-align: center;
-  font-size: 1.5vW;
+  font-size: 3vW;
   font-weight: bold;
-  font-family: 'Black Ops One', cursive;
-  color: orange;
+  font-family: Arcade-Font;
+  color: #6576B4;
   text-shadow: 2.5px 2.5px #000000;}
         
 /*Termina Win*/
@@ -216,10 +258,6 @@ button:hover {
   div.Win {
     font-size: 9vw;}
 
-  .NextLevel,.TryAgain,.SaveExit {
-    width: 100%;
-    font-size: 2vw;}
-
   .Code p,.User p{
     font-size: 3vw;}
 }
@@ -248,12 +286,16 @@ button:hover {
   div.Win {
     font-size: 9vw;}
 
-  .NextLevel,.TryAgain,.SaveExit {
-    width: 100%;
-    font-size: 2vw;}
+  #NextLevel,#TryAgain,#SaveExit {
+    font-size: 3vw;
+  }
 
   .Code p,.User p{
-    font-size: 3vw;}
+    font-size: 4vw;}
+
+  .User p {
+    margin-bottom: 3%;
+  }
 }
 
 /* Responsive Movil 800x600 */
@@ -279,12 +321,20 @@ button:hover {
   div.Win {
     font-size: 9vw;}
 
-  .NextLevel,.TryAgain,.SaveExit {
-    width: 100%;
-    font-size: 2vw;}
 
   .Code p,.User p{
-    font-size: 2vw;}
+    font-size: 5vw;}
+
+  button#colorblind {
+    width: 15%;
+  }
+  .Logo{
+    -webkit-text-stroke-width:0px;
+  }
+
+  #Header a {
+    color:white;
+  }
 }
 
 
@@ -296,7 +346,7 @@ button:hover {
     float: none;
     display: block;
     text-align: center;
-    font-size: 4vw;
+    font-size: 6vw;
     margin-top: 1vw;
     float:left;
   }
@@ -310,12 +360,31 @@ button:hover {
   }
 
   div.Win {
-    font-size: 15vw;}
+    font-size: 16vw;}
 
   .NextLevel,.TryAgain,.SaveExit {
     width: 100%;
     font-size: 7vw;}
 
+  #NextLevel{
+    margin-left: 0%;
+  }
+
+  #NextLevel,#TryAgain {
+    margin-bottom: 3%;
+  }
+
+  #NextLevel,#TryAgain,#SaveExit{
+    border-radius: 0px;
+    font-size: 7vw;
+  }
+
   .Code p,.User p{
     font-size: 8vw;}
+
+  button#colorblind{
+    width: 30%;
+    font-size: 4vw;
+    padding: 10px 10px;
+  }
 }
