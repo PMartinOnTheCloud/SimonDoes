@@ -24,7 +24,7 @@ $_SESSION['points'] += 100;
 	<div id="Header">
 		<a class="Logo">SimonDoes</a>
 		<div class="Header-right">
-			<a class="Active" href="index.php">Home</a>
+			<a class="Active" href="index.php" onclick="play1();">Home</a>
 		</div>
 	</div>
 	<div class="Title">
@@ -36,7 +36,7 @@ $_SESSION['points'] += 100;
 
 	<div class="User"> <p>Username: <?php $user = $_SESSION['username']; echo "$user";?></p> </div>
 
-	<div class="Relative">
+	<div id="sound" class="Relative">
 		<form method="post" action="to_play.php">
 			<button class="NextLevel" id="NextLevel" name="NextLevel" type="Submit" onmousedown="bleep.play()">Next Level</button>
 			<audio id="audio" src="Sound/win.wav"></audio>
@@ -45,7 +45,8 @@ $_SESSION['points'] += 100;
 			<button class="TryAgain" name="TryAgain" id="TryAgain" type="Submit" onmousedown="bleep.play()" >Try Again</button>
 		</form>
 		<form method="post" action="ranking.php">
-			<button class="SaveExit" id="SaveExit" name="SaveExit" type="Submit" onclick="bell()">Save/Exit</button>
+			<button class="SaveExit" id="SaveExit" name="SaveExit" type="Submit" onclick="playsound()">Save/Exit</button>
+			<audio id="audiosound" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"></audio>
 		</form>
 	</div>
 	<div class="Code">
