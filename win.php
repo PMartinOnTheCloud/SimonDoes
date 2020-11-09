@@ -17,7 +17,8 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="CSS/win.css" rel="stylesheet" type="text/css" />
-<script src="Song/sound.js" type="text/javascript"></script>
+ <audio id="hoverAudio" preload="auto" src="Song/poweron.ogg"></audio>
+ <audio id="selectAudio" preload="auto" src="../Song/016.mp3"></audio>
 <title>Win</title>
 
  </head>
@@ -31,7 +32,6 @@ if (end($urlexplode)== "to_play.php"){
 
 ?>
 <body> 
-	<audio id="play" src="http://www.soundjay.com/button/beep-07.wav"></audio>
 	<div id="Win">
 	<div id="Header">
 
@@ -49,19 +49,20 @@ if (end($urlexplode)== "to_play.php"){
 	<div class="User"> <p>Username: <?php $user = $_SESSION['username']; echo "$user";?></p> </div>
 	<div class="Relative">
 		<form method="post" action="to_play.php">
-			<button class="NextLevel" id="NextLevel" name="NextLevel" type="Submit" onclick="playSound()"><u>N</u>ext Level</button>
+			<button class="NextLevel" id="NextLevel" name="NextLevel" type="Submit" onclick="audio.play ( )"><u>N</u>ext Level</button>
 		</form>
 		<form method="post" action="to_play.php">
-			<button class="TryAgain" name="RetryWin" id="TryAgain" type="Submit" onclick="PlaySound()"><u>T</u>ry Again</button>
+			<button class="TryAgain" name="RetryWin" id="TryAgain" type="Submit" onclick="audio.play ( )"><u>T</u>ry Again</button>
 		</form>
 		<form method="post" action="ranking.php">
-			<button class="SaveExit" id="SaveExit" name="SaveExit" type="Submit" onclick="PlaySound()"><u>S</u>ave/Exit</button>
+			<button class="SaveExit" id="SaveExit" name="SaveExit" type="Submit" onclick="audio.play ( )"><u>S</u>ave/Exit</button>
 		</form>
 	</div>
 	<div class="Code">
 		<p>Code: <?php echo "$code";?> </p>
 	</div>
 </div>
+    <script src="Song/sound.js"></script>
 <script src="JS/hotkey_win.js" type="text/javascript"></script>
 </body>
 </html>
