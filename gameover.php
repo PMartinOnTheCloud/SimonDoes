@@ -2,6 +2,12 @@
  if (isset($_SESSION["code"])){
         $code = $_SESSION['code'];
     }
+if(!empty($_SESSION['visited_pages'])) {
+  $_SESSION['visited_pages']['prev'] = $_SESSION['visited_pages']['current'];
+}else {
+  $_SESSION['visited_pages']['prev'] = 'No previous page';
+}
+$_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,23 +16,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="CSS/gameover.css" rel="stylesheet" type="text/css" />	
-<link href='https://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
 <title>GameOver</title>
 
  </head>
 <body>
-	<?php
 
-if ($_SESSION["points"] > 20){
-	$_SESSION["points"] -= 20;
+<?php
+
+$url = $_SESSION['visited_pages']['prev'];
+$urlexplode = explode("/", $url);
+if (end($urlexplode)== "to_play.php"){
+	if ($_SESSION["points"] > 20){
+		$_SESSION["points"] -= 20;
+	}
 }
+
+
 ?>
 	<div id="Gameover">
 	<div id="Header">
-		<a class="Logo">SimonDoes</a>
-		<div class="Header-right">
-			<a class="Active" href="index.php">Home</a>
-		</div>
+		<a class="Logo" href="index.php">SimonDoes</a>
+		<button id="colorblind" onclick="">S<u>w</u>itch</button>
 	</div>
 	<div class="Title">
 		<div class="Gameover">Game Over</div>
@@ -35,18 +45,18 @@ if ($_SESSION["points"] > 20){
 		</div>
 	</div>
 
-	<div class="User"> <p>Username:<?php $user = $_SESSION['username']; echo "$user";?></p> </div>
+	<div class="User"> <p>Username: <?php $user = $_SESSION['username']; echo "$user";?></p> </div>
 
 	<div class="Relative">
 		<form method="post" action="to_play.php">
-			<button class="TryAgain" name="TryAgain" id="TryAgain" type="Submit">Try Again</button>
+			<button class="TryAgain" name="TryAgain" id="TryAgain" type="Submit"><u>T</u>ry Again</button>
 		</form>
 		<form method="post" action="ranking.php">
-			<button class="SaveExit" id="SaveExit" name="SaveExit" type="Submit">Save/Exit</button>
+			<button class="SaveExit" id="SaveExit" name="SaveExit" type="Submit"><u>S</u>ave/Exit</button>
 		</form>
 	</div>
 	<div class="Code">
-		<p>Code:<?php echo "$code";?></p>
+		<p>Code: <?php echo "$code";?></p>
 	</div>
 </div>
 <script src="JS/hotkey_gameover.js" type="text/javascript"></script>
