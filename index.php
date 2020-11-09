@@ -2,56 +2,73 @@
    if (isset($_SESSION["username"])){
         $user = $_SESSION['username'];
     }
+if(!empty($_SESSION['visited_pages'])) {
+  $_SESSION['visited_pages']['prev'] = $_SESSION['visited_pages']['current'];
+}else {
+  $_SESSION['visited_pages']['prev'] = 'No previous page';
+}
+$_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
 ?>
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <LINK REL="stylesheet" TYPE="text/css" HREF="CSS/index.css">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="CSS/Index.css">
 </head>
  
 <body>
-    <!-- Empieza Header -->
+    <!-- Start Header -->
     <div class="Header">
-      <h1 class="Logo">Welcome to SimonDone! </h1>
+      <h1 class="Logo">Welcome to Simon Does</h1>
+      <button id="colorblind" onclick="">S<u>w</u>itch</button>
     </div>
-    <!-- Finaliza Header -->
+    <!-- End Header -->
 
-    <!-- Empieza Explicacion -->
-  <div class="container">
+    <!-- Start Explanation -->
     <section class="Main">
-      <p id="text">To start the game just press the <mark class="important">START</mark> button.
-      <p id="text">When the game starts a table box will appear, after that a few boxes will light up. </p>
-      <p id="text"><mark class="correct">To win the game you need to press the correct boxes. </p>
-      <h3 id="text">But <mark class="important">be carefull!</mark> If you fail a single one you will <mark class="incorrect">lose the game!</mark></h3>
-      <p id="text">Win multiple games to increase the dificult of it by increasing the speed of the boxes to disapear and the number of it.</p> 
-      <p id="text">If you understood the instructions, enter a username and press <mark class="important"><strong>"CONTINUE".</mark></strong></p><br>
+      <p id="text">To start the game you just need to input a USERNAME and then press the CONTINUE button.</p>
+      <p id="text"><mark class="important">NOTE:</mark> You can introduce a level code to get to that level automatically.</p>
+      <p id="text">When you enter a level a game board will appear, and a START button next to it.</p>
+      <p id="text">After clicking it a few boxes will light up and then fade.</p>
+      <p id="text">To complete the level you need to click the boxes that were lighted up and click the button check.</p>
+      <p id="text">But <mark class="incorrect">BE CAREFULL.</mark> If you mark a single incorrect box, <mark class="incorrect">you will lose the game.</mark></p>
+      <p id="text">If you <mark class="correct">PASS A LEVEL</mark> you will get to the next level that has increased difficulty.</p>
+      <br>
+      <form name='input' action='to_play.php' method='post'>
+        <input type="checkbox" id="liarbutton" name="liarmode" value="liarmode">
+        <label class="checklabel" for="liarbutton">'<u>L</u>iar' Mode</label>
+        <input type="checkbox" id="survivalbutton" name="survivalmode" value="survivalmode">
+        <label class="checklabel" for="survivalbutton"><u>S</u>urvival Mode</label>
     </section>
-    <!-- Finaliza Explicacion -->
+    <!-- Ends Explanation -->
 
-    <!-- Empieza Form Username -->
+    <!-- Starts Form -->
     <aside>
       <div class="imgcontainer">
+        <label class="label" for="uname" >Code Level</label> 
+        <input type="text" id="inputlevel" placeholder="Enter Code" name="codelevel"> 
         <img src="Images/win.png" alt="Avatar" class="avatar">
       </div>
-      <form name='input' action='to_play.php' method='post'>
-        <label class="label" for="uname"><b>Username</b></label>
+        <label class="label" for="uname">Username</label>
         <?php 
           if (isset($user)) {
-            echo "<input type=\"text\" value=\"$user\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" id=\"button\"onclick=\"carga_sonido()\">Continue</button>";
+            echo "<input type=\"text\" value=\"$user\" name=\"username\" required><button type=\"submit\" id=\"button\"><u>C</u>ontinue</button>";
           }
           else{
-            echo "<input type=\"text\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" id=\"button\"onclick=\"carga_sonido()\">Continue</button>";
+            echo "<input type=\"text\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" id=\"button\">Continue</button>";
           }
         ?>  
-      </form>
+    </form>
       <form action="ranking.php">
-        <button id="ranking" type="submit">Ranking</button>
+        <button id="ranking" type="submit"><u>R</u>anking</button>
       </form>
     </aside>
-    <!-- Finaliza Form Username -->
-  </div>
+    <!-- Ends Form -->
+  <footer>
+    <p>Carlos Jurado · Pablo Martin · Adrian Pradas</p>
+  </footer>
+<script src="JS/hotkey_index.js" type="text/javascript"></script>
 </body>
 </html>
