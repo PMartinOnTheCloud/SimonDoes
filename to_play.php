@@ -100,13 +100,13 @@ $relativeheight = (100/$heigth)-(0.4);
 $relativewidth= (100/$width)-(0.4);
 
 
-echo "<div id='general'>";
+echo "<div style='margin-top: 10%' id='general'>";
 for ($h=0;$h<$heigth;$h++){
 	for ($w=0;$w<$width;$w++){
 		if (in_array($identification, $arrayOfCeldasToIlluminate)) {
-			echo "<div id='$identification' class='impostor' style='height: $relativeheight%;width: $relativewidth%;'></div>";
+			echo "<div id='$identification' class='impostor' style='height: $relativeheight%; width: $relativewidth%;'></div>";
 		} else {
-			echo "<div id='$identification' class='' style='height: $relativeheight%;width: $relativewidth%;'></div>";
+			echo "<div id='$identification' class='' style='height: $relativeheight%; width: $relativewidth%;'></div>";
 		}
 		$identification += 1;
 	}
@@ -116,8 +116,8 @@ echo "</div>";
 
 ?>
 
-<button id='buttonStart' onclick="startGame(<?php echo "$secondsin"; ?>)">START</button>
-<button id='buttonCheck' onclick="failOrGrace(<?php echo "$numberOfCeldasToIlluminate"; ?>)">CHECK</button>
+<button style="margin-left: 70%" id='buttonStart' onclick="startGame(<?php echo "$secondsin"; ?>)">START</button>
+<button style="margin-left: 70%" id='buttonCheck' onclick="failOrGrace(<?php echo "$numberOfCeldasToIlluminate"; ?>)">CHECK</button>
 
 <script src="Song/sound.js"></script>
 <script src="JS/to_play.js" type="text/javascript"></script>
