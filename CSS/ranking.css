@@ -1,41 +1,40 @@
+@font-face {
+  font-family: 'Arcade-Font';
+  src: url('../Fonts/Bitwise-m19x.ttf');
+}
+
+body {
+  background-color:#262626;
+  font-family: Arcade-Font;
+}
+
 html, body{
   height:100%;
   margin:0;
   display: flex;
   flex-direction: column;
-  background: #191919;}
+}
 
 /*Empieza Header*/
 #Header {
   text-align:center;
-  border: 1px solid #ccc;
-  overflow: hidden;
-  background-color: black;
+  background-color:#191919;
+  border-bottom: 3px solid #7FFF00;
   padding: 20px 10px;  
 }
 
 #Header a {
   float: left;
-  color: black;
+  color: #FFFFFF;
   text-align: center;
   padding: 12px;
   text-decoration: none;
-  font-size: 18px; 
+  font-size: 22px; 
   line-height: 25px;
   border-radius: 4px;
-}
-
-
-.Logo {
-  color: transparent;
-  position: left;
-  text-align: center;
-  font-size: 40px;
-  font-family: 'Black Ops One', cursive;
-  -moz-text-stroke-width: 2px;
-  -webkit-text-stroke-width: 2px;
-  -moz-text-stroke-color: #000000;
-  -webkit-text-stroke-color: #ffffff;
+  font-family: Arcade-Font;
+  margin-left: 2.5%;
+  margin-top: 10px;
 }
 
 .Header-right {
@@ -53,23 +52,48 @@ html, body{
 /*Termina Header*/
 
 #tabla {
-max-height: 200px;
-margin-left: auto;
+  margin-left: auto;
   margin-right: auto;
   color: #7fff00;
   font-size: 30px;
-  border-collapse: separate;
-  border-spacing: 20px;
+  border-collapse: collapse;
+  border-spacing: 200px;
   text-align: center;
-  overflow-y: auto;
-  overflow-x: auto;
   display: block;
+  margin-bottom: 3%;
+}
+
+button#colorblind {
+  width: 10%;
+  margin-top: 7px;
+  float: right;
+  background-color: #6576B4;
+  color: white;
+  border-radius: 0px;
+  font-family: Arcade-Font;
+  font-size: 20px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  border: none;
+  margin-right: 20px;
 }
 
 td {
-  border: #7fff00 2px solid;
+  padding-top:1%;
+  border-top:#7fff00 3px solid;
+  text-align: center;
 }
 
+tr > th:nth-child(3), tr > td:nth-child(3) {
+  padding-left: 20px;
+  border-left:#7fff00 3px solid;
+  padding-right: 20px;
+}
+
+tr > th:nth-child(2), tr > td:nth-child(2) {
+  padding-right: 20px;
+  padding-left: 20px;
+}
 h1 {
     text-align:center;
     color: #7fff00;
@@ -87,9 +111,14 @@ table.class_color tr:last-child td{
   box-sizing: border-box;
   bottom: 0;
   width: 100%;
+  border-top: 3px solid #7FFF00;
   background-color: #191919;
   color: #7fff00;
   text-align: center;
+}
+
+.footer > p {
+  font-size: 15px;
 }
 
 
@@ -101,6 +130,10 @@ table.class_color tr:last-child td{
   .footer{
     font-size: 2vw;
   }
+
+  #tabla {
+    margin-bottom: 5%;
+  }
 }
 
 @media screen and (max-width:1024px){
@@ -110,6 +143,9 @@ table.class_color tr:last-child td{
 
   .footer{
     font-size: 2vw;
+  }
+  #tabla {
+    margin-bottom: 6%;
   }
 }
 
@@ -121,14 +157,28 @@ table.class_color tr:last-child td{
   .footer{
     font-size: 3vw;
   }
-}
 
-@media screen and (max-width:800px){
-  .Main{
-    width: 60%;
+  #tabla {
+    margin-bottom: 7%;
   }
 
-  .footer{
-    font-size: 6vw;
+  button#colorblind {
+    width: 13%;
+    font-size: 17px;
+  }
+
+@media screen and (max-width:375px){
+  #tabla {
+    margin-bottom: 15%;
+  }
+  button#colorblind {
+    width: 25%;
+    font-size: 15px;
+  }
+  h1.Ranking{
+    font-size: 30px;
+  }
+  #tabla {
+    font-size: 20px;
   }
 }
