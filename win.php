@@ -37,13 +37,14 @@ $_SESSION['points'] += 100;
 
 	<div class="Relative">
 		<form method="post" action="to_play.php">
-			<button class="NextLevel" id="NextLevel" name="NextLevel" type="Submit">Next Level</button>
+			<button class="NextLevel" id="NextLevel" name="NextLevel" type="Submit" onclick="play()">Next Level</button>
+			<audio id="audio" src="Sound/win.wav"></audio>
 		</form>
 		<form method="post" action="to_play.php">
-			<button class="TryAgain" name="TryAgain" id="TryAgain" type="Submit">Try Again</button>
+			<button class="TryAgain" name="TryAgain" id="TryAgain" type="Submit" onclick="play()">Try Again</button>
 		</form>
 		<form method="post" action="ranking.php">
-			<button class="SaveExit" id="SaveExit" name="SaveExit" type="Submit">Save/Exit</button>
+			<button class="SaveExit" id="SaveExit" name="SaveExit" type="Submit" onclick="play()">Save/Exit</button>
 		</form>
 	</div>
 	<div class="Code">
@@ -51,6 +52,13 @@ $_SESSION['points'] += 100;
 	</div>
 </div>
 <script src="JS/hotkey_gameover.js" type="text/javascript"></script>
+  <script>
+
+      function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+</script>
 </body>
 
 
