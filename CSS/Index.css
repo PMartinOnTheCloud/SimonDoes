@@ -47,7 +47,10 @@ button#colorblind {
   border-radius: 10px;
 }
 
-
+button#colorblind:hover {
+  background-color: white;
+  color: #6576B4;
+}
 
 /* section */
 .Main{

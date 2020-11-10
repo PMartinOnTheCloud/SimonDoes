@@ -61,6 +61,11 @@ button#colorblind {
 }
 
 
+button#colorblind:hover {
+  background-color: white;
+  color: #6576B4;
+}
+
 .Header-right {
   float: right;
 }
@@ -112,6 +117,12 @@ button#colorblind {
 	background-color:black;
 	color:#7fff00;
 }
+
+button.:hover {
+  background-color: #7fff00;
+  color: black;
+}
+
 
 /*Empieza Tabla*/
 

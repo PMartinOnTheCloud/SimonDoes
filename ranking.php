@@ -16,14 +16,14 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
     <title>Ranking</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="CSS/ranking.css">
-    <audio id="BtM" preload="auto" src="Song/poweron.ogg"></audio>
+    <audio id="BtM" preload="auto" src="Song/beep3.wav"></audio>
 
 </head>
 <body>
 <div id="Header">
-        <a class="Logo" href="index.php">SimonDoes</a>
-            <button id="colorblind" onclick="">S<u>w</u>itch</button>
-    </div>
+    <a class="Logo" href="index.php">SimonDoes</a>
+    <button id="colorblind" onmouseover="Switch()" onclick="">S<u>w</u>itch</button>
+</div>
 <h1 class="Ranking">TOP SCORERS</h1>
     <?php
 

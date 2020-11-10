@@ -94,7 +94,10 @@ button#colorblind {
   margin-right: 20px;
 }
 
-
+button#colorblind:hover {
+  background-color: white;
+  color: #6576B4;
+}
 
 
 /*Termina Header*/

@@ -19,12 +19,12 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
 	<title>To_play</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="CSS/to_play.css">
-    <audio id="BtM" preload="auto" src="Song/beep.wav"></audio>
+    <audio id="BtM" preload="auto" src="Song/beep3.wav"></audio>
 </head>
 <body>
 <div id="Header">
 	<a class="Logo" href="index.php">SimonDoes</a>
-	<button id="colorblind" onclick="">S<u>w</u>itch</button>
+	<button class="colorblind" id="colorblind" onclick="">S<u>w</u>itch</button>
 </div>
 <?php
 
@@ -119,8 +119,8 @@ echo "</div>";
 
 ?>
 
-<button style="margin-left: 70%" id='buttonStart' onclick="startGame(<?php echo "$secondsin"; ?>)">START</button>
-<button style="margin-left: 70%" id='buttonCheck' onclick="failOrGrace(<?php echo "$numberOfCeldasToIlluminate"; ?>)">CHECK</button>
+<button class="buttonStart" style="margin-left: 70%" id='buttonStart' onclick="startGame(<?php echo "$secondsin"; ?>)">START</button>
+<button class="buttonCheck" style="margin-left: 70%" id='buttonCheck' onclick="failOrGrace(<?php echo "$numberOfCeldasToIlluminate"; ?>)">CHECK</button>
 
 <script src="Song/sound.js"></script>
 <script src="JS/to_play.js" type="text/javascript"></script>
