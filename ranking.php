@@ -23,7 +23,7 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
 <body>
 <div id="Header">
     <a class="Logo" href="index.php">SimonDoes</a>
-    <button id="colorblind" onmouseover="Switch()" onclick="">S<u>w</u>itch</button>
+    <button class="colorblind"  id="colorblind" onmouseover="myPlay()" onclick="">S<u>w</u>itch</button>
 </div>
 <h1 class="Ranking">TOP SCORERS</h1>
     <?php

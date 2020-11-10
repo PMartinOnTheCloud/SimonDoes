@@ -1,5 +1,6 @@
 window.onload = function (params) {
     var audio = document.getElementById("inicio");
+    audio.volume = 0.1;
     audio.play();
 };
 
@@ -12,3 +13,8 @@ for (const button of buttons) {
     });
 }
 
+
+function myPlay() {
+    var a = document.getElementById('BtM');
+    a.play();
+} 
