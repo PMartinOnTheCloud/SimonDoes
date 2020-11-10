@@ -17,6 +17,7 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="CSS/win.css" rel="stylesheet" type="text/css" />
+<script src="JS/ColorSwith.js"></script>
 <audio id="audio" preload="auto" src="Song/win.wav"></audio>
 <audio id="BtM" preload="auto" src="Song/beep3.wav"></audio>
 
@@ -37,7 +38,7 @@ if (end($urlexplode)== "to_play.php"){
 	<div id="Header">
 
 		<a class="Logo" href="index.php">SimonDoes</a>
-		<button id="colorblind" onclick="">S<u>w</u>itch</button>	
+		<button id="colorblind" onclick="myFunction()">S<u>w</u>itch</button>	
 		</div>
 	</div>
 	<div class="Title">

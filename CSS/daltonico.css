@@ -14,7 +14,7 @@ body {
 
 .Header {
   overflow: hidden;
-  background-color:#191919;
+  background-color:#ffffff;
   padding: 20px 10px;
   border-bottom: 3px solid #7FFF00;
 }
@@ -157,10 +157,7 @@ button:hover {
 
 
 /*final aside*/
-.ranking{
-  background-color: #191919;
-  color: #7fff00;
-}
+
 
 footer {
   overflow: hidden;
@@ -179,57 +176,6 @@ footer > p {
   text-decoration: none;
   font-size: 18px;
 }
-
-.dark-Mode {
-  background-color: white;
-}
-
-.dark-Mode >.Header > h1.Logo {
-  filter: invert(100%);
-}
-
-.darck-Mode > .Header > button#colorblind {
-  filter: invert(100%);
-}
-
-.dark-Mode > .Main{
-  filter: invert(100%);
-}
-
-.dark-Mode > aside > .imgcontainer >.label {
-  filter: invert(100%);
-}
-
-.dark-Mode > aside > .imgcontainer > input {
-  filter: invert(100%);
-}
-.dark-Mode > aside > .label {
-  filter: invert(100%);
-}
-
-.dark-Mode > aside > input {
-  filter: invert(100%);
-}
-
-.dark-Mode > aside > button {
-  filter: invert(100%);
-}
-s
-.dark-Mode > aside > button > .ranking   {
-  filter: invert(100%)
-}
-
-.dark-Mode footer > p  {
-  filter: invert(100%);
-}
-
-/*body.dark-Mode{
-  filter: invert(100%);
-}
-
-body.dark-Mode img{
-  filter: invert(100%);
-}*/
 
 @media screen and (max-width:1920px){
   p#text{

@@ -19,13 +19,14 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
 	<title>To_play</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="CSS/to_play.css">
+    <script src="JS/ColorSwith.js"></script>
     <audio id="inicio" preload="auto" src="Song/inicio.mp3"></audio>
     <audio id="BtM" preload="auto" src="Song/beep3.wav"></audio>
 </head>
 <body>
 <div id="Header">
 	<a class="Logo" href="index.php">SimonDoes</a>
-	<button class="colorblind" id="colorblind" onclick="">S<u>w</u>itch</button>
+	<button class="colorblind" id="colorblind" onclick="myFunction()">S<u>w</u>itch</button>
 </div>
 <?php
 
@@ -119,6 +120,8 @@ for ($h=0;$h<$heigth;$h++){
 echo "</div>";
 
 ?>
+<svg width="200" height="200"><circle id="circle" cx="100" cy="100" r="80" /></svg>
+<span id="timer"><?php echo $secondsin; ?></span>
 
 <button class="buttonStart" style="margin-left: 70%" id='buttonStart' onclick="startGame(<?php echo "$secondsin"; ?>)">START</button>
 <button class="buttonCheck" style="margin-left: 70%" id='buttonCheck' onclick="failOrGrace(<?php echo "$numberOfCeldasToIlluminate"; ?>)">CHECK</button>

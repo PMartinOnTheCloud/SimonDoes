@@ -38,8 +38,6 @@ function clearCeldas (celdas) {
 function addEventListenerToCeldas (celdas,selectedCeldasId,correctCeldasId) {
 	for (let i = 0; i < celdas.length; i++) {
 		celdas[i].addEventListener("click",function() { checkCeldas(i,celdas); });
-		celdas[i].play();
-
 	}
 }
 
@@ -102,6 +100,27 @@ function youLose() {
 	location.replace('gameover.php');
 }
 
+
 function easteregg() {
 	location.replace('easter_egg.php');
+}
+
+
+function countdownAnimation (seconds) {
+    document.getElementById("circle").style.visibility = "visible";
+    document.getElementById("timer").style.visibility = "visible";
+    document.getElementById("circle").style.animation = String(seconds)+"s circletimer linear";
+    var countdown = seconds;
+    var countdownStart = setInterval(function() {
+        console.log(countdown);
+        if (countdown == 1){
+            document.getElementById("circle").style.visibility = "hidden";
+            document.getElementById("timer").style.visibility = "hidden";
+            clearInterval(countdownStart);
+        } else {
+            --countdown;
+            document.getElementById("timer").innerHTML = countdown;
+        }
+    },1000)
+
 }

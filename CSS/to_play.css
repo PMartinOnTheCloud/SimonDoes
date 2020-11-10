@@ -128,42 +128,7 @@ button.:hover {
   color: black;
 }
 
-/*button#buttonStart {
-  display: block;
-  margin: 20px auto auto auto;
-  position: absolute;top: 50%;
-  width:20%;
-  height: 20%;
-  font-size: 50px;
-  background-color: black;
-  color:#7fff00;
-  font-family: Arcade-Font;
-  border-radius: 10px;
-}
 
-button#buttonStart:hover {
-  background-color: #7fff00;
-  color: #191919;
-}
-
-button#buttonCheck {
-  display: block;
-  margin: 20px auto auto auto;
-  position: absolute;top: 50%;
-  width:20%;
-  height: 20%;
-  font-size: 50px;
-  background-color: black;
-  color:#7fff00;
-  font-family: Arcade-Font;
-  border-radius: 10px;
-}
-
-button#buttonCheck:hover {
-  background-color: #7fff00;
-  color: #191919;
-}
-*/
 
 @keyframes circletimer {
   0% {

@@ -16,6 +16,7 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <LINK REL="stylesheet" TYPE="text/css" HREF="CSS/Index.css">
+  <script src="JS/ColorSwith.js"></script>
   <script src="Song/sound.js"></script>
   <audio id="BtM" preload="auto" src="Song/beep3.wav"></audio>
 </head>
@@ -24,7 +25,7 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
     <!-- Start Header -->
     <div class="Header">
       <h1 class="Logo">Welcome to Simon Does</h1>
-      <button id="colorblind" onclick="">S<u>w</u>itch</button>
+      <button id="colorblind" onclick="myFunction()">S<u>w</u>itch</button>
     </div>
     <!-- End Header -->
 
@@ -38,7 +39,7 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
       <p id="text">But <mark class="incorrect">BE CAREFULL.</mark> If you mark a single incorrect box, <mark class="incorrect">you will lose the game.</mark></p>
       <p id="text">If you <mark class="correct">PASS A LEVEL</mark> you will get to the next level that has increased difficulty.</p>
       <br>
-      <form name='input' action='to_play.php' method='post'>
+      <form class="Form" name='input' action='to_play.php' method='post'>
         <input type="checkbox" id="liarbutton" name="liarmode" value="liarmode">
         <label class="checklabel" for="liarbutton">'<u>L</u>iar' Mode</label>
         <input type="checkbox" id="survivalbutton" name="survivalmode" value="survivalmode">
@@ -64,7 +65,7 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
         ?>  
     </form>
       <form action="ranking.php">
-        <button id="ranking" type="submit"><u>R</u>anking</button>
+        <button class="ranking" id="ranking" type="submit"><u>R</u>anking</button>
       </form>
     </aside>
     <!-- Ends Form -->

@@ -16,13 +16,14 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
     <title>Ranking</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="CSS/ranking.css">
+    <script src="JS/ColorSwith.js"></script>
     <audio id="BtM" preload="auto" src="Song/beep3.wav"></audio>
 
 </head>
 <body>
 <div id="Header">
     <a class="Logo" href="index.php">SimonDoes</a>
-    <button class="colorblind"  id="colorblind" onmouseover="myPlay()" onclick="">S<u>w</u>itch</button>
+    <button class="colorblind"  id="colorblind" onclick="myFunction()">S<u>w</u>itch</button>
 </div>
 <h1 class="Ranking">TOP SCORERS</h1>
     <?php
@@ -59,7 +60,7 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
  
     ?>
 
-    <table id="tabla">
+    <table class="" id="tabla">
             <tr>
             <th></th>
             <th>Username</th>
