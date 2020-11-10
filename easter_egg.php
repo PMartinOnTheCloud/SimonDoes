@@ -18,7 +18,7 @@
 			<img src="Images/tekken.png" class=".vert-move">
 		</div>
 		<section class="Main">
-			<p id="text">Congratulations from the creators of <mark class="important">SimonDoes</mark>,SimonDoes for</p>
+			<p id="text">Congratulations from the creators of <mark class="important">SimonDoes</mark>, for</p>
       		<p id="text">reaching this <mark class="important">Easter_EGG</mark>, you are already a king.</p>
       		<p id="text"><mark class="important">Adrian Pradas, Carlos Jurado, Pablo Martin</mark>.</p>
     	</section>
