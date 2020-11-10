@@ -12,9 +12,3 @@ for (const button of buttons) {
         BtM.play();
     });
 }
-
-
-function myPlay() {
-    var a = document.getElementById('BtM');
-    a.play();
-} 

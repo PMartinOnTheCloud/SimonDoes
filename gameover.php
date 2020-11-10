@@ -16,8 +16,7 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="CSS/gameover.css" rel="stylesheet" type="text/css" />	
-<audio id="GameOverSound" preload="auto" src="Song/lose.wav"></audio>
-<audio id="BtM" preload="auto" src="Song/beep3.wav"></audio>
+<audio id="audio" preload="auto" src="Song/lose.wav"></audio>
 <title>GameOver</title>
 
  </head>
@@ -62,7 +61,6 @@ if (end($urlexplode)== "to_play.php"){
 	</div>
 </div>
 <script src="Song/SoundGameOver.js"></script>
-<script src="Song/sound.js"></script>
 <script src="JS/hotkey_gameover.js" type="text/javascript"></script>
 </body>
 
