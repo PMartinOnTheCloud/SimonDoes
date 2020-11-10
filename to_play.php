@@ -1,4 +1,7 @@
-<?php session_start();?>
+<?php session_start();
+if (isset($_SESSION["code"])){
+        $code = $_SESSION['code'];
+    }?>
 <?php
       if (isset($_POST["username"])){
         $_SESSION["username"] = $_POST["username"]; 
@@ -21,7 +24,6 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
 <body>
 <div id="Header">
 	<a class="Logo" href="index.php">SimonDoes</a>
-    <p>Code: <?php echo "$code";?></p>
 	<button id="colorblind" onclick="">S<u>w</u>itch</button>
 </div>
 <?php
@@ -127,7 +129,8 @@ echo "</div>";
 <footer>
     <p>Welcome, <?php
 		$user = $_SESSION['username'];
-		echo "$user";?></p>
+		echo "$user";?> - Code: <?php echo "$code";?></p>
+
   </footer>
 
 </body>
