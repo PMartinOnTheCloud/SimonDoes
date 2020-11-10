@@ -234,6 +234,19 @@ button:hover {
         
 /*Termina Win*/
 
+.dark-Mode > #Win > #Header{
+  background-color: #231002;
+}
+
+
+.dark-Mode > #Win >.Header >a {
+  filter: invert(100%);
+}
+
+.dark-Mode > #Win > .Header >button {
+  filter: invert(100%);
+}
+
 .dark-Mode > .Title > .Win {
   filter: invert(100%);
 }
