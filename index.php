@@ -17,10 +17,8 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <LINK REL="stylesheet" TYPE="text/css" HREF="CSS/Index.css">
   <script src="JS/ColorSwith.js"></script>
-  <audio autoplay id="myautoload">
-    <source src="Song/ranking.mp3" type="audio/mpeg">
-    </audio>
-  <audio id="BtM" preload="auto" src="Song/beep3.wav"></audio>
+    <audio id="inicio" preload="auto" src="Song/ranking.wav"></audio>
+    <audio id="BtM" preload="auto" src="Song/beep3.wav"></audio>
 </head>
  
 <body>
@@ -42,9 +40,9 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
       <p id="text">If you <mark class="correct">PASS A LEVEL</mark> you will get to the next level that has increased difficulty.</p>
       <br>
       <form class="Form" name='input' action='to_play.php' method='post'>
-        <input type="checkbox" id="liarbutton" name="liarmode" value="liarmode">
+        <input type="checkbox" id="liarbutton" name="liarmode" value="liarmode" onchange="myfunction(this)">
         <label class="checklabel" for="liarbutton">'<u>L</u>iar' Mode</label>
-        <input type="checkbox" id="survivalbutton" name="survivalmode" value="survivalmode">
+        <input type="checkbox" id="survivalbutton" name="survivalmode" value="survivalmode" onchange="myfunction(this)">
         <label class="checklabel" for="survivalbutton"><u>S</u>urvival Mode</label>
     </section>
     <!-- Ends Explanation -->
@@ -75,6 +73,7 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
     <p>Carlos Jurado · Pablo Martin · Adrian Pradas</p>
   </footer>
 <script src="Song/sound.js"></script>
+<script src="Song/checkbox.js"></script>
 <script src="JS/hotkey_index.js" type="text/javascript"></script>
 </body>
 </html>
