@@ -3,6 +3,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="CSS/easter_egg.css" rel="stylesheet" type="text/css" />
+	<audio id="audio" preload="auto" src="Song/easter-egg.wav"></audio>
 	<title>easter_egg</title>
 </head>
 <body>
@@ -24,5 +25,6 @@
     	</section>
 
 	</div>
+	<script src="Song/SoundEaster.js"></script>
 </body>
 </html>
