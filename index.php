@@ -17,7 +17,6 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <LINK REL="stylesheet" TYPE="text/css" HREF="CSS/Index.css">
   <script src="JS/ColorSwith.js"></script>
-  <script src="Song/sound.js"></script>
   <audio id="BtM" preload="auto" src="Song/beep3.wav"></audio>
 </head>
  
@@ -72,6 +71,7 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
   <footer>
     <p>Carlos Jurado · Pablo Martin · Adrian Pradas</p>
   </footer>
+<script src="Song/sound.js"></script>
 <script src="JS/hotkey_index.js" type="text/javascript"></script>
 </body>
 </html>

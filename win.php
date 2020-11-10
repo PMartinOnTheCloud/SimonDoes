@@ -19,6 +19,7 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
 <link href="CSS/win.css" rel="stylesheet" type="text/css" />
 <script src="JS/ColorSwith.js"></script>
 <audio id="audio" preload="auto" src="Song/win.wav"></audio>
+<audio id="BtM" preload="auto" src="Song/beep3.wav"></audio>
 <title>Win</title>
 
  </head>
