@@ -96,7 +96,7 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
         $user = $_SESSION['username'];
         echo "$user";}?></p>
 </div>
-<script src="Song/sound.js"></script>
+<script src="Song/soundRanking.js"></script>
 <script src="JS/hotkey_ranking.js" type="text/javascript"></script>
 </body>
 </html>
