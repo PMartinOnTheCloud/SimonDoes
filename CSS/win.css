@@ -80,7 +80,7 @@ html, body{
 }
 
 button#colorblind {
-  width: 10%;
+  width: 150px;
   margin-top: 7px;
   float: right;
   background-color: #6576B4;
@@ -98,6 +98,7 @@ button#colorblind:hover {
   background-color: white;
   color: #6576B4;
 }
+
 
 
 /*Termina Header*/

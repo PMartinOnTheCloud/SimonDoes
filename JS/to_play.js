@@ -38,6 +38,8 @@ function clearCeldas (celdas) {
 function addEventListenerToCeldas (celdas,selectedCeldasId,correctCeldasId) {
 	for (let i = 0; i < celdas.length; i++) {
 		celdas[i].addEventListener("click",function() { checkCeldas(i,celdas); });
+		celdas[i].play();
+
 	}
 }
 
