@@ -50,8 +50,8 @@ function checkCeldas(i,celdas) {
 }
 
 
-function failOrGrace(numberOfCeldasToIlluminate){
-	clearInterval(scnds);
+function failOrGrace(numberOfCeldasToIlluminate,level){
+	easterBool = easterEgg(level);
 	var correctCeldasId = getCorrectCeldasId(numberOfCeldasToIlluminate);
 	var coloredCeldasId = getColoredCeldasId();
 	var fallo = false;
@@ -60,11 +60,29 @@ function failOrGrace(numberOfCeldasToIlluminate){
 			fallo = true;
 		}
 	}
+
 	if (fallo == false && coloredCeldasId.length==correctCeldasId.length){
 		youWin();
+	} else if (easterBool==true){
+		easterLocation();
 	}
 	else{
 		youLose();
+	}
+	
+}
+
+function easterEgg(level){
+	if (level=="B7771") {
+		var easter = true;
+		checkEaster = document.getElementById("general").children;
+		for (let i = 0; checkEaster.length > i ; i++) {
+			console.log(easter);
+			if (checkEaster[i].style.backgroundColor != "green") {
+				easter = false;
+			}
+		}
+		return easter;
 	}
 }
 
@@ -98,4 +116,8 @@ function youWin() {
 
 function youLose() {
 	location.replace('gameover.php');
+}
+
+function easterLocation() {
+	location.replace('easter_egg.php');
 }

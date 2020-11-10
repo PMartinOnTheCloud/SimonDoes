@@ -40,6 +40,7 @@ if (!isset($_SESSION['pastname'])){
 
 if (isset($_POST['RetryWin'])) {
 	$_SESSION['points']-= 100;
+	$_SESSION['level'] -= 1;
 	header("Location: to_play.php"); 
 }
 
@@ -98,7 +99,7 @@ $identification = 0;
 
 $relativeheight = (100/$heigth)-(0.4);
 $relativewidth= (100/$width)-(0.4);
-
+$codename=$_SESSION['code'];
 
 echo "<div id='general'>";
 for ($h=0;$h<$heigth;$h++){
@@ -117,7 +118,7 @@ echo "</div>";
 ?>
 
 <button id='buttonStart' onclick="startGame(<?php echo "$secondsin"; ?>)">START</button>
-<button id='buttonCheck' onclick="failOrGrace(<?php echo "$numberOfCeldasToIlluminate"; ?>)">CHECK</button>
+<button id='buttonCheck' onclick="failOrGrace(<?php echo "$numberOfCeldasToIlluminate,'$codename'" ?>)">CHECK</button>
 
 <script src="JS/to_play.js" type="text/javascript"></script>
 <script src="JS/hotkey_to_play.js" type="text/javascript"></script>
