@@ -39,7 +39,7 @@ if (end($urlexplode)== "to_play.php"){
 	<div id="Gameover">
 	<div id="Header">
 		<a class="Logo" href="index.php">SimonDoes</a>
-		<button id="colorblind" onclick="myFunction()">S<u>w</u>itch</button>
+		<button id="colorblind" onclick="myFunction()" onmousedown="bleep.play()">S<u>w</u>itch</button>
 	</div>
 	<div class="Title">
 		<div class="Gameover">Game Over</div>
@@ -52,10 +52,10 @@ if (end($urlexplode)== "to_play.php"){
 
 	<div class="Relative">
 		<form method="post" action="to_play.php">
-			<button class="TryAgain" name="TryAgain" id="TryAgain" type="Submit"><u>T</u>ry Again</button>
+			<button class="TryAgain" name="TryAgain" id="TryAgain" type="Submit" onmousedown="bleep.play()"><u>T</u>ry Again</button>
 		</form>
 		<form method="post" action="ranking.php">
-			<button class="SaveExit" id="SaveExit" name="SaveExit" type="Submit"><u>S</u>ave/Exit</button>
+			<button class="SaveExit" id="SaveExit" name="SaveExit" type="Submit" onmousedown="bleep.play()"><u>S</u>ave/Exit</button>
 		</form>
 	</div>
 	<div class="Code">

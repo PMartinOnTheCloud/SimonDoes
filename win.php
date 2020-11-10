@@ -19,8 +19,6 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
 <link href="CSS/win.css" rel="stylesheet" type="text/css" />
 <script src="JS/ColorSwith.js"></script>
 <audio id="audio" preload="auto" src="Song/win.wav"></audio>
-<audio id="BtM" preload="auto" src="Song/beep3.wav"></audio>
-
 <title>Win</title>
 
  </head>
@@ -37,8 +35,8 @@ if (end($urlexplode)== "to_play.php"){
 	<div id="Win">
 	<div id="Header">
 
-		<a class="Logo" href="index.php">SimonDoes</a>
-		<button id="colorblind" onclick="myFunction()">S<u>w</u>itch</button>	
+		<a class="Logo" href="index.php" onmousedown="bleep.play()">SimonDoes</a>
+		<button id="colorblind" onclick="myFunction()" onmousedown="bleep.play()">S<u>w</u>itch</button>	
 		</div>
 	</div>
 	<div class="Title">
@@ -51,13 +49,13 @@ if (end($urlexplode)== "to_play.php"){
 	<div class="User"> <p>Username: <?php $user = $_SESSION['username']; echo "$user";?></p> </div>
 	<div class="Relative">
 		<form method="post" action="to_play.php">
-			<button class="NextLevel" id="NextLevel" name="NextLevel" type="Submit" onclick="audio.play ( )"><u>N</u>ext Level</button>
+			<button class="NextLevel" id="NextLevel" name="NextLevel" type="Submit" onmousedown="bleep.play()"><u>N</u>ext Level</button>
 		</form>
 		<form method="post" action="to_play.php">
-			<button class="TryAgain" name="RetryWin" id="TryAgain" type="Submit" onclick="audio.play ( )"><u>T</u>ry Again</button>
+			<button class="TryAgain" name="RetryWin" id="TryAgain" type="Submit" onmousedown="bleep.play()"><u>T</u>ry Again</button>
 		</form>
 		<form method="post" action="ranking.php">
-			<button class="SaveExit" id="SaveExit" name="SaveExit" type="Submit" onclick="audio.play ( )"><u>S</u>ave/Exit</button>
+			<button class="SaveExit" id="SaveExit" name="SaveExit" type="Submit" onmousedown="bleep.play()"><u>S</u>ave/Exit</button>
 		</form>
 	</div>
 	<div class="Code">

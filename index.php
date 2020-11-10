@@ -25,7 +25,7 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
     <!-- Start Header -->
     <div class="Header">
       <h1 class="Logo">Welcome to Simon Does</h1>
-      <button id="colorblind" onclick="myFunction()">S<u>w</u>itch</button>
+      <button id="colorblind" onclick="myFunction()" onmousedown="bleep.play()">S<u>w</u>itch</button>
     </div>
     <!-- End Header -->
 
@@ -57,15 +57,15 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
         <label class="label" for="uname">Username</label>
         <?php 
           if (isset($user)) {
-            echo "<input type=\"text\" value=\"$user\" name=\"username\" required><button type=\"submit\" id=\"button\"><u>C</u>ontinue</button>";
+            echo "<input type=\"text\" value=\"$user\" name=\"username\" required><button type=\"submit\" id=\"button\" onmousedown=\"bleep.play()\"><u>C</u>ontinue</button>";
           }
           else{
-            echo "<input type=\"text\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" id=\"button\">Continue</button>";
+            echo "<input type=\"text\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" id=\"button\" onmousedown=\"bleep.play()\">Continue</button>";
           }
         ?>  
     </form>
       <form action="ranking.php">
-        <button class="ranking" id="ranking" type="submit"><u>R</u>anking</button>
+        <button class="ranking" id="ranking" type="submit" onmousedown="bleep.play()"><u>R</u>anking</button>
       </form>
     </aside>
     <!-- Ends Form -->
