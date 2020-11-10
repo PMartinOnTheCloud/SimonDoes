@@ -230,6 +230,34 @@ button:hover {
 /*Termina Win*/
 
 
+.dark-Mode > #Gameover > #Header{
+  filter: invert(0%);
+}
+
+.dark-Mode > #Gameover > #Header > button{
+  filter: invert(100%);
+}
+
+.dark-Mode > #Gameover > .Title > .Gameover {
+  filter: invert(100%);
+}
+
+.dark-Mode > #Gameover > .Title > .Img {
+  filter: invert(100%);
+}
+
+.dark-Mode > #Gameover > .Relative > form > button {
+  filter: invert(100%);
+}
+
+.dark-Mode > #Gameover > .User p  {
+  filter: invert(100%);
+}
+
+.dark-Mode   > #Gameover > .Code p {
+  filter: invert(100%);
+}
+
 
 @media screen and (max-width: 1366px) {
   #Header a {

@@ -238,7 +238,7 @@ button:hover {
   filter: invert(100%);
 }
 
-.dark-Mode > button > u{
+.dark-Mode > .Relative > form > button {
   filter: invert(100%);
 }
 

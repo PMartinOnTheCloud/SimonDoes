@@ -180,20 +180,51 @@ footer > p {
   font-size: 18px;
 }
 
+
 .dark-Mode {
-  background-color: white;
+  background-color: #9c9c9c;
 }
 
-.dark-Mode >.Header > h1.Logo {
+
+.dark-Mode >.Header {
+background-color: #231002;
+color:#8000ff;
+}
+
+
+.dark-Mode >.Header >h1 {
+color:#8000ff;
+}
+
+.dark-Mode >.Header >button {
   filter: invert(100%);
 }
 
-.darck-Mode > .Header > button#colorblind {
-  filter: invert(100%);
+.dark-Mode > .Main {
+  background-color: #9c9c9c;
 }
 
-.dark-Mode > .Main{
-  filter: invert(100%);
+.dark-Mode > .Main > p#text{
+  color: #8000ff;
+}
+
+.dark-Mode > .Main > p#text > .important{
+  background-color: #9c9c9c;
+  color: #f8f32b;
+}
+
+.dark-Mode > .Main > p#text > .incorrect{
+  background-color: #9c9c9c;
+  color: #b9132c;
+}
+
+.dark-Mode > .Main > p#text > .correct{
+  background-color: #9c9c9c;
+  color: #00ff00;
+}
+
+.dark-Mode > aside {
+  background-color: #9c9c9c;
 }
 
 .dark-Mode > aside > .imgcontainer >.label {
@@ -211,12 +242,8 @@ footer > p {
   filter: invert(100%);
 }
 
-.dark-Mode > aside > button {
-  filter: invert(100%);
-}
-s
-.dark-Mode > aside > button > .ranking   {
-  filter: invert(100%)
+.dark-Mode footer  {
+background-color: #231002;
 }
 
 .dark-Mode footer > p  {
