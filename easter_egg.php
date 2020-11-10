@@ -10,6 +10,7 @@
 		<div id="Header">
 			<a class="Logo" href="index.php">SimonDoes</a>
 		</div>
+		<div class="Title">EASTER EGG</div>
 		<div class="Img">
 			<img src="Images/corona.png" class=".vert-move">
 		</div>

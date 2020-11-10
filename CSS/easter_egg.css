@@ -74,10 +74,36 @@ html, body{
 
 /*Termina Header*/
 
+.Title {
+    padding: 20px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size:7vw;
+    font-family: Arcade-Font;
+    line-height: 100%;
+    text-align: center;
+    color: orange;
+    text-shadow: 3px 3px #000000;
+    animation: var(--animation) var(--speed) infinite var(--easing);
+  -moz-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 2px;
+  -moz-text-stroke-color: #000000;
+  -webkit-text-stroke-color: #ffffff;
+}
+
+.Title p {
+      margin-top: 5%;
+      margin-bottom: 0px;
+      font-size: 1vw;
+      font-family: Arcade-Font;
+      line-height: 140px;
+      text-align: center;
+      text-shadow: 5px 5px #000000;
+      color: #7fff00;}
 
 .Img img{
   width: 5%; height: 5%;
-  margin-top: 5%;
   display:block;
   margin-left: auto;
   margin-right: auto;
@@ -118,4 +144,5 @@ mark.important {
 p#text {
   color:white;
   margin-left: 20px;
+  font-size: 2vw;
 }
