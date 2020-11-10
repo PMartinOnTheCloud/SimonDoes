@@ -99,3 +99,7 @@ function youWin() {
 function youLose() {
 	location.replace('gameover.php');
 }
+
+function easteregg() {
+	location.replace('easter_egg.php');
+}

@@ -21,6 +21,7 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
 <body>
 <div id="Header">
 	<a class="Logo" href="index.php">SimonDoes</a>
+    <p>Code: <?php echo "$code";?></p>
 	<button id="colorblind" onclick="">S<u>w</u>itch</button>
 </div>
 <?php
