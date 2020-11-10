@@ -60,7 +60,7 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
  
     ?>
 
-    <table class="" id="tabla">
+    <table class="tabla" id="tabla">
             <tr>
             <th></th>
             <th>Username</th>

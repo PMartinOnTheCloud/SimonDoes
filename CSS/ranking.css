@@ -124,7 +124,7 @@ table.class_color tr:last-child td{
 }
 
 .footer > p {
-  font-size: 15px;
+  font-size: 20px;
 }
 
 
@@ -132,7 +132,11 @@ table.class_color tr:last-child td{
   filter: invert(100%);
 }
 
-.dark-Mode > h1 {
+.dark-Mode > #tabla {
+  filter: invert(100%);
+}
+
+.dark-Mode > .footer > p {
   filter: invert(100%);
 }
 

@@ -234,7 +234,21 @@ button:hover {
         
 /*Termina Win*/
 
+.dark-Mode > .Title > .Win {
+  filter: invert(100%);
+}
 
+.dark-Mode > button > u{
+  filter: invert(100%);
+}
+
+.dark-Mode > .User p  {
+  filter: invert(100%);
+}
+
+.dark-Mode  >.Code p {
+  filter: invert(100%);
+}
 /* Responsive Movil 1920x1080 */
 
 
