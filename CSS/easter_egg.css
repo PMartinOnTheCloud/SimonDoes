@@ -181,3 +181,44 @@ p#text {
   margin-left: 20px;
   font-size: 2vw;
 }
+
+@media screen and (max-width:1920px){
+  p#text{
+    font-size: 18px;
+  }
+}
+
+
+@media screen and (max-width:1366px){
+ .Main{
+    width: 100%;
+    padding-top: 2%;
+  }
+}
+
+@media screen and (max-width:1024px){
+    p#text{
+    font-size: 18px;
+  }
+
+}
+
+@media screen and (max-width:800px){
+      p#text{
+    font-size: 19px;
+  }
+
+}
+
+@media screen and (max-width:375px){
+  #Header >a.Logo{
+    font-size: 9vw;
+  }
+
+  .Title{
+    font-size: 40px;
+  }
+     p#text{
+    font-size: 20px;
+  }
+}
