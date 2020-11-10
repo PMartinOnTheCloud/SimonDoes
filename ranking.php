@@ -17,6 +17,7 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="CSS/ranking.css">
     <script src="JS/ColorSwith.js"></script>
+    <audio id="inicio" preload="auto" src="Song/ranking.wav"></audio>
     <audio id="BtM" preload="auto" src="Song/beep3.wav"></audio>
 
 </head>
