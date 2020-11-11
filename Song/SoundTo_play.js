@@ -1,5 +1,6 @@
 window.onload = function (params) {
-    var audio = document.getElementById("audio");
+    var audio = document.getElementById("inicio");
+    audio.volume = 0.1;
     audio.play();
 };
 

@@ -95,9 +95,14 @@ input[type=checkbox] {
   -webkit-transform: scale(1.5);
 }
 
-label.checklabel {
+.checklabel1 {
   color:white;
 }
+
+.checklabel2 {
+  color:white;
+}
+
 
 /*Final section
 /* aside*/
@@ -136,18 +141,19 @@ input[type=text], input[type=password] {
 }
 
 button {
-  background-color: #191919;
-  color: #7fff00;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  font-size: 20px;
   width: 100%;
+  border-radius: 10px;
+}
 
+button.continue{
   font-size: 20px;
   font-family: Arcade-Font;
-  border-radius: 10px;
+  background-color: #191919;
+  color: #7fff00;
 }
 
 button:hover {
@@ -202,7 +208,19 @@ color:#8000ff;
 
 .dark-Mode > .Main {
   background-color: #9c9c9c;
+  color: #8000ff;
 }
+
+.dark-Mode > .Main > label.checklabel1 {
+  background-color: #9c9c9c;
+  color: #8000ff;
+}
+
+.dark-Mode > .Main > label.checklabel2 {
+  background-color: #9c9c9c;
+  color: #8000ff;
+}
+
 
 .dark-Mode > .Main > p#text{
   color: #8000ff;
@@ -223,6 +241,7 @@ color:#8000ff;
   color: #00ff00;
 }
 
+
 .dark-Mode > aside {
   background-color: #9c9c9c;
 }
@@ -241,6 +260,15 @@ color:#8000ff;
 .dark-Mode > aside > input {
   filter: invert(100%);
 }
+
+.dark-Mode > aside > .continue {
+  filter: invert(100%);
+}
+
+.dark-Mode > aside > form >.ranking {
+  filter: invert(100%);
+}
+
 
 .dark-Mode footer  {
 background-color: #231002;

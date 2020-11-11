@@ -41,9 +41,9 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
       <br>
       <form class="Form" name='input' action='to_play.php' method='post'>
         <input type="checkbox" id="liarbutton" name="liarmode" value="liarmode" onchange="myfunction(this)">
-        <label class="checklabel" for="liarbutton">'<u>L</u>iar' Mode</label>
+        <label class="checklabel1" for="liarbutton">'<u>L</u>iar' Mode</label>
         <input type="checkbox" id="survivalbutton" name="survivalmode" value="survivalmode" onchange="myfunction2(this)">
-        <label class="checklabel" for="survivalbutton"><u>S</u>urvival Mode</label>
+        <label class="checklabel2" for="survivalbutton"><u>S</u>urvival Mode</label>
     </section>
     <!-- Ends Explanation -->
 
@@ -57,10 +57,10 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
         <label class="label" for="uname">Username</label>
         <?php 
           if (isset($user)) {
-            echo "<input type=\"text\" value=\"$user\" name=\"username\" required><button type=\"submit\" id=\"button\" onmousedown=\"bleep.play()\"><u>C</u>ontinue</button>";
+            echo "<input type=\"text\" value=\"$user\" name=\"username\" required><button class=\"continue\" type=\"submit\" id=\"button\" onmousedown=\"bleep.play()\"><u>C</u>ontinue</button>";
           }
           else{
-            echo "<input type=\"text\" placeholder=\"Enter Username\" name=\"username\" required><button type=\"submit\" id=\"button\" onmousedown=\"bleep.play()\">Continue</button>";
+            echo "<input type=\"text\" placeholder=\"Enter Username\" name=\"username\" required><button class=\"continue\" type=\"submit\" id=\"button\" onmousedown=\"bleep.play()\">Continue</button>";
           }
         ?>  
     </form>
