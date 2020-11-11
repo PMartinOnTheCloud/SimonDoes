@@ -23,4 +23,4 @@ Run apache and execute at your browser (localhost/'your directory name')
 
 ## Easter Egg
 
-![Alt text](/../production/Imatges/image.png?raw=true "Optional Title")
+![Alt text](/../production/Images/git.png?raw=true "Optional Title")
