@@ -23,3 +23,4 @@ Run apache and execute at your browser (localhost/'your directory name')
 
 ## Easter Egg
 
+![Alt text](/../production/path/to/image.png?raw=true "Optional Title")
