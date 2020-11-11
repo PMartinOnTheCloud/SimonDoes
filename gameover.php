@@ -37,7 +37,7 @@ if (end($urlexplode)== "to_play.php"){
 
 ?>
 	<div id="Gameover">
-	<div id="Header">
+	<div id="Header" class="Header">
 		<a class="Logo" href="index.php">SimonDoes</a>
 		<button id="colorblind" onclick="myFunction()" onmousedown="bleep.play()">S<u>w</u>itch</button>
 	</div>

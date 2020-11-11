@@ -46,6 +46,10 @@ html, body{
   padding: 20px 10px;  
 }
 
+.Header {
+  background-color: black;
+}
+
 #Header a {
   float: left;
   color: black;
@@ -230,9 +234,10 @@ button:hover {
 /*Termina Win*/
 
 
-.dark-Mode > #Gameover > #Header{
-  filter: invert(0%);
+.dark-Mode > #Gameover > .Header{
+  filter: invert(100%);
 }
+
 
 .dark-Mode > #Gameover > #Header > button{
   filter: invert(100%);

@@ -103,10 +103,12 @@ button#colorblind:hover {
 	width:190px;
 	height: 190px;
 	font-size: 50px;
-	background-color: black;
-	color:#7fff00;
-  font-family: Arcade-Font;
+}
 
+.buttonStart{
+  background-color: black;
+  color:#7fff00;
+  font-family: Arcade-Font;
 }
 
 #buttonCheck {
@@ -118,9 +120,13 @@ button#colorblind:hover {
 	width:190px;
 	height: 190px;
 	font-size: 50px;
-	background-color:black;
-	color:#7fff00;
+}
+
+.buttonCheck{
+  background-color:black;
+  color:#7fff00;
   font-family: Arcade-Font;
+}
 }
 
 button.:hover {
@@ -168,7 +174,6 @@ svg {
   visibility: hidden; 
 }
 
-
 /*Empieza Tabla*/
 
 /*Empieza footer*/
@@ -192,3 +197,30 @@ footer > p {
 }
 
 /*Termina footer*/
+
+.dark-Mode > #Header  {
+background-color: #b4b4b4;
+}
+
+.dark-Mode > #Header > button#colorblind {
+  filter: invert(100%);
+}
+
+.dark-Mode > .buttonStart {
+background: #fce903;
+color: black;
+}
+
+.dark-Mode > .buttonCheck  {
+background: #fce903;
+color: black;
+
+}
+
+.dark-Mode footer  {
+background-color: #b4b4b4;
+}
+
+.dark-Mode footer > p  {
+  filter: invert(100%);
+}

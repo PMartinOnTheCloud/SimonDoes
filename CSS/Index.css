@@ -188,12 +188,12 @@ footer > p {
 
 
 .dark-Mode {
-  background-color: #9c9c9c;
+  background-color: #4b4b4b;
 }
 
 
 .dark-Mode >.Header {
-background-color: #231002;
+background-color: #b4b4b4;
 color:#8000ff;
 }
 
@@ -207,7 +207,7 @@ color:#8000ff;
 }
 
 .dark-Mode > .Main {
-  background-color: #9c9c9c;
+  background-color: #4b4b4b;
   color: #8000ff;
 }
 
@@ -223,7 +223,7 @@ color:#8000ff;
 
 
 .dark-Mode > .Main > p#text{
-  color: #8000ff;
+  color: #0000cd;
 }
 
 .dark-Mode > .Main > p#text > .important{
@@ -243,18 +243,17 @@ color:#8000ff;
 
 
 .dark-Mode > aside {
-  background-color: #9c9c9c;
+  background-color: #4b4b4b;
 }
 
 .dark-Mode > aside > .imgcontainer >.label {
-  filter: invert(100%);
-}
+color: #0000cd;}
 
 .dark-Mode > aside > .imgcontainer > input {
   filter: invert(100%);
 }
 .dark-Mode > aside > .label {
-  filter: invert(100%);
+  color: #0000cd;
 }
 
 .dark-Mode > aside > input {
@@ -271,7 +270,7 @@ color:#8000ff;
 
 
 .dark-Mode footer  {
-background-color: #231002;
+background-color: #b4b4b4;
 }
 
 .dark-Mode footer > p  {

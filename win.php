@@ -40,6 +40,7 @@ if (end($urlexplode)== "to_play.php"){
 		<button id="colorblind" onclick="myFunction()" onmousedown="bleep.play()">S<u>w</u>itch</button>	
 		</div>
 	</div>
+	
 	<div class="Title">
 		<div class="Win">YOU'VE WON</div>
 		<div class="Img">

@@ -154,7 +154,9 @@ img {
 .User {
   width: 100%;
   height: auto;
-  padding-top: 2%;}
+  padding-top: 2%;
+  margin-bottom: 1%;
+}
 
 .User p {
   margin-top: 0%;
@@ -163,7 +165,7 @@ img {
   font-size: 2.5vW;
   font-weight: bold;
   font-family: Arcade-Font;
-  color: #6576B4;
+  color: orange;
   text-shadow: 2.5px 2.5px #000000;}
 
  button {
@@ -191,9 +193,6 @@ img {
   margin-right: 7%;
 }
 
-.User > p{
-  margin-bottom: 1%;
-}
 button:hover {
   background-color: #7fff00;
   color:#000000;
@@ -229,21 +228,17 @@ button:hover {
   font-size: 3vW;
   font-weight: bold;
   font-family: Arcade-Font;
-  color: #6576B4;
+  color: orange;
   text-shadow: 2.5px 2.5px #000000;}
         
 /*Termina Win*/
 
+
 .dark-Mode > #Win > #Header{
-  background-color: #231002;
+  filter: invert(0%);
 }
 
-
-.dark-Mode > #Win >.Header >a {
-  filter: invert(100%);
-}
-
-.dark-Mode > #Win > .Header >button {
+.dark-Mode > #Win > #Header > button{
   filter: invert(100%);
 }
 
@@ -259,7 +254,7 @@ button:hover {
   filter: invert(100%);
 }
 
-.dark-Mode  >.Code p {
+.dark-Mode > .Code p {
   filter: invert(100%);
 }
 /* Responsive Movil 1920x1080 */
