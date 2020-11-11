@@ -3,7 +3,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="CSS/easter_egg.css" rel="stylesheet" type="text/css" />
-	<audio id="audio" preload="auto" src="Song/inicio2.wav"></audio>
+	<audio id="audio" preload="auto" src="Song/Akuma_streetFigther_easteregg.mp3"></audio>
 	<title>easter_egg</title>
 </head>
 <body>
