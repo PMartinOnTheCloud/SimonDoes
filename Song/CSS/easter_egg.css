@@ -1,0 +1,225 @@
+* {box-sizing: border-box;}
+
+@font-face {
+  font-family: 'Arcade-Font';
+  src: url('../Fonts/Bitwise-m19x.ttf');
+  font-weight: bold;
+}
+
+
+
+:root {
+  --animation: glitch; /* glitch, hue, fade, shrink */
+  --speed: 2s;
+  --easing: linear;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+
+html, body{
+  height:100%;
+  margin:0;
+  display: flex;
+  flex-direction: column;
+  background:#262626;
+  font-family: Arcade-Font;}
+
+
+#easter_egg {
+  height: 100%;
+  width: 100%;
+  background-color:#262626;
+  justify-content: center;
+  align-content: center;
+}
+
+/*Empieza Header*/
+#Header {
+  text-align:center;
+  overflow: hidden;
+  background-color: black;
+  padding: 20px 10px;
+  border-bottom: 3px solid #7fff00;
+}
+
+#Header a {
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 3vw; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+
+.Logo {
+  color: transparent;
+  position: left;
+  text-align: center;
+  font-size: 40px;
+  font-family: Arcade-Font;
+  -moz-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 2px;
+  -moz-text-stroke-color: #000000;
+  -webkit-text-stroke-color: #ffffff;
+  margin-top: 10px;
+}
+
+#Header a.Active {
+  background-color: #6c7059; 
+  color: #7fff00;
+  text-align: center;
+  font-family: Arcade-Font;
+}
+
+/*Termina Header*/
+
+.Title {
+    padding: 20px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size:7vw;
+    font-family: Arcade-Font;
+    line-height: 100%;
+    text-align: center;
+    color: orange;
+    text-shadow: 3px 3px #000000;
+    animation: var(--animation) var(--speed) infinite var(--easing);
+  -moz-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 2px;
+  -moz-text-stroke-color: #000000;
+  -webkit-text-stroke-color: #ffffff;
+}
+
+.Title p {
+      margin-top: 5%;
+      margin-bottom: 0px;
+      font-size: 1vw;
+      font-family: Arcade-Font;
+      line-height: 140px;
+      text-align: center;
+      text-shadow: 5px 5px #000000;
+      color: #7fff00;}
+
+.Img img{
+  width: 50px; height: 50px;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  transform:scale(1);
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+.ImgT img{
+  width: 250px; height: 250px;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.Main{
+  width: 100%;
+  text-align: center;
+  padding-top: 0%;
+  padding-left: 0%;
+  -moz-animation: fadein 5s; /* Firefox */
+    -webkit-animation: fadein 5s; /* Safari and Chrome */
+    -o-animation: fadein 5s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+mark.important {
+  color:#6576b4;
+  background-color:#262626;
+}
+
+p#text {
+  color:white;
+  margin-left: 20px;
+  font-size: 2vw;
+}
+
+@media screen and (max-width:1920px){
+  p#text{
+    font-size: 40px;
+  }
+}
+
+
+@media screen and (max-width:1366px){
+ .Main{
+    width: 100%;
+    padding-top: 2%;
+  }
+}
+
+@media screen and (max-width:1024px){
+    p#text{
+    font-size: 18px;
+  }
+
+}
+
+@media screen and (max-width:800px){
+      p#text{
+    font-size: 19px;
+  }
+
+}
+
+@media screen and (max-width:375px){
+  #Header >a.Logo{
+    font-size: 9vw;
+  }
+
+  .Title{
+    font-size: 40px;
+  }
+     p#text{
+    font-size: 20px;
+  }
+}

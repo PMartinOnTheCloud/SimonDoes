@@ -1,0 +1,225 @@
+@font-face {
+  font-family: 'Arcade-Font';
+  src: url('../Fonts/Bitwise-m19x.ttf');
+  font-weight: bold;
+}
+
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: Arcade-Font;
+  background-color:#262626;
+}
+
+/*Empieza Header*/
+#Header {
+  text-align:center;
+  overflow: hidden;
+  background-color: black;
+  padding: 20px 10px;  
+}
+
+#Header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 3vw; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+
+.Logo {
+  color: transparent;
+  position: left;
+  text-align: center;
+  font-size: 40px;
+  font-family: Arcade-Font;
+  -moz-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 2px;
+  -moz-text-stroke-color: #000000;
+  -webkit-text-stroke-color: #ffffff;
+  margin-top: 10px;
+}
+
+button#colorblind {
+  width: 150px;
+  margin-top: 7px;
+  float: right;
+  background-color: #6576B4;
+  color: white;
+  border-radius: 0px;
+  font-family: Arcade-Font;
+  font-size: 20px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  border: none;
+  margin-right: 20px;
+}
+
+button#colorblind:hover {
+  background-color: white;
+  color: #6576B4;
+}
+
+
+.Header-right {
+  float: right;
+}
+
+
+#Header a.Active {
+  background-color: #6c7059; 
+  color: #7fff00;
+  text-align: center;
+  font-family: Arcade-Font;
+}
+
+/*Termina Header*/
+
+
+/*Empieza Tabla*/
+
+#general {
+	margin:auto;
+	width: 500px;
+	height: 500px;
+}
+
+#general > div {
+	background-color: white;
+	border: 1px solid black;
+	float: right;
+}
+
+#buttonStart {
+	display: block;
+	margin: 20px auto auto auto;
+	position: absolute;
+  top: 50%;
+	width:190px;
+	height: 190px;
+	font-size: 50px;
+}
+
+.buttonStart{
+  background-color: black;
+  color:#7fff00;
+  font-family: Arcade-Font;
+}
+
+#buttonCheck {
+	display: block;
+	margin: 20px auto auto auto;
+	visibility: hidden;
+	position: absolute;
+  top: 50%;
+	width:190px;
+	height: 190px;
+	font-size: 50px;
+}
+
+.buttonCheck{
+  background-color:black;
+  color:#7fff00;
+  font-family: Arcade-Font;
+}
+}
+
+button.:hover {
+  background-color: #7fff00;
+  color: black;
+}
+
+
+
+@keyframes circletimer {
+  0% {
+    stroke-dashoffset: 500;
+    stroke-dasharray: 500;}
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 500;}
+}
+svg {
+  background-color: transparent;
+  position: absolute;
+  background-color: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(-90deg); }
+#circle {
+    stroke: rgba(188, 0, 84, 1);
+    stroke-width: 16;
+    fill: transparent;
+    stroke-dashoffset: 500;
+    stroke-dasharray: 0;
+    z-index: 1;
+    visibility: hidden;
+}
+
+#timer {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(188, 0, 84, 1);
+  font-size: 42px;
+  font-weight: 700;
+  z-index: 1;
+  visibility: hidden; 
+}
+/*Empieza Tabla*/
+
+/*Empieza footer*/
+
+footer {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:#191919;
+  padding: 10px 10px;
+  border-top: 3px solid #7FFF00;
+}
+
+footer > p {
+  color: #7FFF00;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/*Termina footer*/
+
+.dark-Mode > #Header  {
+background-color: #b4b4b4;
+}
+
+.dark-Mode > #Header > button#colorblind {
+  filter: invert(100%);
+}
+
+.dark-Mode > .buttonStart {
+background: #fce903;
+color: black;
+}
+
+.dark-Mode > .buttonCheck  {
+background: #fce903;
+color: black;
+
+}
+
+.dark-Mode footer  {
+background-color: #b4b4b4;
+}
+
+.dark-Mode footer > p  {
+  filter: invert(100%);
+}
