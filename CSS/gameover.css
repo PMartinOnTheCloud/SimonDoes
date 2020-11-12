@@ -1,0 +1,415 @@
+@-webkit-keyframes animacao1 { 
+  0% {background: #D62623;}
+  50% {background: #EE3430;}
+  100% {background: #FB3733;} }
+
+
+@font-face {
+  font-family: 'Arcade-Font';
+  src: url('../Fonts/Bitwise-m19x.ttf');
+}
+
+
+:root {
+  --animation: glitch; /* glitch, hue, fade, shrink */
+  --speed: 2s;
+  --easing: linear;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+
+html, body{
+  height:100%;
+  margin:0;
+  display: flex;
+  flex-direction: column;
+  background: #191919;}
+
+#Gameover {
+  height: 100%;
+  width: 100%;
+  background-color: #3d3d3d;
+  justify-content: center;
+  align-content: center;
+  -webkit-animation-name: animacao1;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function:  linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+}
+
+/*Empieza Header*/
+#Header {
+  text-align:center;
+  overflow: hidden;
+  background-color: black;
+  padding: 20px 10px;  
+}
+
+.Header {
+  background-color: black;
+}
+
+#Header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 3vw; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+
+.Logo {
+  color: transparent;
+  position: left;
+  text-align: center;
+  font-size: 40px;
+  font-family: Arcade-Font;
+  -moz-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 2px;
+  -moz-text-stroke-color: #000000;
+  -webkit-text-stroke-color: #ffffff;
+  margin-top: 10px;
+}
+
+button#colorblind {
+  width: 150px;
+  margin-top: 7px;
+  float: right;
+  background-color: #6576B4;
+  color: white;
+  border-radius: 0px;
+  font-family: Arcade-Font;
+  font-size: 20px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  border: none;
+  margin-right: 20px;
+}
+
+button#colorblind:hover {
+  background-color: white;
+  color: #6576B4;
+}
+
+
+
+.Header-right {
+  float: right;
+}
+
+
+#Header a.Active {
+  background-color: #6c7059; 
+  color: #7fff00;
+  text-align: center;
+  font-family: Arcade-Font;
+}
+
+
+
+
+/*Termina Header*/
+
+img {
+  width: 15%; height: 15%;
+  margin-top: 0px;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  transform:scale(1);
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+.Gameover {
+    padding: 20px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size:9vw;
+    font-family: Arcade-Font;
+    line-height: 100%;
+    text-align: center;
+    color: orange;
+    text-shadow: 2.5px 2.5px #000000;
+    animation: var(--animation) var(--speed) infinite var(--easing);
+}
+
+.Gameover p {
+      margin-top: 5%;
+      margin-bottom: 0px;
+      font-size: 1vw;
+      font-family: Arcade-Font;
+      line-height: 140px;
+      text-align: center;
+      text-shadow: 5px 5px #000000;
+      color: #7fff00;}
+
+.User {
+  width: 100%;
+  height: auto;
+  padding-top: 2%;}
+
+.User p {
+  margin-top: 0%;
+  margin-bottom: 0%;
+  text-align: center;
+  font-size: 2.5vW;
+  font-weight: bold;
+  font-family: Arcade-Font;
+  color: orange;
+  text-shadow: 2.5px 2.5px #000000;}
+
+ button {
+        background-color: #000000;
+        color: #7fff00;
+        padding: 15px 20px;
+        margin: 8px 0;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 10px;
+        border: 0px;
+        font-family: Arcade-Font;
+        font-size: 2vw;-webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+}  
+
+button:hover {
+  background-color: #7fff00;
+  color:#000000;
+}
+
+
+    .TryAgain {
+        padding: 15px 20px;
+        background-color: #000000;
+        margin-left: 10%;
+        margin-right: 10%;
+        color: #7fff00;
+    }
+
+    .TryAgain,.SaveExit {
+        margin-top: 1%;
+        float: left;
+        width: 35%;
+    }
+
+    .Relative::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+.Code {
+  width: 100%;
+  height: auto;
+  padding-top: 2%;}
+
+.Code p {
+  margin-top: 0%;
+  margin-bottom: 0%;
+  text-align: center;
+  font-size: 5vW;
+  font-weight: bold;
+  font-family: Arcade-Font;
+  color: orange;
+  text-shadow: 2.5px 2.5px #000000;}
+        
+/*Termina Win*/
+
+
+.dark-Mode > #Gameover > .Header{
+  filter: invert(0%);
+}
+
+
+.dark-Mode > #Gameover > #Header > button{
+  background-color: white;
+  color: #5564eb;
+
+}
+
+.dark-Mode > #Gameover > .Title > .Gameover {
+  color:#5564eb;
+}
+
+.dark-Mode > #Gameover > .Title > .Img {
+  filter: invert(100%);
+}
+
+.dark-Mode > #Gameover > .Relative > form > button {
+    filter: invert(100%);
+ }
+
+.dark-Mode > #Gameover > .User p  {
+  color:#5564eb;
+}
+
+.dark-Mode   > #Gameover > .Code p {
+  color:#5564eb;
+}
+
+
+@media screen and (max-width: 1366px) {
+  #Header a {
+    float: none;
+    display: block;
+    text-align: center;
+    font-size: 3vw;
+    margin-top: 1vw;
+    float:left;
+  }
+  
+  .Header-right {
+    float: right;
+    }
+
+  img{
+    width: 15%; height: 15%;
+  }
+
+  div.Gameover {
+    font-size: 9vw;}
+
+
+  .Code p,.User p{
+    font-size: 3vw;}
+}
+
+
+/* Responsive Movil 1024x768 */
+
+@media screen and (max-width: 1024px) {
+  #Header a {
+    float: none;
+    display: block;
+    text-align: center;
+    font-size: 3vw;
+    margin-top: 1vw;
+    float:left;
+  }
+  
+  .Header-right {
+    float: right;
+    }
+
+  img{
+    width: 20%; height: 20%;
+  }
+
+  div.Gameover {
+    font-size: 9vw;}
+
+  button {
+    font-size: 3vw;
+  }
+
+  .TryAgain, .SaveExit {
+    margin-top: 2%;
+  }
+
+  .Code p,.User p{
+    font-size: 4vw;}
+}
+
+/* Responsive Movil 800x600 */
+
+@media screen and (max-width: 800px) {
+  #Header a {
+    float: none;
+    display: block;
+    text-align: center;
+    font-size: 3vw;
+    margin-top: 1vw;
+    float:left;
+  }
+  
+  .Header-right {
+    float: right;
+    }
+
+  img{
+    width: 15%; height: 15%;
+  }
+
+  div.Gameover {
+    font-size: 9vw;}
+
+  .Code p,.User p{
+    font-size: 4vw;}
+
+  button#colorblind {
+    width: 15%;
+  }
+  .Logo{
+  -moz-text-stroke-width: 0px;
+  -webkit-text-stroke-width: 0px;
+  }
+
+  #Header a{
+    color:white;
+  }
+}
+
+
+
+/* Responsive Movil 375x667 */
+
+@media screen and (max-width: 375px) {
+  #Header a {
+    float: none;
+    display: block;
+    text-align: center;
+    font-size: 4vw;
+    margin-top: 1vw;
+    float:left;
+  }
+  
+  .Header-right {
+    float: right;
+    }
+
+  img{
+    width: 45%; height: 45%;
+  }
+
+  div.Gameover {
+    font-size: 15vw;}
+
+  .NextLevel,.TryAgain,.SaveExit {
+    width: 100%;
+    font-size: 7vw;}
+
+  .Code p,.User p{
+    font-size: 9vw;}
+  button#colorblind {
+    width: 24%;
+    font-size: 4vw;
+  }
+  #Header a {
+    font-size: 7vw;
+  }
+
+  .TryAgain,.SaveExit {
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0px;
+    font-size: 8vw;
+  }
+}

@@ -1,0 +1,207 @@
+@font-face {
+  font-family: 'Arcade-Font';
+  src: url('../Fonts/Bitwise-m19x.ttf');
+}
+
+body {
+  background-color:#262626;
+  font-family: Arcade-Font;
+}
+
+html, body{
+  height:100%;
+  margin:0;
+  display: flex;
+  flex-direction: column;
+}
+
+/*Empieza Header*/
+#Header {
+  text-align:center;
+  background-color:#191919;
+  border-bottom: 3px solid #7FFF00;
+  padding: 20px 10px;  
+}
+
+#Header a {
+  float: left;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 22px; 
+  line-height: 25px;
+  border-radius: 4px;
+  font-family: Arcade-Font;
+  margin-left: 2.5%;
+  margin-top: 10px;
+}
+
+.Header-right {
+  float: right;
+}
+
+
+#Header a.Active {
+  background-color: #6c7059; 
+  color: #7fff00;
+  text-align: center;
+  font-family: 'Black Ops One', cursive;
+}
+
+/*Termina Header*/
+
+#tabla {
+  margin-left: auto;
+  margin-right: auto;
+  color: #7fff00;
+  font-size: 30px;
+  border-collapse: collapse;
+  border-spacing: 200px;
+  text-align: center;
+  display: block;
+  margin-bottom: 100px;
+}
+
+button#colorblind {
+  width: 150px;
+  margin-top: 7px;
+  float: right;
+  background-color: #6576B4;
+  color: white;
+  border-radius: 0px;
+  font-family: Arcade-Font;
+  font-size: 20px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  border: none;
+  margin-right: 20px;
+}
+
+button#colorblind:hover {
+  background-color: white;
+  color: #6576B4;
+}
+
+
+td {
+  padding-top:1%;
+  border-top:#7fff00 3px solid;
+  text-align: center;
+}
+
+tr > th:nth-child(3), tr > td:nth-child(3) {
+  padding-left: 20px;
+  border-left:#7fff00 3px solid;
+  padding-right: 20px;
+}
+
+tr > th:nth-child(2), tr > td:nth-child(2) {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+h1 {
+    text-align:center;
+    color: #7fff00;
+    font-size: 40px;
+
+}
+
+table.class_color tr:last-child td{
+   background: #f00;
+}
+
+.footer {
+  position: fixed;
+  background-color: black;
+  box-sizing: border-box;
+  bottom: 0;
+  width: 100%;
+  border-top: 3px solid #7FFF00;
+  background-color: #191919;
+  color: #7fff00;
+  text-align: center;
+}
+
+.footer > p {
+  font-size: 20px;
+}
+
+
+.dark-Mode > #Header > button{
+  background-color: white;
+  color: #5564eb;}
+
+.dark-Mode > h1 {
+color: #5564eb;
+}
+
+.dark-Mode > #tabla  {
+color: #5564eb;
+}
+
+.dark-Mode > .footer > p {
+color: #5564eb;
+}
+
+
+@media screen and (max-width:1366px){
+  .Main{
+    width: 60%;
+  }
+
+  .footer{
+    font-size: 2vw;
+  }
+
+  #tabla {
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width:1024px){
+  .Main{
+    width: 60%;
+  }
+
+  .footer{
+    font-size: 2vw;
+  }
+  #tabla {
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width:800px){
+  .Main{
+    width: 60%;
+  }
+
+  .footer{
+    font-size: 3vw;
+  }
+
+  #tabla {
+    margin-bottom: 100px;
+  }
+
+  button#colorblind {
+    width: 13%;
+    font-size: 17px;
+  }
+
+@media screen and (max-width:375px){
+  #tabla {
+    margin-bottom: 100px;
+  }
+  button#colorblind {
+    width: 25%;
+    font-size: 15px;
+  }
+  h1.Ranking{
+    font-size: 30px;
+  }
+  #tabla {
+    font-size: 20px;
+  }
+}

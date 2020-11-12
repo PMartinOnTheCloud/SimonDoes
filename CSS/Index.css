@@ -1,0 +1,404 @@
+@font-face {
+  font-family: 'Arcade-Font';
+  src: url('../Fonts/Bitwise-m19x.ttf');
+  font-weight: bold;
+}
+
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: Arcade-Font;
+  background-color:#262626;
+}
+
+.Header {
+  overflow: hidden;
+  background-color:#191919;
+  padding: 20px 10px;
+  border-bottom: 3px solid #7FFF00;
+}
+
+.Header > h1 {
+  color: #7FFF00;
+  text-align: center;
+  padding: 12px;
+  padding-left: 10%;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+  display: inline-block;
+  float:left;
+}
+
+.Header > h1.Logo {
+  font-size: 25px;
+  font-weight: bold;
+  width: 85%;
+}
+
+button#colorblind {
+  width: 10%;
+  margin-top: 17px;
+  float: left;
+  background-color: #6576B4;
+  color: white;
+  border-radius: 10px;
+}
+
+button#colorblind:hover {
+  background-color: white;
+  color: #6576B4;
+}
+
+/* section */
+
+.Main{
+  float:left;
+  width: 60%;
+  text-align: left;
+  padding-top: 8%;
+  padding-left: 10%;
+}
+
+mark.important {
+      
+      color:#6576b4;
+      background-color:#262626;
+    }
+mark.correct{
+      color:#308446;
+      background-color:#262626;
+    }
+mark.incorrect{
+      color:#e51a4c;
+      background-color:#262626;
+    }
+p#text {
+  color:white;
+  margin-left: 20px;
+}
+
+
+h3#text{
+  color:white;
+  margin-left: 20px;
+}
+
+
+input[type=checkbox] {
+  margin-left: 15%;
+  margin-top: 7%;
+  transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+}
+
+.checklabel1 {
+  color:white;
+}
+
+.checklabel2 {
+  color:white;
+}
+
+
+/*Final section
+/* aside*/
+aside{
+  float:left;
+  width: 30%;
+  padding-top: 5%;
+  margin-right: 10%;
+}
+
+img.avatar {
+  width: 20%;
+  display:block;
+  margin:auto;
+}
+
+.label{
+  color:#7fff00;
+  text-align: center;
+}
+
+button#continue{
+  top: 80%;
+  left: 50%;
+}
+
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  color:black;
+}
+
+button {
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 10px;
+  font-family: Arcade-Font;
+}
+
+button.continue{
+  font-size: 20px;
+  font-family: Arcade-Font;
+  background-color: #191919;
+  color: #7fff00;
+}
+
+button:hover {
+  background-color: #7fff00;
+  color: #191919;
+}
+
+
+/*final aside*/
+.ranking{
+  background-color: #191919;
+  color: #7fff00;
+  font-size: 20px;
+}
+
+footer {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:#191919;
+  padding: 10px 10px;
+  border-top: 3px solid #7FFF00;
+}
+
+footer > p {
+  color: #7FFF00;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+
+.dark-Mode {
+  background-color:#262626;
+}
+
+
+.dark-Mode >.Header {
+background-color: #191919;
+color:#5564eb;
+}
+
+
+.dark-Mode >.Header >h1 {
+color:#5564eb;
+}
+
+.dark-Mode >.Header >button {
+  background-color: yellow;
+  color:#191919;
+}
+
+.dark-Mode > .Main {
+  background-color: #262626;
+  color: #5564eb;
+}
+
+.dark-Mode > .Main > label.checklabel1 {
+  background-color: #9c9c9c;
+  color: #5564eb;
+}
+
+.dark-Mode > .Main > label.checklabel2 {
+  background-color: #9c9c9c;
+  color: #5564eb;
+}
+
+
+.dark-Mode > .Main > p#text{
+  color: #5564eb;
+}
+
+.dark-Mode > .Main > p#text > .important{
+  background-color: #262626;
+  color: #f8f32b;
+}
+
+.dark-Mode > .Main > p#text > .incorrect{
+  background-color:#262626;
+  color: #b9132c;
+}
+
+.dark-Mode > .Main > p#text > .correct{
+  background-color: #262626;
+  color: #00ff00;
+}
+
+
+.dark-Mode > aside {
+  background-color: #262626;
+}
+
+.dark-Mode > aside > .imgcontainer >.label {
+color: #5564eb;}
+
+.dark-Mode > aside > .imgcontainer > input {
+  filter: invert(100%);
+}
+.dark-Mode > aside > .label {
+  color: #5564eb;
+}
+
+.dark-Mode > aside > input {
+  filter: invert(100%);
+}
+
+.dark-Mode > aside > .continue {
+  filter: invert(100%);
+}
+
+.dark-Mode > aside > form >.ranking {
+  filter: invert(100%);
+}
+
+
+.dark-Mode footer  {
+background-color: #191919;
+}
+
+.dark-Mode footer > p  {
+  color: #5564eb;
+}
+
+
+/*body.dark-Mode{
+  filter: invert(100%);
+}
+
+body.dark-Mode img{
+  filter: invert(100%);
+}*/
+
+@media screen and (max-width:1920px){
+  p#text{
+    font-size: 18px;
+  }
+}
+
+
+@media screen and (max-width:1366px){
+  .Main{
+    width: 60%;
+    padding-top: 5%;
+  }
+
+  aside{
+    width: 30%;
+    margin-right: 0%;
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width:1024px){
+  .Main{
+    width: 60%;
+  }
+
+  aside{
+    width: 30%;
+  }
+}
+
+@media screen and (max-width:800px){
+   .Header {
+      padding: 10px 5px;
+   }
+
+   .Main{
+    width: 55%;
+    padding-left: 1%;
+    padding-top: 3%;
+  }
+  aside{
+    width: 40%;
+    padding-left: 2%;
+    margin-left: 0%;
+    float: right;
+    margin-right: 3%;
+  }
+  button#colorblind {
+    width: 13%;
+  }
+  footer{
+    padding: 0px 0px;
+  }
+  input[type=checkbox] {
+    margin-top: 0.5%;
+  }
+  p#text {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width:375px){
+   .Main{
+    width: 100%;
+  }
+
+  .label b{
+    margin-left: 10px;
+  }
+  aside{
+    width: 100%;
+  }
+  .Header > h1.Logo {
+    width: 100%;
+    display: block;
+  }
+  button#colorblind {
+    width: 25%;
+    font-size: 15px;
+    margin-left: 37.5%;
+    margin-right: 37.5%;
+    margin-top: 5px;
+  }
+  .Header > h1 {
+    padding-left: 7%;
+  }
+  .Main {
+    padding-right: 5%;
+    padding-top: 2%;
+  }
+  input[type=checkbox] {
+    margin-left: 12%;
+    margin-bottom: 5%;
+  }
+  aside {
+    padding-right:4%; 
+    padding-left:4%;
+    margin-right: 0%;
+  }
+  img.avatar{
+    display: none;
+  }
+  footer > p{
+    font-size: 15px;
+  }
+  #inputlevel {
+    margin-bottom: 5%;
+  }
+  #ranking {
+    margin-bottom: 20%;
+  }
+
+}
