@@ -84,7 +84,7 @@ function failOrGrace(numberOfCeldasToIlluminate,level){
 }
 
 function easterEgg(level){
-	if (level=="B7771") {
+	if (level=="B7791") {
 		var easter = true;
 		checkEaster = document.getElementById("general").children;
 		for (let i = 0; checkEaster.length > i ; i++) {
