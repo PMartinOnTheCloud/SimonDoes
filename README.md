@@ -27,5 +27,5 @@ Para acceder al Easter Egg debemos en el ultimo nivel y más dificil marcar toda
 
 ![Alt text](/../production/Images/git.png?raw=true "Optional Title")
 
-##colour blindness
+## Colour Blindness 
 Lo verian todos los daltonismos menos (TRITANOMALÍA)
