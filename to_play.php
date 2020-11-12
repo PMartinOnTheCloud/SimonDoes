@@ -114,7 +114,7 @@ $relativeheight = (100/$heigth)-(0.4);
 $relativewidth= (100/$width)-(0.4);
 $codename=$_SESSION['code'];
 
-echo "<div style='margin-top: 10%' id='general'>";
+echo "<div style='margin-top: 5%' id='general'>";
 for ($h=0;$h<$heigth;$h++){
 	for ($w=0;$w<$width;$w++){
 		if (in_array($identification, $arrayOfCeldasToIlluminate)) {
@@ -134,8 +134,8 @@ echo "</div>";
 <span id="timer"><?php echo $secondsin; ?></span>
 
 
-<button class="buttonStart" style="margin-left: 70%" id='buttonStart' onclick="startGame(<?php echo "$secondsin"; ?>)">START</button>
-<button class="buttonCheck" style="margin-left: 70%" id='buttonCheck' onclick="failOrGrace(<?php echo "$numberOfCeldasToIlluminate,'$codename'"; ?>)">CHECK</button>
+<button class="buttonStart"  id='buttonStart' onclick="startGame(<?php echo "$secondsin"; ?>)">START</button>
+<button class="buttonCheck"  id='buttonCheck' onclick="failOrGrace(<?php echo "$numberOfCeldasToIlluminate,'$codename'"; ?>)">CHECK</button>
 
 <script src="Song/sound.js"></script>
 <script src="JS/to_play.js" type="text/javascript"></script>
