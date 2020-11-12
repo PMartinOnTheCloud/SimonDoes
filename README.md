@@ -23,4 +23,6 @@ Run apache and execute at your browser (localhost/'your directory name')
 
 ## Easter Egg
 
+Para acceder al Easter Egg debemos en el ultimo nivel y más dificil marcar todas las casillas.
+
 ![Alt text](/../production/Images/git.png?raw=true "Optional Title")
