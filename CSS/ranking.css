@@ -37,6 +37,7 @@ html, body{
   margin-top: 10px;
 }
 
+
 .Header-right {
   float: right;
 }
@@ -127,17 +128,20 @@ table.class_color tr:last-child td{
   font-size: 20px;
 }
 
+.dark-Mode > #Header > button{
+  background-color: white;
+  color: #5564eb;}
 
 .dark-Mode > h1 {
-  filter: invert(100%);
+color: #5564eb;
 }
 
-.dark-Mode > #tabla {
-  filter: invert(100%);
+.dark-Mode > #tabla  {
+color: #5564eb;
 }
 
 .dark-Mode > .footer > p {
-  filter: invert(100%);
+color: #5564eb;
 }
 
 

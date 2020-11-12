@@ -235,16 +235,18 @@ button:hover {
 
 
 .dark-Mode > #Gameover > .Header{
-  filter: invert(100%);
+  filter: invert(0%);
 }
 
 
 .dark-Mode > #Gameover > #Header > button{
-  filter: invert(100%);
+  background-color: white;
+  color: #5564eb;
+
 }
 
 .dark-Mode > #Gameover > .Title > .Gameover {
-  filter: invert(100%);
+  color:#5564eb;
 }
 
 .dark-Mode > #Gameover > .Title > .Img {
@@ -252,15 +254,15 @@ button:hover {
 }
 
 .dark-Mode > #Gameover > .Relative > form > button {
-  filter: invert(100%);
-}
+    filter: invert(100%);
+ }
 
 .dark-Mode > #Gameover > .User p  {
-  filter: invert(100%);
+  color:#5564eb;
 }
 
 .dark-Mode   > #Gameover > .Code p {
-  filter: invert(100%);
+  color:#5564eb;
 }
 
 

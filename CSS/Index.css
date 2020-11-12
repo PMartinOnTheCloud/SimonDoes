@@ -190,72 +190,73 @@ footer > p {
 
 
 .dark-Mode {
-  background-color: #4b4b4b;
+  background-color:#262626;
 }
 
 
 .dark-Mode >.Header {
-background-color: #b4b4b4;
-color:#8000ff;
+background-color: #191919;
+color:#5564eb;
 }
 
 
 .dark-Mode >.Header >h1 {
-color:#8000ff;
+color:#5564eb;
 }
 
 .dark-Mode >.Header >button {
-  filter: invert(100%);
+  background-color: yellow;
+  color:#191919;
 }
 
 .dark-Mode > .Main {
-  background-color: #4b4b4b;
-  color: #8000ff;
+  background-color: #262626;
+  color: #5564eb;
 }
 
 .dark-Mode > .Main > label.checklabel1 {
   background-color: #9c9c9c;
-  color: #8000ff;
+  color: #5564eb;
 }
 
 .dark-Mode > .Main > label.checklabel2 {
   background-color: #9c9c9c;
-  color: #8000ff;
+  color: #5564eb;
 }
 
 
 .dark-Mode > .Main > p#text{
-  color: #0000cd;
+  color: #5564eb;
 }
 
 .dark-Mode > .Main > p#text > .important{
-  background-color: #9c9c9c;
+  background-color: #262626;
   color: #f8f32b;
 }
 
 .dark-Mode > .Main > p#text > .incorrect{
-  background-color: #9c9c9c;
+  background-color:#262626;
   color: #b9132c;
 }
 
 .dark-Mode > .Main > p#text > .correct{
-  background-color: #9c9c9c;
+  background-color: #262626;
   color: #00ff00;
 }
 
 
 .dark-Mode > aside {
-  background-color: #4b4b4b;
+  background-color: #262626;
 }
 
 .dark-Mode > aside > .imgcontainer >.label {
-color: #0000cd;}
+color: #5564eb;}
 
 .dark-Mode > aside > .imgcontainer > input {
   filter: invert(100%);
 }
 .dark-Mode > aside > .label {
-  color: #0000cd;
+  color: #5564eb;
 }
 
 .dark-Mode > aside > input {
@@ -272,11 +273,11 @@ color: #0000cd;}
 
 
 .dark-Mode footer  {
-background-color: #b4b4b4;
+background-color: #191919;
 }
 
 .dark-Mode footer > p  {
-  filter: invert(100%);
+  color: #5564eb;
 }
 
 /*body.dark-Mode{

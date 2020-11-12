@@ -238,9 +238,10 @@ button:hover {
   filter: invert(0%);
 }
 
+
 .dark-Mode > #Win > #Header > button{
-  filter: invert(100%);
-}
+  background-color: white;
+  color: #5564eb;}
 
 .dark-Mode > .Title > .Win {
   filter: invert(100%);
