@@ -42,9 +42,10 @@ if (!isset($_SESSION['pastname'])){
 	}
 }
 
+$_SESSION['time']=0;
 
 if (isset($_POST['RetryWin'])) {
-	$_SESSION['points']-= 100;
+	$_SESSION['points']-= $_SESSION['prevpoints'];
 	header("Location: to_play.php"); 
 }
 
@@ -88,7 +89,15 @@ if ($contents[$_SESSION['level']]) {
     $numberOfCeldasToIlluminate=$codeline[3];
     $secondsin=$codeline[4];
     $_SESSION['code']=$codeline[5];
+    if ($_SESSION['level']+1 != sizeof($contents)) {
+        $codeline= explode(",",$contents[$_SESSION['level']+1]);
+        $_SESSION['codenext'] = $codeline[5];
+    } else {
+        $_SESSION['codenext'] = $_SESSION['code'];
+    }
 }
+
+
 
 $arrayOfCeldasToIlluminate = [];
 
@@ -103,7 +112,7 @@ $identification = 0;
 
 $relativeheight = (100/$heigth)-(0.4);
 $relativewidth= (100/$width)-(0.4);
-
+$codename=$_SESSION['code'];
 
 echo "<div style='margin-top: 10%' id='general'>";
 for ($h=0;$h<$heigth;$h++){
@@ -120,20 +129,23 @@ for ($h=0;$h<$heigth;$h++){
 echo "</div>";
 
 ?>
+
 <svg width="200" height="200"><circle id="circle" cx="100" cy="100" r="80" /></svg>
 <span id="timer"><?php echo $secondsin; ?></span>
 
+
 <button class="buttonStart" style="margin-left: 70%" id='buttonStart' onclick="startGame(<?php echo "$secondsin"; ?>)">START</button>
-<button class="buttonCheck" style="margin-left: 70%" id='buttonCheck' onclick="failOrGrace(<?php echo "$numberOfCeldasToIlluminate"; ?>)">CHECK</button>
+<button class="buttonCheck" style="margin-left: 70%" id='buttonCheck' onclick="failOrGrace(<?php echo "$numberOfCeldasToIlluminate,'$codename'"; ?>)">CHECK</button>
 
 <script src="Song/sound.js"></script>
 <script src="JS/to_play.js" type="text/javascript"></script>
 <script src="JS/hotkey_to_play.js" type="text/javascript"></script>
 
+
 <footer>
     <p>Welcome, <?php
 		$user = $_SESSION['username'];
-		echo "$user";?> - Code: <?php echo "$code";?></p>
+		echo "$user";?> - Level: <?php echo $_SESSION['level']+1;?> - <?php echo "$name";?></p>
 
   </footer>
 

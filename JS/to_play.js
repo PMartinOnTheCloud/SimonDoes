@@ -2,14 +2,15 @@ function startGame(seconds) {
 	hideButtonStart();
 	var arrayOfCeldasToIlluminate = document.getElementsByClassName("impostor");
 	paintCeldas(arrayOfCeldasToIlluminate);
+	countdownAnimation(seconds);
 	setTimeout(function(){ playerPlays(); }, (seconds * 1000));
 }
 
 function playerPlays() {
 	var celdas = document.getElementById('general').children;
-	var s = 0;
-	scnds = setInterval(function () { s += 1; },1000);
 	clearCeldas(celdas);
+	decisecondsTime = 0;
+	decisecondsInterval = setInterval(function(){ decisecondsTime += 1; },100);
 	showButtonCheck();
 	addEventListenerToCeldas(celdas);}
 
@@ -49,9 +50,9 @@ function checkCeldas(i,celdas) {
 	}	
 }
 
-
-function failOrGrace(numberOfCeldasToIlluminate){
-	clearInterval(scnds);
+function failOrGrace(numberOfCeldasToIlluminate,level){
+	clearInterval(decisecondsInterval);
+ 	easterBool = easterEgg(level);
 	var correctCeldasId = getCorrectCeldasId(numberOfCeldasToIlluminate);
 	var coloredCeldasId = getColoredCeldasId();
 	var fallo = false;
@@ -62,9 +63,28 @@ function failOrGrace(numberOfCeldasToIlluminate){
 	}
 	if (fallo == false && coloredCeldasId.length==correctCeldasId.length){
 		youWin();
+	} else if (easterBool==true){
+		easterLocation();
 	}
 	else{
 		youLose();
+	}
+
+}
+
+function easterEgg(level){
+	if (level=="B7771") {
+		var easter = true;
+		checkEaster = document.getElementById("general").children;
+		for (let i = 0; checkEaster.length > i ; i++) {
+			if (checkEaster[i].style.backgroundColor != "green") {
+				easter = false;
+			}
+		}
+		return easter;
+	} else {
+		var easter = false;
+		return easter;
 	}
 }
 
@@ -92,7 +112,8 @@ function getColoredCeldasId() {
 
 
 function youWin() {
-	location.replace('win.php');
+	url = 'win.php?'+decisecondsTime;
+	location.replace(url);
 }
 
 
@@ -101,10 +122,9 @@ function youLose() {
 }
 
 
-function easteregg() {
+function easterLocation() {
 	location.replace('easter_egg.php');
 }
-
 
 function countdownAnimation (seconds) {
     document.getElementById("circle").style.visibility = "visible";
@@ -112,7 +132,6 @@ function countdownAnimation (seconds) {
     document.getElementById("circle").style.animation = String(seconds)+"s circletimer linear";
     var countdown = seconds;
     var countdownStart = setInterval(function() {
-        console.log(countdown);
         if (countdown == 1){
             document.getElementById("circle").style.visibility = "hidden";
             document.getElementById("timer").style.visibility = "hidden";

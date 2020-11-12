@@ -147,6 +147,7 @@ button {
   cursor: pointer;
   width: 100%;
   border-radius: 10px;
+  font-family: Arcade-Font;
 }
 
 button.continue{
@@ -166,6 +167,7 @@ button:hover {
 .ranking{
   background-color: #191919;
   color: #7fff00;
+  font-size: 20px;
 }
 
 footer {

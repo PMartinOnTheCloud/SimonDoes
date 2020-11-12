@@ -60,7 +60,7 @@ html, body{
   border-spacing: 200px;
   text-align: center;
   display: block;
-  margin-bottom: 3%;
+  margin-bottom: 100px;
 }
 
 button#colorblind {
@@ -151,7 +151,7 @@ table.class_color tr:last-child td{
   }
 
   #tabla {
-    margin-bottom: 6%;
+    margin-bottom: 100px;
   }
 }
 
@@ -164,7 +164,7 @@ table.class_color tr:last-child td{
     font-size: 2vw;
   }
   #tabla {
-    margin-bottom: 3%;
+    margin-bottom: 100px;
   }
 }
 
@@ -178,7 +178,7 @@ table.class_color tr:last-child td{
   }
 
   #tabla {
-    margin-bottom: 7%;
+    margin-bottom: 100px;
   }
 
   button#colorblind {
@@ -188,7 +188,7 @@ table.class_color tr:last-child td{
 
 @media screen and (max-width:375px){
   #tabla {
-    margin-bottom: 15%;
+    margin-bottom: 100px;
   }
   button#colorblind {
     width: 25%;

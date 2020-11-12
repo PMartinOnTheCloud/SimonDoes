@@ -26,9 +26,22 @@ $_SESSION['visited_pages']['current'] = $_SERVER['REQUEST_URI'];
  <?php
 $url = $_SESSION['visited_pages']['prev'];
 $urlexplode = explode("/", $url);
+$url2 = $_SESSION['visited_pages']['current'];
+$url2explode = explode("?",$url2);
+$contents = file('conf.txt', FILE_IGNORE_NEW_LINES);
+
 if (end($urlexplode)== "to_play.php"){
-	$_SESSION['points'] += 100;
-	$_SESSION['level'] +=1;
+	if ((int)end($url2explode) <= 70){
+	$calcTime = 100 - (floor((int)end($url2explode)/2));
+	} else {
+		$calcTime = 100 - 50;
+	}
+	$_SESSION['points'] += $calcTime;
+	if ($_SESSION['level'] != sizeof($contents)-1) {
+		$_SESSION['level'] +=1;
+	}
+	$_SESSION['prevpoints'] = $calcTime;
+	header('Location: win.php');
 }
 
 ?>
@@ -61,7 +74,7 @@ if (end($urlexplode)== "to_play.php"){
 		</form>
 	</div>
 	<div class="Code">
-		<p>Code: <?php echo "$code";?> </p>
+		<p>Code: <?php echo $_SESSION['codenext'];?> </p>
 	</div>
 </div>
 <script src="Song/SoundWin.js"></script>
